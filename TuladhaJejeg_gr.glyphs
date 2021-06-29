@@ -4,7 +4,8 @@
 DisplayStrings = (
 "ꦿ/cakra_suku-java/cakra-java.below",
 "/uniA9A9_uniA9B8.conj/suku-java.below/ttaPas-java/ttaPas_suku-java",
-"ꦿꦙꦾꦽꦴꦀ"
+"ꦿꦙꦾꦽꦴꦀ",
+"ꦒꦽ"
 );
 classes = (
 {
@@ -82032,9 +82033,15 @@ note = uniA987.conj;
 {
 color = 4;
 glyphname = "keret-java";
-lastChange = "2021-06-13 14:05:08 +0000";
+lastChange = "2021-06-29 12:01:21 +0000";
 layers = (
 {
+anchors = (
+{
+name = _bottom;
+pos = (1210,0);
+}
+);
 background = {
 shapes = (
 {
