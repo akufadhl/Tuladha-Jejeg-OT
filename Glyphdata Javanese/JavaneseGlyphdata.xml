@@ -240,7 +240,6 @@
 	<glyph unicode="A9CC" name="padaPiseleh-java" sortName="java" category="Punctuation" subCategory="Other" script="javanese" production="uniA9CC" direction="LRT" description="JAVANESE PUNCTUATION PADA PISELEH" />
 	<glyph unicode="A9CD" name="padaPiselehTurned-java" sortName="java" category="Punctuation" subCategory="Other" script="javanese" production="uniA9CD" direction="LRT" description="JAVANESE PUNCTUATION PADA PISELEH TURNED" />
 	<glyph unicode="A9CF" name="pangrangkep-java" sortName="java" category="Letter" subCategory="Other" script="javanese" production="uniA9CF" direction="LRT" description="JAVANESE PUNCTUATION PANGRANGKEP" />
-	<glyph name="caPas_keret-java" category="Mark" subCategory="Nonspacing" script="javanese" production="uniA9C0A995A9BD" direction="LRT" description="JAVANESE MARK CA KERET BELOW FORM" />
 	<glyph name="caMurdaPas_keret-java" category="Mark" subCategory="Nonspacing" script="javanese" production="uniA9C0A996A9BD" direction="LRT" description="JAVANESE MARK CA MURDA KERET BELOW FORM" />
 	<glyph name="jaMahaprana_keret-java" sortName="java" category="Letter" subCategory="Other" script="javanese" production="uniA999A9BD" direction="LRT" description="JAVANESE LETTER JA MAHAPRANA KERET" />
 	<glyph name="jaMahapranaPas_keret-java" sortName="java" category="Letter" subCategory="Other" script="javanese" production="uniA9C0A999A9BD" direction="LRT" description="JAVANESE PASANGAN JA MAHAPRANA KERET" />

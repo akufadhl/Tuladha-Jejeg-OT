@@ -1,0 +1,10 @@
+letter_width = [('kaSasak-java', 2040), ('ma-java', 900)]
+pasangan_width = [('kaSasakPas-java', 1030), ('maPas-java', 1050)]
+
+for a in letter_width:
+    for b in pasangan_width:
+        if a[1] < b[1]:
+            print(a,"-",b,"=",b[1] % a[1])
+     
+            pos=b[1] % a[1]
+            print("pos @descenders'", a[0]," <", pos, "0", pos, "0 >", b[0],";")

@@ -34,6 +34,11 @@ name = AllJavanese;
 code = "$[name like \"*pengkal*\"]
 ";
 name = PengkalSpacing;
+},
+{
+code = "jaMahaprana_keret-java jaMahaprana_suku-java jaMahaprana_sukuMendut-java ngaLelet-java ngaLeletRaswadi-java o-java taling-java dirgaMure-java wignyan-java jaMahapranaPas_keret-java jaMahapranaPas_suku-java jaMahapranaPas_sukuMendut-java two-java three-java padaAndap-java padaMadya-java padaLuhur-java cakra-java pengkal-java pengkal_keret-java pengkal_suku-java pengkal_sukuMendut-java pengkal-java.below pengkal_keret-java.below pengkal_suku-java.below pengkal_sukuMendut-java.below cakra-java.001 cakra-java.002 suku-java
+";
+name = Descenders;
 }
 );
 date = "2011-09-18 19:23:17 +0000";
@@ -403,6 +408,7 @@ lookup PasSpace {
 	pos [ka-java kaSasak-java kaMurda-java ga-java gaMurda-java nga-java ca-java caMurda-java ja-java nyaMurda-java nya-java tta-java ttaMahaprana-java dda-java ddaMahaprana-java naMurda-java ta-java taMurda-java da-java daMahaprana-java na-java pa-java paMurda-java ba-java baMurda-java ma-java ya-java ra-java raAgung-java la-java wa-java saMurda-java saMahaprana-java sa-java ha-java]' <0 0 350 0> raAgungPas-java;
 	pos @belowForm ka-java' <650 0 650 0> [naMurdaPas-java nyaPas-java.alt kaPas-java.base taPas-java.base];
 	pos @belowForm na-java' <650 0 650 0> [baPas-java];
+	pos [@belowForm @Descenders] na-java' < 490 0 490 0 > kaPas-java.base ;
 } PasSpace;
 
 lookup CakraSpace {
