@@ -18,25 +18,21 @@ tag = opsz;
 classes = (
 {
 code = "aPas-java aiPas-java ePas-java iKawiPas-java iPas-java iiPas-java kaPas-java kaPas-java.base kaSasakPas-java kaSasakPas-java.base kaMurdaPas-java gaPas-java gaMurdaPas-java ngaPas-java caPas-java caPas_pengkal-java caPas_suku-java caMurdaPas-java jaPas-java jaPas_suku-java nyaMurdaPas-java ttaPas-java ttaPas_pengkal-java ttaPas_suku-java ttaMahapranaPas-java ttaMahapranaPas_suku-java ddaPas-java ddaPas_suku-java ddaMahapranaPas-java naMurdaPas-java taPas-java taMurdaPas-java taPas-java.base daPas-java daMahapranaPas-java naPas-java naPas_suku-java baPas-java baMurdaPas-java maPas-java maPas_suku-java yaPas-java raPas-java raAgungPas-java laPas-java laPas-java.base waPas-java waPas_suku-java saMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java oPas-java uPas-java nyaMurdaPas-java.alt baPas-java.alt pengkal-java.below";
-disabled = 1;
 name = belowForm;
 },
 {
 code = "$[script like \"javanese\"]
 ";
-disabled = 1;
 name = AllJavanese;
 },
 {
 code = "$[name like \"*pengkal*\"]
 ";
-disabled = 1;
 name = PengkalSpacing;
 },
 {
 code = "jaMahaprana_keret-java jaMahaprana_suku-java jaMahaprana_sukuMendut-java ngaLelet-java ngaLeletRaswadi-java o-java taling-java dirgaMure-java wignyan-java jaMahapranaPas_keret-java jaMahapranaPas_suku-java jaMahapranaPas_sukuMendut-java two-java three-java padaAndap-java padaMadya-java padaLuhur-java cakra-java pengkal-java pengkal_keret-java pengkal_suku-java pengkal_sukuMendut-java pengkal-java.below pengkal_keret-java.below pengkal_suku-java.below pengkal_sukuMendut-java.below cakra-java.001 cakra-java.002 suku-java
 ";
-disabled = 1;
 name = Descenders;
 }
 );
@@ -52,7 +48,6 @@ languagesystem java KAW;
 
 languagesystem bali dflt;
 ";
-disabled = 1;
 name = Languagesystems;
 },
 {
@@ -60,7 +55,6 @@ code = "lookup lookup0 {
  sub cakra-java by cakra-java.isol;
 } lookup0;
 ";
-disabled = 1;
 name = lookup0;
 }
 );
@@ -79,7 +73,6 @@ feature ss02;
 feature cv01;
 feature cv02;
 ";
-disabled = 1;
 tag = aalt;
 },
 {
@@ -96,7 +89,6 @@ sub pangkon-java [ngaLelet-java ngaLeletRaswadi-java kaMurda-java ca-java caMurd
 sub jaMahaprana-java cakra-java' lookup lookup0;
 } pref_java_01;
 ";
-disabled = 1;
 notes = "lookup JaMahaprana {\012lookupflag UseMarkFilteringSet [cakra-java];\012	sub [jaMahaprana-java] cakra-java' by cakra-java.isol;\012} JaMahaprana;\012\012lookup belowPasCakra {\012	sub caPas-java cakra-java' by cakra-java.isol;\012} belowPasCakra;";
 tag = pref;
 },
@@ -105,7 +97,6 @@ code = "script java;
 language KAW;
 
 sub pangkon-java ra-java by layar-java;";
-disabled = 1;
 tag = rphf;
 },
 {
@@ -152,7 +143,6 @@ lookup abvs_java_02 {
 	sub [na-java ja-java] pepet-java' by pepet-java.short;
 } abvs_java_02;
 ";
-disabled = 1;
 tag = abvs;
 },
 {
@@ -208,7 +198,6 @@ lookup blwf_bali_01;
 
 script java;
 lookup blwf_java_01;";
-disabled = 1;
 tag = blwf;
 },
 {
@@ -298,7 +287,6 @@ sub [nya-java naMurda-java] [kaPas-java.base kaSasakPas-java.base gaPas-java gaM
 sub [nya-java naMurda-java] [raAgungPas-java naMurdaPas-java ] cakra-java.below' by cakra-java.below.002;
 } psts_java_06;
 ";
-disabled = 1;
 tag = blws;
 },
 {
@@ -318,7 +306,6 @@ lookup psts_java_04 {
 	sub @belowForm pengkal-java' by pengkal-java.below;
 } psts_java_04;
 ";
-disabled = 1;
 tag = pstf;
 },
 {
@@ -362,7 +349,6 @@ lookup psts_java_07 {
 
 
 ";
-disabled = 1;
 tag = psts;
 },
 {
@@ -370,7 +356,6 @@ code = "sub nyaPas-java by nyaPas-java.alt;
 sub nyaMurdaPas-java by nyaMurdaPas-java.alt;
 sub baPas-java by baPas-java.alt;
 ";
-disabled = 1;
 labels = (
 {
 language = dflt;
@@ -387,7 +372,6 @@ sub saPas-java by saPas-java.alt;
 sub haPas-java by haPas-java.alt;
 sub paCerekPas-java by paCerekPas-java.alt;
 ";
-disabled = 1;
 labels = (
 {
 language = dflt;
@@ -400,7 +384,6 @@ tag = ss02;
 code = "sub nyaPas-java by nyaPas-java.alt;
 sub nyaMurdaPas-java by nyaMurdaPas-java.alt;
 sub baPas-java by baPas-java.alt;";
-disabled = 1;
 tag = cv01;
 },
 {
@@ -411,7 +394,6 @@ sub saPas-java by saPas-java.alt;
 sub haPas-java by haPas-java.alt;
 sub paCerekPas-java by paCerekPas-java.alt;
 ";
-disabled = 1;
 tag = cv02;
 },
 {
@@ -443,7 +425,6 @@ lookup CakraSpace {
 	pos @AllJavanese' <$cakra 0 $cakra 0> [cakra-java.below cakra-java.below.001 cakra-java.below.002];
 } CakraSpace;
 ";
-disabled = 1;
 tag = dist;
 }
 );
