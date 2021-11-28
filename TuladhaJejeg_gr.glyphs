@@ -1,5 +1,5 @@
 {
-.appVersion = "3100";
+.appVersion = "3102";
 .formatVersion = 3;
 DisplayStrings = (
 borneo,
@@ -445,13 +445,6 @@ lookup CakraSpace {
 ";
 disabled = 1;
 tag = dist;
-},
-{
-code = "pos [@belowForm @Descenders] daMahaprana-java' <800 0 800 0> raAgungPas-java;
-pos [@belowForm @Descenders] ja-java' gaPas-java <460 0 460 0>;
-";
-disabled = 1;
-tag = kern;
 }
 );
 fontMaster = (
@@ -28688,8 +28681,9 @@ width = 2814;
 note = uniA999.short;
 },
 {
+export = 0;
 glyphname = uniA9AB.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -28711,8 +28705,9 @@ width = 0;
 note = uniA9AB.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA9B3_uniA981.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -28765,8 +28760,9 @@ width = 0;
 note = uniA9AB_uniA9B3_uniA981.reph;
 },
 {
+export = 0;
 glyphname = uniA9ABA9B3A9B6A981.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -28830,8 +28826,9 @@ width = 0;
 note = uniA9ABA9B3A9B6A981.reph;
 },
 {
+export = 0;
 glyphname = uniA9ABA9B3A9B6A980.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -28895,8 +28892,9 @@ width = 0;
 note = uniA9ABA9B3A9B6A980.reph;
 },
 {
+export = 0;
 glyphname = uniA9ABA9B3A9B7A981.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -28965,8 +28963,9 @@ width = 0;
 note = uniA9ABA9B3A9B7A981.reph;
 },
 {
+export = 0;
 glyphname = uniA9ABA9B3A9B7A980.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29038,8 +29037,9 @@ width = 0;
 note = uniA9ABA9B3A9B7A980.reph;
 },
 {
+export = 0;
 glyphname = uniA9ABA9B3A9BCA981.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29101,8 +29101,9 @@ width = 0;
 note = uniA9ABA9B3A9BCA981.reph;
 },
 {
+export = 0;
 glyphname = uniA9ABA9B3A9BCA980.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29164,8 +29165,9 @@ width = 0;
 note = uniA9ABA9B3A9BCA980.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA9B3_uniA980.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29221,8 +29223,9 @@ width = 0;
 note = uniA9AB_uniA9B3_uniA980.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA9B6_uniA981.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29262,8 +29265,9 @@ width = 0;
 note = uniA9AB_uniA9B6_uniA981.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA9B6_uniA980.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29303,8 +29307,9 @@ width = 0;
 note = uniA9AB_uniA9B6_uniA980.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA9B7_uniA981.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29352,8 +29357,9 @@ width = 0;
 note = uniA9AB_uniA9B7_uniA981.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA9B7_uniA980.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29401,8 +29407,9 @@ width = 0;
 note = uniA9AB_uniA9B7_uniA980.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA9BC_uniA981.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29440,8 +29447,9 @@ width = 0;
 note = uniA9AB_uniA9BC_uniA981.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA9BC_uniA980.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
@@ -29479,8 +29487,9 @@ width = 0;
 note = uniA9AB_uniA9BC_uniA980.reph;
 },
 {
+export = 0;
 glyphname = uniA9AB_uniA980.reph;
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2021-11-28 08:03:53 +0000";
 layers = (
 {
 background = {
