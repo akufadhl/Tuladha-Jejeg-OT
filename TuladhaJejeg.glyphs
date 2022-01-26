@@ -2,7 +2,8 @@
 .appVersion = "3110";
 .formatVersion = 3;
 DisplayStrings = (
-"ꦄ ᬆ"
+"ꦄ ᬆ",
+"ḝ/eogonek_acutecomb ỿ"
 );
 classes = (
 {
@@ -41018,18 +41019,6 @@ width = 2440;
 );
 note = uniA9D9;
 unicode = 43481;
-},
-{
-glyphname = uni200C;
-lastChange = "2021-11-21 03:05:06 +0000";
-layers = (
-{
-layerId = m01;
-width = 0;
-}
-);
-note = uni200C;
-unicode = 8204;
 },
 {
 glyphname = zerowidthjoiner;
