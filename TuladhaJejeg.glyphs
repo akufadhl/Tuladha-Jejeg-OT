@@ -1,10 +1,6 @@
 {
-.appVersion = "3110";
+.appVersion = "3108";
 .formatVersion = 3;
-DisplayStrings = (
-"ꦄ ᬆ",
-"ḝ/eogonek_acutecomb ỿ"
-);
 classes = (
 {
 code = "aPas-java aiPas-java ePas-java iKawiPas-java iPas-java iiPas-java kaPas-java kaPas-java.base kaSasakPas-java kaSasakPas-java.base kaMurdaPas-java gaPas-java gaMurdaPas-java ngaPas-java caPas-java caPas-java.short caPas_pengkal-java caPas_suku-java caMurdaPas-java jaPas-java jaPas_suku-java nyaMurdaPas-java ttaPas-java ttaPas_pengkal-java ttaPas_suku-java ttaMahapranaPas-java ttaMahapranaPas_suku-java ddaPas-java ddaPas_suku-java ddaMahapranaPas-java naMurdaPas-java taPas-java taMurdaPas-java taPas-java.base daPas-java daMahapranaPas-java naPas-java naPas_suku-java baPas-java baMurdaPas-java maPas-java maPas_suku-java yaPas-java raPas-java raAgungPas-java laPas-java laPas-java.base waPas-java waPas_suku-java saMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java oPas-java uPas-java nyaMurdaPas-java.alt baPas-java.alt pengkal-java.below laPas-java.below
@@ -45,7 +41,7 @@ value = 2000;
 }
 );
 date = "2011-09-18 19:23:17 +0000";
-familyName = "Tuladha javanese";
+familyName = TuladhaJavanese;
 featurePrefixes = (
 {
 automatic = 1;
@@ -85,15 +81,18 @@ feature ss01;
 feature ss02;
 feature cv01;
 feature cv02;
-feature isol;
 feature init;
 feature medi;
 feature fina;
+feature calt;
+feature isol;
 ";
 tag = aalt;
 },
 {
-code = "script java;
+code = "lookup pref_bugi_01 {
+	sub e-bugi by e-bugi;
+} pref_bugi_01;
 lookup pref_java_02 {
 	@cakras = [cakra-java cakra-java.below cakra_suku-java cakra_suku-java.below cakra_suku-java.001 cakra_suku-java.002 cakra-java.001 pengkal-java pengkal-java.below pengkal-java.base pengkal-java.below.base pengkal_keret-java pengkal_keret-java.below];
 	lookupflag UseMarkFilteringSet @cakras;
@@ -107,7 +106,10 @@ ignore sub pangkon-java [pa-java paMurda-java sa-java ha-java ka-java kaSasak-ja
 sub pangkon-java [ngaLelet-java ngaLeletRaswadi-java kaMurda-java ca-java caMurda-java ja-java nyaMurda-java jaMahaprana-java nya-java tta-java ttaMahaprana-java dda-java ddaMahaprana-java  taMurda-java da-java na-java pa-java ba-java baMurda-java ma-java wa-java saMahaprana-java] cakra-java' lookup lookup0 ;
 sub jaMahaprana-java cakra-java' lookup lookup0;
 } pref_java_01;
-";
+
+script java;
+lookup pref_java_02;
+lookup pref_java_01;";
 notes = "lookup JaMahaprana {\012lookupflag UseMarkFilteringSet [cakra-java];\012	sub [jaMahaprana-java] cakra-java' by cakra-java.isol;\012} JaMahaprana;\012\012lookup belowPasCakra {\012	sub caPas-java cakra-java' by cakra-java.isol;\012} belowPasCakra;";
 tag = pref;
 },
@@ -503,484 +505,481 @@ lookup CakraSpace {
 tag = dist;
 },
 {
-code = "
-lookup Distance {
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [gaPas-java saMurdaPas-java] <20 0 20 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <79 0 79 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [caMurdaPas_suku-java] <179 0 179 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [caMurdaPas_sukuMendut-java] <72 0 72 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [naMurdaPas-java nyaPas-java.alt] <654 0 654 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [yaPas-java] <40 0 40 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [raAgungPas-java] <280 0 280 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <70 0 70 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <170 0 170 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [iPas-java] <74 0 74 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [saMahapranaPas-java.alt] <366 0 366 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [haPas-java.alt] <58 0 58 0>;
-	pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [baPas-java.alt] <160 0 160 0>;
-	pos @LetterWithBelow [kaMurda-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <84 0 84 0>;
-	pos @LetterWithBelow [kaMurda-java]' [gaPas-java saMurdaPas-java] <104 0 104 0>;
-	pos @LetterWithBelow [kaMurda-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <163 0 163 0>;
-	pos @LetterWithBelow [kaMurda-java]' [caMurdaPas_suku-java] <263 0 263 0>;
-	pos @LetterWithBelow [kaMurda-java]' [caMurdaPas_sukuMendut-java] <156 0 156 0>;
-	pos @LetterWithBelow [kaMurda-java]' [naMurdaPas-java nyaPas-java.alt] <738 0 738 0>;
-	pos @LetterWithBelow [kaMurda-java]' [yaPas-java] <124 0 124 0>;
-	pos @LetterWithBelow [kaMurda-java]' [raAgungPas-java] <364 0 364 0>;
-	pos @LetterWithBelow [kaMurda-java]' [laPas-java.base] <64 0 64 0>;
-	pos @LetterWithBelow [kaMurda-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <154 0 154 0>;
-	pos @LetterWithBelow [kaMurda-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <76 0 76 0>;
-	pos @LetterWithBelow [kaMurda-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <254 0 254 0>;
-	pos @LetterWithBelow [kaMurda-java]' [iPas-java] <158 0 158 0>;
-	pos @LetterWithBelow [kaMurda-java]' [saMahapranaPas-java.alt] <450 0 450 0>;
-	pos @LetterWithBelow [kaMurda-java]' [haPas-java.alt] <142 0 142 0>;
-	pos @LetterWithBelow [kaMurda-java]' [baPas-java.alt] <244 0 244 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <59 0 59 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [caMurdaPas_suku-java] <159 0 159 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [caMurdaPas_sukuMendut-java] <52 0 52 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [naMurdaPas-java nyaPas-java.alt] <634 0 634 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [yaPas-java] <20 0 20 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [raAgungPas-java] <260 0 260 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <50 0 50 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <150 0 150 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [iPas-java] <54 0 54 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [saMahapranaPas-java.alt] <346 0 346 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [haPas-java.alt] <38 0 38 0>;
-	pos @LetterWithBelow [ga-java caMurda-java]' [baPas-java.alt] <140 0 140 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <460 0 460 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [gaPas-java saMurdaPas-java] <480 0 480 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caPas_pengkal-java] <135 0 135 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <265 0 265 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <539 0 539 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <190 0 190 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caMurdaPas_suku-java] <639 0 639 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caMurdaPas_sukuMendut-java] <532 0 532 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <280 0 280 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <290 0 290 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <289 0 289 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [naMurdaPas-java nyaPas-java.alt] <1114 0 1114 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <217 0 217 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <250 0 250 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [yaPas-java] <500 0 500 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [raPas-java] <100 0 100 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [raAgungPas-java] <740 0 740 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [laPas-java.base] <440 0 440 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <530 0 530 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <180 0 180 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <452 0 452 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [maPas_pengkal-java] <149 0 149 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <630 0 630 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <330 0 330 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [aPas-java] <344 0 344 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [iPas-java] <534 0 534 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <50 0 50 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [paMurdaPas-java.alt] <90 0 90 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [saMahapranaPas-java.alt] <826 0 826 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [haPas-java.alt] <518 0 518 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [nyaMurdaPas-java.alt] <20 0 20 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [baPas-java.alt] <620 0 620 0>;
-	pos @LetterWithBelow [nga-java paMurda-java sa-java]' [laPas-java.below.base] <340 0 340 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [suku-java sukuMendut-java] <21 0 21 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <520 0 520 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [gaPas-java saMurdaPas-java] <540 0 540 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <60 0 60 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caPas_pengkal-java] <195 0 195 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <325 0 325 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <599 0 599 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <250 0 250 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caMurdaPas_suku-java] <699 0 699 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caMurdaPas_sukuMendut-java] <592 0 592 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <340 0 340 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <350 0 350 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <349 0 349 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ddaMahapranaPas-java] <17 0 17 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [naMurdaPas-java nyaPas-java.alt] <1174 0 1174 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <277 0 277 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <310 0 310 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [yaPas-java] <560 0 560 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [raPas-java] <160 0 160 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [raAgungPas-java] <800 0 800 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [laPas-java.base] <500 0 500 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <590 0 590 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <240 0 240 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <512 0 512 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [maPas_pengkal-java] <209 0 209 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <690 0 690 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <390 0 390 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [aPas-java] <404 0 404 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [iPas-java] <594 0 594 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [oPas-java] <20 0 20 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <110 0 110 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [paMurdaPas-java.alt] <150 0 150 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [saMahapranaPas-java.alt] <886 0 886 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [haPas-java.alt] <578 0 578 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [nyaMurdaPas-java.alt] <80 0 80 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [baPas-java.alt] <680 0 680 0>;
-	pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [laPas-java.below.base] <400 0 400 0>;
-	pos @LetterWithBelow [ja-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <440 0 440 0>;
-	pos @LetterWithBelow [ja-java]' [gaPas-java saMurdaPas-java] <460 0 460 0>;
-	pos @LetterWithBelow [ja-java]' [caPas_pengkal-java] <115 0 115 0>;
-	pos @LetterWithBelow [ja-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <245 0 245 0>;
-	pos @LetterWithBelow [ja-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <519 0 519 0>;
-	pos @LetterWithBelow [ja-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <170 0 170 0>;
-	pos @LetterWithBelow [ja-java]' [caMurdaPas_suku-java] <619 0 619 0>;
-	pos @LetterWithBelow [ja-java]' [caMurdaPas_sukuMendut-java] <512 0 512 0>;
-	pos @LetterWithBelow [ja-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <260 0 260 0>;
-	pos @LetterWithBelow [ja-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <270 0 270 0>;
-	pos @LetterWithBelow [ja-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <269 0 269 0>;
-	pos @LetterWithBelow [ja-java]' [naMurdaPas-java nyaPas-java.alt] <1094 0 1094 0>;
-	pos @LetterWithBelow [ja-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <197 0 197 0>;
-	pos @LetterWithBelow [ja-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <230 0 230 0>;
-	pos @LetterWithBelow [ja-java]' [yaPas-java] <480 0 480 0>;
-	pos @LetterWithBelow [ja-java]' [raPas-java] <80 0 80 0>;
-	pos @LetterWithBelow [ja-java]' [raAgungPas-java] <720 0 720 0>;
-	pos @LetterWithBelow [ja-java]' [laPas-java.base] <420 0 420 0>;
-	pos @LetterWithBelow [ja-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <510 0 510 0>;
-	pos @LetterWithBelow [ja-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <160 0 160 0>;
-	pos @LetterWithBelow [ja-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <432 0 432 0>;
-	pos @LetterWithBelow [ja-java]' [maPas_pengkal-java] <129 0 129 0>;
-	pos @LetterWithBelow [ja-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <610 0 610 0>;
-	pos @LetterWithBelow [ja-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <310 0 310 0>;
-	pos @LetterWithBelow [ja-java]' [aPas-java] <324 0 324 0>;
-	pos @LetterWithBelow [ja-java]' [iPas-java] <514 0 514 0>;
-	pos @LetterWithBelow [ja-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <30 0 30 0>;
-	pos @LetterWithBelow [ja-java]' [paMurdaPas-java.alt] <70 0 70 0>;
-	pos @LetterWithBelow [ja-java]' [saMahapranaPas-java.alt] <806 0 806 0>;
-	pos @LetterWithBelow [ja-java]' [haPas-java.alt] <498 0 498 0>;
-	pos @LetterWithBelow [ja-java]' [baPas-java.alt] <600 0 600 0>;
-	pos @LetterWithBelow [ja-java]' [laPas-java.below.base] <320 0 320 0>;
-	pos @LetterWithBelow [jaMahaprana-java.base jaMahaprana-java.short.base]' [naMurdaPas-java nyaPas-java.alt] <219 0 219 0>;
-	pos @LetterWithBelow [tta-java]' [suku-java sukuMendut-java] <10 0 10 0>;
-	pos @LetterWithBelow [tta-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <509 0 509 0>;
-	pos @LetterWithBelow [tta-java]' [gaPas-java saMurdaPas-java] <529 0 529 0>;
-	pos @LetterWithBelow [tta-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <49 0 49 0>;
-	pos @LetterWithBelow [tta-java]' [caPas_pengkal-java] <184 0 184 0>;
-	pos @LetterWithBelow [tta-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <314 0 314 0>;
-	pos @LetterWithBelow [tta-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <588 0 588 0>;
-	pos @LetterWithBelow [tta-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <239 0 239 0>;
-	pos @LetterWithBelow [tta-java]' [caMurdaPas_suku-java] <688 0 688 0>;
-	pos @LetterWithBelow [tta-java]' [caMurdaPas_sukuMendut-java] <581 0 581 0>;
-	pos @LetterWithBelow [tta-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <329 0 329 0>;
-	pos @LetterWithBelow [tta-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <339 0 339 0>;
-	pos @LetterWithBelow [tta-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <338 0 338 0>;
-	pos @LetterWithBelow [tta-java]' [ddaMahapranaPas-java] <6 0 6 0>;
-	pos @LetterWithBelow [tta-java]' [naMurdaPas-java nyaPas-java.alt] <1163 0 1163 0>;
-	pos @LetterWithBelow [tta-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <266 0 266 0>;
-	pos @LetterWithBelow [tta-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <299 0 299 0>;
-	pos @LetterWithBelow [tta-java]' [yaPas-java] <549 0 549 0>;
-	pos @LetterWithBelow [tta-java]' [raPas-java] <149 0 149 0>;
-	pos @LetterWithBelow [tta-java]' [raAgungPas-java] <789 0 789 0>;
-	pos @LetterWithBelow [tta-java]' [laPas-java.base] <489 0 489 0>;
-	pos @LetterWithBelow [tta-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <579 0 579 0>;
-	pos @LetterWithBelow [tta-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <229 0 229 0>;
-	pos @LetterWithBelow [tta-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <501 0 501 0>;
-	pos @LetterWithBelow [tta-java]' [maPas_pengkal-java] <198 0 198 0>;
-	pos @LetterWithBelow [tta-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <679 0 679 0>;
-	pos @LetterWithBelow [tta-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <379 0 379 0>;
-	pos @LetterWithBelow [tta-java]' [aPas-java] <393 0 393 0>;
-	pos @LetterWithBelow [tta-java]' [iPas-java] <583 0 583 0>;
-	pos @LetterWithBelow [tta-java]' [oPas-java] <9 0 9 0>;
-	pos @LetterWithBelow [tta-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <99 0 99 0>;
-	pos @LetterWithBelow [tta-java]' [paMurdaPas-java.alt] <139 0 139 0>;
-	pos @LetterWithBelow [tta-java]' [saMahapranaPas-java.alt] <875 0 875 0>;
-	pos @LetterWithBelow [tta-java]' [haPas-java.alt] <567 0 567 0>;
-	pos @LetterWithBelow [tta-java]' [nyaMurdaPas-java.alt] <69 0 69 0>;
-	pos @LetterWithBelow [tta-java]' [baPas-java.alt] <669 0 669 0>;
-	pos @LetterWithBelow [tta-java]' [laPas-java.below.base] <389 0 389 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [suku-java sukuMendut-java] <1 0 1 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <500 0 500 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [gaPas-java saMurdaPas-java] <520 0 520 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <40 0 40 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [caPas_pengkal-java] <175 0 175 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <305 0 305 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <579 0 579 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <230 0 230 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [caMurdaPas_suku-java] <679 0 679 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [caMurdaPas_sukuMendut-java] <572 0 572 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <320 0 320 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <330 0 330 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <329 0 329 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [naMurdaPas-java nyaPas-java.alt] <1154 0 1154 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <257 0 257 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <290 0 290 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [yaPas-java] <540 0 540 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [raPas-java] <140 0 140 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [raAgungPas-java] <780 0 780 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [laPas-java.base] <480 0 480 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <570 0 570 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <220 0 220 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <492 0 492 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [maPas_pengkal-java] <189 0 189 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <670 0 670 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <370 0 370 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [aPas-java] <384 0 384 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [iPas-java] <574 0 574 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <90 0 90 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [paMurdaPas-java.alt] <130 0 130 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [saMahapranaPas-java.alt] <866 0 866 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [haPas-java.alt] <558 0 558 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [nyaMurdaPas-java.alt] <60 0 60 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [baPas-java.alt] <660 0 660 0>;
-	pos @LetterWithBelow [ddaMahaprana-java]' [laPas-java.below.base] <380 0 380 0>;
-	pos @LetterWithBelow [na-java]' [pengkal-java pengkal_sukuMendut-java pengkal_keret-java ttaMahapranaPas-java daMahapranaPas-java naPas-java naPas_pengkal-java naPas_pengkal_suku-java naPas_pengkal_suku-java naPas_pengkal_sukuMendut-java naPas_suku-java naPas_sukuMendut-java maPas-java waPas-java taMurdaPas_pengkal-java taMurdaPas_pengkal_suku-java taMurdaPas_pengkal_sukuMendut-java waPas_pengkal-java waPas_pengkal_suku-java waPas_pengkal_sukuMendut-java taMurdaPas_keret-java taMurdaPas_keret-java taMurdaPas_suku-java taMurdaPas_sukuMendut-java waPas_keret-java waPas_suku-java waPas_sukuMendut-java naPas_keret-java naPas_keret-java pengkal-java.base caPas-java.short] <60 0 60 0>;
-	pos @LetterWithBelow [na-java]' [suku-java sukuMendut-java] <81 0 81 0>;
-	pos @LetterWithBelow [na-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <580 0 580 0>;
-	pos @LetterWithBelow [na-java]' [gaPas-java saMurdaPas-java] <600 0 600 0>;
-	pos @LetterWithBelow [na-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <120 0 120 0>;
-	pos @LetterWithBelow [na-java]' [caPas_pengkal-java] <255 0 255 0>;
-	pos @LetterWithBelow [na-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <385 0 385 0>;
-	pos @LetterWithBelow [na-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <659 0 659 0>;
-	pos @LetterWithBelow [na-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <310 0 310 0>;
-	pos @LetterWithBelow [na-java]' [caMurdaPas_suku-java] <759 0 759 0>;
-	pos @LetterWithBelow [na-java]' [caMurdaPas_sukuMendut-java] <652 0 652 0>;
-	pos @LetterWithBelow [na-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <400 0 400 0>;
-	pos @LetterWithBelow [na-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <410 0 410 0>;
-	pos @LetterWithBelow [na-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <409 0 409 0>;
-	pos @LetterWithBelow [na-java]' [ddaMahapranaPas-java] <77 0 77 0>;
-	pos @LetterWithBelow [na-java]' [naMurdaPas-java nyaPas-java.alt] <1234 0 1234 0>;
-	pos @LetterWithBelow [na-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <337 0 337 0>;
-	pos @LetterWithBelow [na-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <370 0 370 0>;
-	pos @LetterWithBelow [na-java]' [yaPas-java] <620 0 620 0>;
-	pos @LetterWithBelow [na-java]' [raPas-java] <220 0 220 0>;
-	pos @LetterWithBelow [na-java]' [raAgungPas-java] <860 0 860 0>;
-	pos @LetterWithBelow [na-java]' [laPas-java.base] <560 0 560 0>;
-	pos @LetterWithBelow [na-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <650 0 650 0>;
-	pos @LetterWithBelow [na-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <300 0 300 0>;
-	pos @LetterWithBelow [na-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <572 0 572 0>;
-	pos @LetterWithBelow [na-java]' [maPas_pengkal-java] <269 0 269 0>;
-	pos @LetterWithBelow [na-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <750 0 750 0>;
-	pos @LetterWithBelow [na-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <450 0 450 0>;
-	pos @LetterWithBelow [na-java]' [aPas-java] <464 0 464 0>;
-	pos @LetterWithBelow [na-java]' [iPas-java] <654 0 654 0>;
-	pos @LetterWithBelow [na-java]' [oPas-java] <80 0 80 0>;
-	pos @LetterWithBelow [na-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <170 0 170 0>;
-	pos @LetterWithBelow [na-java]' [paMurdaPas-java.alt] <210 0 210 0>;
-	pos @LetterWithBelow [na-java]' [saMahapranaPas-java.alt] <946 0 946 0>;
-	pos @LetterWithBelow [na-java]' [haPas-java.alt] <638 0 638 0>;
-	pos @LetterWithBelow [na-java]' [nyaMurdaPas-java.alt] <140 0 140 0>;
-	pos @LetterWithBelow [na-java]' [baPas-java.alt] <740 0 740 0>;
-	pos @LetterWithBelow [na-java]' [laPas-java.below] <49 0 49 0>;
-	pos @LetterWithBelow [na-java]' [laPas-java.below.base] <460 0 460 0>;
-	pos @LetterWithBelow [pa-java]' [pengkal-java pengkal_sukuMendut-java pengkal_keret-java ttaMahapranaPas-java daMahapranaPas-java naPas-java naPas_pengkal-java naPas_pengkal_suku-java naPas_pengkal_suku-java naPas_pengkal_sukuMendut-java naPas_suku-java naPas_sukuMendut-java maPas-java waPas-java taMurdaPas_pengkal-java taMurdaPas_pengkal_suku-java taMurdaPas_pengkal_sukuMendut-java waPas_pengkal-java waPas_pengkal_suku-java waPas_pengkal_sukuMendut-java taMurdaPas_keret-java taMurdaPas_keret-java taMurdaPas_suku-java taMurdaPas_sukuMendut-java waPas_keret-java waPas_suku-java waPas_sukuMendut-java naPas_keret-java naPas_keret-java pengkal-java.base caPas-java.short] <20 0 20 0>;
-	pos @LetterWithBelow [pa-java]' [suku-java sukuMendut-java] <41 0 41 0>;
-	pos @LetterWithBelow [pa-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <540 0 540 0>;
-	pos @LetterWithBelow [pa-java]' [gaPas-java saMurdaPas-java] <560 0 560 0>;
-	pos @LetterWithBelow [pa-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <80 0 80 0>;
-	pos @LetterWithBelow [pa-java]' [caPas_pengkal-java] <215 0 215 0>;
-	pos @LetterWithBelow [pa-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <345 0 345 0>;
-	pos @LetterWithBelow [pa-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <619 0 619 0>;
-	pos @LetterWithBelow [pa-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <270 0 270 0>;
-	pos @LetterWithBelow [pa-java]' [caMurdaPas_suku-java] <719 0 719 0>;
-	pos @LetterWithBelow [pa-java]' [caMurdaPas_sukuMendut-java] <612 0 612 0>;
-	pos @LetterWithBelow [pa-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <360 0 360 0>;
-	pos @LetterWithBelow [pa-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <370 0 370 0>;
-	pos @LetterWithBelow [pa-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <369 0 369 0>;
-	pos @LetterWithBelow [pa-java]' [ddaMahapranaPas-java] <37 0 37 0>;
-	pos @LetterWithBelow [pa-java]' [naMurdaPas-java nyaPas-java.alt] <1194 0 1194 0>;
-	pos @LetterWithBelow [pa-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <297 0 297 0>;
-	pos @LetterWithBelow [pa-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <330 0 330 0>;
-	pos @LetterWithBelow [pa-java]' [yaPas-java] <580 0 580 0>;
-	pos @LetterWithBelow [pa-java]' [raPas-java] <180 0 180 0>;
-	pos @LetterWithBelow [pa-java]' [raAgungPas-java] <820 0 820 0>;
-	pos @LetterWithBelow [pa-java]' [laPas-java.base] <520 0 520 0>;
-	pos @LetterWithBelow [pa-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <610 0 610 0>;
-	pos @LetterWithBelow [pa-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <260 0 260 0>;
-	pos @LetterWithBelow [pa-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <532 0 532 0>;
-	pos @LetterWithBelow [pa-java]' [maPas_pengkal-java] <229 0 229 0>;
-	pos @LetterWithBelow [pa-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <710 0 710 0>;
-	pos @LetterWithBelow [pa-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <410 0 410 0>;
-	pos @LetterWithBelow [pa-java]' [aPas-java] <424 0 424 0>;
-	pos @LetterWithBelow [pa-java]' [iPas-java] <614 0 614 0>;
-	pos @LetterWithBelow [pa-java]' [oPas-java] <40 0 40 0>;
-	pos @LetterWithBelow [pa-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <130 0 130 0>;
-	pos @LetterWithBelow [pa-java]' [paMurdaPas-java.alt] <170 0 170 0>;
-	pos @LetterWithBelow [pa-java]' [saMahapranaPas-java.alt] <906 0 906 0>;
-	pos @LetterWithBelow [pa-java]' [haPas-java.alt] <598 0 598 0>;
-	pos @LetterWithBelow [pa-java]' [nyaMurdaPas-java.alt] <100 0 100 0>;
-	pos @LetterWithBelow [pa-java]' [baPas-java.alt] <700 0 700 0>;
-	pos @LetterWithBelow [pa-java]' [laPas-java.below] <9 0 9 0>;
-	pos @LetterWithBelow [pa-java]' [laPas-java.below.base] <420 0 420 0>;
-	pos @LetterWithBelow [ba-java]' [gaPas-java saMurdaPas-java] <16 0 16 0>;
-	pos @LetterWithBelow [ba-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <75 0 75 0>;
-	pos @LetterWithBelow [ba-java]' [caMurdaPas_suku-java] <175 0 175 0>;
-	pos @LetterWithBelow [ba-java]' [caMurdaPas_sukuMendut-java] <68 0 68 0>;
-	pos @LetterWithBelow [ba-java]' [naMurdaPas-java nyaPas-java.alt] <650 0 650 0>;
-	pos @LetterWithBelow [ba-java]' [yaPas-java] <36 0 36 0>;
-	pos @LetterWithBelow [ba-java]' [raAgungPas-java] <276 0 276 0>;
-	pos @LetterWithBelow [ba-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <66 0 66 0>;
-	pos @LetterWithBelow [ba-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <166 0 166 0>;
-	pos @LetterWithBelow [ba-java]' [iPas-java] <70 0 70 0>;
-	pos @LetterWithBelow [ba-java]' [saMahapranaPas-java.alt] <362 0 362 0>;
-	pos @LetterWithBelow [ba-java]' [haPas-java.alt] <54 0 54 0>;
-	pos @LetterWithBelow [ba-java]' [baPas-java.alt] <156 0 156 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <400 0 400 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [gaPas-java saMurdaPas-java] <420 0 420 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [caPas_pengkal-java] <75 0 75 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <205 0 205 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <479 0 479 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <130 0 130 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [caMurdaPas_suku-java] <579 0 579 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [caMurdaPas_sukuMendut-java] <472 0 472 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <220 0 220 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <230 0 230 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <229 0 229 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [naMurdaPas-java nyaPas-java.alt] <1054 0 1054 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <157 0 157 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <190 0 190 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [yaPas-java] <440 0 440 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [raPas-java] <40 0 40 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [raAgungPas-java] <680 0 680 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [laPas-java.base] <380 0 380 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <470 0 470 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <120 0 120 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <392 0 392 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [maPas_pengkal-java] <89 0 89 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <570 0 570 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <270 0 270 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [aPas-java] <284 0 284 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [iPas-java] <474 0 474 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [paMurdaPas-java.alt] <30 0 30 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [saMahapranaPas-java.alt] <766 0 766 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [haPas-java.alt] <458 0 458 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [baPas-java.alt] <560 0 560 0>;
-	pos @LetterWithBelow [baMurda-java ra-java]' [laPas-java.below.base] <280 0 280 0>;
-	pos @LetterWithBelow [ya-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <39 0 39 0>;
-	pos @LetterWithBelow [ya-java]' [caMurdaPas_suku-java] <139 0 139 0>;
-	pos @LetterWithBelow [ya-java]' [caMurdaPas_sukuMendut-java] <32 0 32 0>;
-	pos @LetterWithBelow [ya-java]' [naMurdaPas-java nyaPas-java.alt] <614 0 614 0>;
-	pos @LetterWithBelow [ya-java]' [raAgungPas-java] <240 0 240 0>;
-	pos @LetterWithBelow [ya-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <30 0 30 0>;
-	pos @LetterWithBelow [ya-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <130 0 130 0>;
-	pos @LetterWithBelow [ya-java]' [iPas-java] <34 0 34 0>;
-	pos @LetterWithBelow [ya-java]' [saMahapranaPas-java.alt] <326 0 326 0>;
-	pos @LetterWithBelow [ya-java]' [haPas-java.alt] <18 0 18 0>;
-	pos @LetterWithBelow [ya-java]' [baPas-java.alt] <120 0 120 0>;
-	pos @LetterWithBelow [la-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <20 0 20 0>;
-	pos @LetterWithBelow [la-java]' [gaPas-java saMurdaPas-java] <40 0 40 0>;
-	pos @LetterWithBelow [la-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <99 0 99 0>;
-	pos @LetterWithBelow [la-java]' [caMurdaPas_suku-java] <199 0 199 0>;
-	pos @LetterWithBelow [la-java]' [caMurdaPas_sukuMendut-java] <92 0 92 0>;
-	pos @LetterWithBelow [la-java]' [naMurdaPas-java nyaPas-java.alt] <674 0 674 0>;
-	pos @LetterWithBelow [la-java]' [yaPas-java] <60 0 60 0>;
-	pos @LetterWithBelow [la-java]' [raAgungPas-java] <300 0 300 0>;
-	pos @LetterWithBelow [la-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <90 0 90 0>;
-	pos @LetterWithBelow [la-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <12 0 12 0>;
-	pos @LetterWithBelow [la-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <190 0 190 0>;
-	pos @LetterWithBelow [la-java]' [iPas-java] <94 0 94 0>;
-	pos @LetterWithBelow [la-java]' [saMahapranaPas-java.alt] <386 0 386 0>;
-	pos @LetterWithBelow [la-java]' [haPas-java.alt] <78 0 78 0>;
-	pos @LetterWithBelow [la-java]' [baPas-java.alt] <180 0 180 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <90 0 90 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [gaPas-java saMurdaPas-java] <110 0 110 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <169 0 169 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [caMurdaPas_suku-java] <269 0 269 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [caMurdaPas_sukuMendut-java] <162 0 162 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [naMurdaPas-java nyaPas-java.alt] <744 0 744 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [yaPas-java] <130 0 130 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [raAgungPas-java] <370 0 370 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [laPas-java.base] <70 0 70 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <160 0 160 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <82 0 82 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <260 0 260 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [iPas-java] <164 0 164 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [saMahapranaPas-java.alt] <456 0 456 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [haPas-java.alt] <148 0 148 0>;
-	pos @LetterWithBelow [nyaPas-java.base]' [baPas-java.alt] <250 0 250 0>;
-	pos @LetterWithBelow [paPas-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <410 0 410 0>;
-	pos @LetterWithBelow [paPas-java]' [gaPas-java saMurdaPas-java] <430 0 430 0>;
-	pos @LetterWithBelow [paPas-java]' [caPas_pengkal-java] <85 0 85 0>;
-	pos @LetterWithBelow [paPas-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <215 0 215 0>;
-	pos @LetterWithBelow [paPas-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <489 0 489 0>;
-	pos @LetterWithBelow [paPas-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <140 0 140 0>;
-	pos @LetterWithBelow [paPas-java]' [caMurdaPas_suku-java] <589 0 589 0>;
-	pos @LetterWithBelow [paPas-java]' [caMurdaPas_sukuMendut-java] <482 0 482 0>;
-	pos @LetterWithBelow [paPas-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <230 0 230 0>;
-	pos @LetterWithBelow [paPas-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <240 0 240 0>;
-	pos @LetterWithBelow [paPas-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <239 0 239 0>;
-	pos @LetterWithBelow [paPas-java]' [naMurdaPas-java nyaPas-java.alt] <1064 0 1064 0>;
-	pos @LetterWithBelow [paPas-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <167 0 167 0>;
-	pos @LetterWithBelow [paPas-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <200 0 200 0>;
-	pos @LetterWithBelow [paPas-java]' [yaPas-java] <450 0 450 0>;
-	pos @LetterWithBelow [paPas-java]' [raPas-java] <50 0 50 0>;
-	pos @LetterWithBelow [paPas-java]' [raAgungPas-java] <690 0 690 0>;
-	pos @LetterWithBelow [paPas-java]' [laPas-java.base] <390 0 390 0>;
-	pos @LetterWithBelow [paPas-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <480 0 480 0>;
-	pos @LetterWithBelow [paPas-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <130 0 130 0>;
-	pos @LetterWithBelow [paPas-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <402 0 402 0>;
-	pos @LetterWithBelow [paPas-java]' [maPas_pengkal-java] <99 0 99 0>;
-	pos @LetterWithBelow [paPas-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <580 0 580 0>;
-	pos @LetterWithBelow [paPas-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <280 0 280 0>;
-	pos @LetterWithBelow [paPas-java]' [aPas-java] <294 0 294 0>;
-	pos @LetterWithBelow [paPas-java]' [iPas-java] <484 0 484 0>;
-	pos @LetterWithBelow [paPas-java]' [paMurdaPas-java.alt] <40 0 40 0>;
-	pos @LetterWithBelow [paPas-java]' [saMahapranaPas-java.alt] <776 0 776 0>;
-	pos @LetterWithBelow [paPas-java]' [haPas-java.alt] <468 0 468 0>;
-	pos @LetterWithBelow [paPas-java]' [baPas-java.alt] <570 0 570 0>;
-	pos @LetterWithBelow [paPas-java]' [laPas-java.below.base] <290 0 290 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <370 0 370 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [gaPas-java saMurdaPas-java] <390 0 390 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [caPas_pengkal-java] <45 0 45 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <175 0 175 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <449 0 449 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <100 0 100 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [caMurdaPas_suku-java] <549 0 549 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [caMurdaPas_sukuMendut-java] <442 0 442 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <190 0 190 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <200 0 200 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <199 0 199 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [naMurdaPas-java nyaPas-java.alt] <1024 0 1024 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <127 0 127 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <160 0 160 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [yaPas-java] <410 0 410 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [raPas-java] <10 0 10 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [raAgungPas-java] <650 0 650 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [laPas-java.base] <350 0 350 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <440 0 440 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <90 0 90 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <362 0 362 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [maPas_pengkal-java] <59 0 59 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <540 0 540 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <240 0 240 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [aPas-java] <254 0 254 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [iPas-java] <444 0 444 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [saMahapranaPas-java.alt] <736 0 736 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [haPas-java.alt] <428 0 428 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [baPas-java.alt] <530 0 530 0>;
-	pos @LetterWithBelow [paMurdaPas-java]' [laPas-java.below.base] <250 0 250 0>;
-	pos @LetterWithBelow [saPas-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <85 0 85 0>;
-	pos @LetterWithBelow [saPas-java]' [gaPas-java saMurdaPas-java] <105 0 105 0>;
-	pos @LetterWithBelow [saPas-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <164 0 164 0>;
-	pos @LetterWithBelow [saPas-java]' [caMurdaPas_suku-java] <264 0 264 0>;
-	pos @LetterWithBelow [saPas-java]' [caMurdaPas_sukuMendut-java] <157 0 157 0>;
-	pos @LetterWithBelow [saPas-java]' [naMurdaPas-java nyaPas-java.alt] <739 0 739 0>;
-	pos @LetterWithBelow [saPas-java]' [yaPas-java] <125 0 125 0>;
-	pos @LetterWithBelow [saPas-java]' [raAgungPas-java] <365 0 365 0>;
-	pos @LetterWithBelow [saPas-java]' [laPas-java.base] <65 0 65 0>;
-	pos @LetterWithBelow [saPas-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <155 0 155 0>;
-	pos @LetterWithBelow [saPas-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <77 0 77 0>;
-	pos @LetterWithBelow [saPas-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <255 0 255 0>;
-	pos @LetterWithBelow [saPas-java]' [iPas-java] <159 0 159 0>;
-	pos @LetterWithBelow [saPas-java]' [saMahapranaPas-java.alt] <451 0 451 0>;
-	pos @LetterWithBelow [saPas-java]' [haPas-java.alt] <143 0 143 0>;
-	pos @LetterWithBelow [saPas-java]' [baPas-java.alt] <245 0 245 0>;
-	pos @LetterWithBelow [haPas-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <30 0 30 0>;
-	pos @LetterWithBelow [haPas-java]' [gaPas-java saMurdaPas-java] <50 0 50 0>;
-	pos @LetterWithBelow [haPas-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <109 0 109 0>;
-	pos @LetterWithBelow [haPas-java]' [caMurdaPas_suku-java] <209 0 209 0>;
-	pos @LetterWithBelow [haPas-java]' [caMurdaPas_sukuMendut-java] <102 0 102 0>;
-	pos @LetterWithBelow [haPas-java]' [naMurdaPas-java nyaPas-java.alt] <684 0 684 0>;
-	pos @LetterWithBelow [haPas-java]' [yaPas-java] <70 0 70 0>;
-	pos @LetterWithBelow [haPas-java]' [raAgungPas-java] <310 0 310 0>;
-	pos @LetterWithBelow [haPas-java]' [laPas-java.base] <10 0 10 0>;
-	pos @LetterWithBelow [haPas-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <100 0 100 0>;
-	pos @LetterWithBelow [haPas-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <22 0 22 0>;
-	pos @LetterWithBelow [haPas-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <200 0 200 0>;
-	pos @LetterWithBelow [haPas-java]' [iPas-java] <104 0 104 0>;
-	pos @LetterWithBelow [haPas-java]' [saMahapranaPas-java.alt] <396 0 396 0>;
-	pos @LetterWithBelow [haPas-java]' [haPas-java.alt] <88 0 88 0>;
-	pos @LetterWithBelow [haPas-java]' [baPas-java.alt] <190 0 190 0>;
-	pos @LetterWithBelow [jaMahapranaPas-java.short.base]' [naMurdaPas-java nyaPas-java.alt] <374 0 374 0>;
-	pos @LetterWithBelow [jaMahapranaPas-java.short.base]' [saMahapranaPas-java.alt] <86 0 86 0>;
-} Distance;";
+code = "pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [gaPas-java saMurdaPas-java] <20 0 20 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <79 0 79 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [caMurdaPas_suku-java] <179 0 179 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [caMurdaPas_sukuMendut-java] <72 0 72 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [naMurdaPas-java nyaPas-java.alt] <654 0 654 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [yaPas-java] <40 0 40 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [raAgungPas-java] <280 0 280 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <70 0 70 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <170 0 170 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [iPas-java] <74 0 74 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [saMahapranaPas-java.alt] <366 0 366 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [haPas-java.alt] <58 0 58 0>;
+pos @LetterWithBelow [ka-java gaMurda-java ta-java ya-java ha-java]' [baPas-java.alt] <160 0 160 0>;
+pos @LetterWithBelow [kaMurda-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <84 0 84 0>;
+pos @LetterWithBelow [kaMurda-java]' [gaPas-java saMurdaPas-java] <104 0 104 0>;
+pos @LetterWithBelow [kaMurda-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <163 0 163 0>;
+pos @LetterWithBelow [kaMurda-java]' [caMurdaPas_suku-java] <263 0 263 0>;
+pos @LetterWithBelow [kaMurda-java]' [caMurdaPas_sukuMendut-java] <156 0 156 0>;
+pos @LetterWithBelow [kaMurda-java]' [naMurdaPas-java nyaPas-java.alt] <738 0 738 0>;
+pos @LetterWithBelow [kaMurda-java]' [yaPas-java] <124 0 124 0>;
+pos @LetterWithBelow [kaMurda-java]' [raAgungPas-java] <364 0 364 0>;
+pos @LetterWithBelow [kaMurda-java]' [laPas-java.base] <64 0 64 0>;
+pos @LetterWithBelow [kaMurda-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <154 0 154 0>;
+pos @LetterWithBelow [kaMurda-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <76 0 76 0>;
+pos @LetterWithBelow [kaMurda-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <254 0 254 0>;
+pos @LetterWithBelow [kaMurda-java]' [iPas-java] <158 0 158 0>;
+pos @LetterWithBelow [kaMurda-java]' [saMahapranaPas-java.alt] <450 0 450 0>;
+pos @LetterWithBelow [kaMurda-java]' [haPas-java.alt] <142 0 142 0>;
+pos @LetterWithBelow [kaMurda-java]' [baPas-java.alt] <244 0 244 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <59 0 59 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [caMurdaPas_suku-java] <159 0 159 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [caMurdaPas_sukuMendut-java] <52 0 52 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [naMurdaPas-java nyaPas-java.alt] <634 0 634 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [yaPas-java] <20 0 20 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [raAgungPas-java] <260 0 260 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <50 0 50 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <150 0 150 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [iPas-java] <54 0 54 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [saMahapranaPas-java.alt] <346 0 346 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [haPas-java.alt] <38 0 38 0>;
+pos @LetterWithBelow [ga-java caMurda-java]' [baPas-java.alt] <140 0 140 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <460 0 460 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [gaPas-java saMurdaPas-java] <480 0 480 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caPas_pengkal-java] <135 0 135 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <265 0 265 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <539 0 539 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <190 0 190 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caMurdaPas_suku-java] <639 0 639 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [caMurdaPas_sukuMendut-java] <532 0 532 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <280 0 280 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <290 0 290 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <289 0 289 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [naMurdaPas-java nyaPas-java.alt] <1114 0 1114 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <217 0 217 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <250 0 250 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [yaPas-java] <500 0 500 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [raPas-java] <100 0 100 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [raAgungPas-java] <740 0 740 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [laPas-java.base] <440 0 440 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <530 0 530 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <180 0 180 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <452 0 452 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [maPas_pengkal-java] <149 0 149 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <630 0 630 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <330 0 330 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [aPas-java] <344 0 344 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [iPas-java] <534 0 534 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <50 0 50 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [paMurdaPas-java.alt] <90 0 90 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [saMahapranaPas-java.alt] <826 0 826 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [haPas-java.alt] <518 0 518 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [nyaMurdaPas-java.alt] <20 0 20 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [baPas-java.alt] <620 0 620 0>;
+pos @LetterWithBelow [nga-java paMurda-java sa-java]' [laPas-java.below.base] <340 0 340 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [suku-java sukuMendut-java] <21 0 21 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <520 0 520 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [gaPas-java saMurdaPas-java] <540 0 540 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <60 0 60 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caPas_pengkal-java] <195 0 195 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <325 0 325 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <599 0 599 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <250 0 250 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caMurdaPas_suku-java] <699 0 699 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [caMurdaPas_sukuMendut-java] <592 0 592 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <340 0 340 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <350 0 350 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <349 0 349 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ddaMahapranaPas-java] <17 0 17 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [naMurdaPas-java nyaPas-java.alt] <1174 0 1174 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <277 0 277 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <310 0 310 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [yaPas-java] <560 0 560 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [raPas-java] <160 0 160 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [raAgungPas-java] <800 0 800 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [laPas-java.base] <500 0 500 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <590 0 590 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <240 0 240 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <512 0 512 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [maPas_pengkal-java] <209 0 209 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <690 0 690 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <390 0 390 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [aPas-java] <404 0 404 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [iPas-java] <594 0 594 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [oPas-java] <20 0 20 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <110 0 110 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [paMurdaPas-java.alt] <150 0 150 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [saMahapranaPas-java.alt] <886 0 886 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [haPas-java.alt] <578 0 578 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [nyaMurdaPas-java.alt] <80 0 80 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [baPas-java.alt] <680 0 680 0>;
+pos @LetterWithBelow [ca-java ttaMahaprana-java dda-java da-java daMahaprana-java ma-java wa-java]' [laPas-java.below.base] <400 0 400 0>;
+pos @LetterWithBelow [ja-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <440 0 440 0>;
+pos @LetterWithBelow [ja-java]' [gaPas-java saMurdaPas-java] <460 0 460 0>;
+pos @LetterWithBelow [ja-java]' [caPas_pengkal-java] <115 0 115 0>;
+pos @LetterWithBelow [ja-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <245 0 245 0>;
+pos @LetterWithBelow [ja-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <519 0 519 0>;
+pos @LetterWithBelow [ja-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <170 0 170 0>;
+pos @LetterWithBelow [ja-java]' [caMurdaPas_suku-java] <619 0 619 0>;
+pos @LetterWithBelow [ja-java]' [caMurdaPas_sukuMendut-java] <512 0 512 0>;
+pos @LetterWithBelow [ja-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <260 0 260 0>;
+pos @LetterWithBelow [ja-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <270 0 270 0>;
+pos @LetterWithBelow [ja-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <269 0 269 0>;
+pos @LetterWithBelow [ja-java]' [naMurdaPas-java nyaPas-java.alt] <1094 0 1094 0>;
+pos @LetterWithBelow [ja-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <197 0 197 0>;
+pos @LetterWithBelow [ja-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <230 0 230 0>;
+pos @LetterWithBelow [ja-java]' [yaPas-java] <480 0 480 0>;
+pos @LetterWithBelow [ja-java]' [raPas-java] <80 0 80 0>;
+pos @LetterWithBelow [ja-java]' [raAgungPas-java] <720 0 720 0>;
+pos @LetterWithBelow [ja-java]' [laPas-java.base] <420 0 420 0>;
+pos @LetterWithBelow [ja-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <510 0 510 0>;
+pos @LetterWithBelow [ja-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <160 0 160 0>;
+pos @LetterWithBelow [ja-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <432 0 432 0>;
+pos @LetterWithBelow [ja-java]' [maPas_pengkal-java] <129 0 129 0>;
+pos @LetterWithBelow [ja-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <610 0 610 0>;
+pos @LetterWithBelow [ja-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <310 0 310 0>;
+pos @LetterWithBelow [ja-java]' [aPas-java] <324 0 324 0>;
+pos @LetterWithBelow [ja-java]' [iPas-java] <514 0 514 0>;
+pos @LetterWithBelow [ja-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <30 0 30 0>;
+pos @LetterWithBelow [ja-java]' [paMurdaPas-java.alt] <70 0 70 0>;
+pos @LetterWithBelow [ja-java]' [saMahapranaPas-java.alt] <806 0 806 0>;
+pos @LetterWithBelow [ja-java]' [haPas-java.alt] <498 0 498 0>;
+pos @LetterWithBelow [ja-java]' [baPas-java.alt] <600 0 600 0>;
+pos @LetterWithBelow [ja-java]' [laPas-java.below.base] <320 0 320 0>;
+pos @LetterWithBelow [jaMahaprana-java.base jaMahaprana-java.short.base]' [naMurdaPas-java nyaPas-java.alt] <219 0 219 0>;
+pos @LetterWithBelow [tta-java]' [suku-java sukuMendut-java] <10 0 10 0>;
+pos @LetterWithBelow [tta-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <509 0 509 0>;
+pos @LetterWithBelow [tta-java]' [gaPas-java saMurdaPas-java] <529 0 529 0>;
+pos @LetterWithBelow [tta-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <49 0 49 0>;
+pos @LetterWithBelow [tta-java]' [caPas_pengkal-java] <184 0 184 0>;
+pos @LetterWithBelow [tta-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <314 0 314 0>;
+pos @LetterWithBelow [tta-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <588 0 588 0>;
+pos @LetterWithBelow [tta-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <239 0 239 0>;
+pos @LetterWithBelow [tta-java]' [caMurdaPas_suku-java] <688 0 688 0>;
+pos @LetterWithBelow [tta-java]' [caMurdaPas_sukuMendut-java] <581 0 581 0>;
+pos @LetterWithBelow [tta-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <329 0 329 0>;
+pos @LetterWithBelow [tta-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <339 0 339 0>;
+pos @LetterWithBelow [tta-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <338 0 338 0>;
+pos @LetterWithBelow [tta-java]' [ddaMahapranaPas-java] <6 0 6 0>;
+pos @LetterWithBelow [tta-java]' [naMurdaPas-java nyaPas-java.alt] <1163 0 1163 0>;
+pos @LetterWithBelow [tta-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <266 0 266 0>;
+pos @LetterWithBelow [tta-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <299 0 299 0>;
+pos @LetterWithBelow [tta-java]' [yaPas-java] <549 0 549 0>;
+pos @LetterWithBelow [tta-java]' [raPas-java] <149 0 149 0>;
+pos @LetterWithBelow [tta-java]' [raAgungPas-java] <789 0 789 0>;
+pos @LetterWithBelow [tta-java]' [laPas-java.base] <489 0 489 0>;
+pos @LetterWithBelow [tta-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <579 0 579 0>;
+pos @LetterWithBelow [tta-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <229 0 229 0>;
+pos @LetterWithBelow [tta-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <501 0 501 0>;
+pos @LetterWithBelow [tta-java]' [maPas_pengkal-java] <198 0 198 0>;
+pos @LetterWithBelow [tta-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <679 0 679 0>;
+pos @LetterWithBelow [tta-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <379 0 379 0>;
+pos @LetterWithBelow [tta-java]' [aPas-java] <393 0 393 0>;
+pos @LetterWithBelow [tta-java]' [iPas-java] <583 0 583 0>;
+pos @LetterWithBelow [tta-java]' [oPas-java] <9 0 9 0>;
+pos @LetterWithBelow [tta-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <99 0 99 0>;
+pos @LetterWithBelow [tta-java]' [paMurdaPas-java.alt] <139 0 139 0>;
+pos @LetterWithBelow [tta-java]' [saMahapranaPas-java.alt] <875 0 875 0>;
+pos @LetterWithBelow [tta-java]' [haPas-java.alt] <567 0 567 0>;
+pos @LetterWithBelow [tta-java]' [nyaMurdaPas-java.alt] <69 0 69 0>;
+pos @LetterWithBelow [tta-java]' [baPas-java.alt] <669 0 669 0>;
+pos @LetterWithBelow [tta-java]' [laPas-java.below.base] <389 0 389 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [suku-java sukuMendut-java] <1 0 1 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <500 0 500 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [gaPas-java saMurdaPas-java] <520 0 520 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <40 0 40 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [caPas_pengkal-java] <175 0 175 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <305 0 305 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <579 0 579 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <230 0 230 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [caMurdaPas_suku-java] <679 0 679 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [caMurdaPas_sukuMendut-java] <572 0 572 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <320 0 320 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <330 0 330 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <329 0 329 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [naMurdaPas-java nyaPas-java.alt] <1154 0 1154 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <257 0 257 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <290 0 290 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [yaPas-java] <540 0 540 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [raPas-java] <140 0 140 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [raAgungPas-java] <780 0 780 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [laPas-java.base] <480 0 480 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <570 0 570 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <220 0 220 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <492 0 492 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [maPas_pengkal-java] <189 0 189 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <670 0 670 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <370 0 370 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [aPas-java] <384 0 384 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [iPas-java] <574 0 574 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <90 0 90 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [paMurdaPas-java.alt] <130 0 130 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [saMahapranaPas-java.alt] <866 0 866 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [haPas-java.alt] <558 0 558 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [nyaMurdaPas-java.alt] <60 0 60 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [baPas-java.alt] <660 0 660 0>;
+pos @LetterWithBelow [ddaMahaprana-java]' [laPas-java.below.base] <380 0 380 0>;
+pos @LetterWithBelow [na-java]' [pengkal-java pengkal_sukuMendut-java pengkal_keret-java ttaMahapranaPas-java daMahapranaPas-java naPas-java naPas_pengkal-java naPas_pengkal_suku-java naPas_pengkal_suku-java naPas_pengkal_sukuMendut-java naPas_suku-java naPas_sukuMendut-java maPas-java waPas-java taMurdaPas_pengkal-java taMurdaPas_pengkal_suku-java taMurdaPas_pengkal_sukuMendut-java waPas_pengkal-java waPas_pengkal_suku-java waPas_pengkal_sukuMendut-java taMurdaPas_keret-java taMurdaPas_keret-java taMurdaPas_suku-java taMurdaPas_sukuMendut-java waPas_keret-java waPas_suku-java waPas_sukuMendut-java naPas_keret-java naPas_keret-java pengkal-java.base caPas-java.short] <60 0 60 0>;
+pos @LetterWithBelow [na-java]' [suku-java sukuMendut-java] <81 0 81 0>;
+pos @LetterWithBelow [na-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <580 0 580 0>;
+pos @LetterWithBelow [na-java]' [gaPas-java saMurdaPas-java] <600 0 600 0>;
+pos @LetterWithBelow [na-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <120 0 120 0>;
+pos @LetterWithBelow [na-java]' [caPas_pengkal-java] <255 0 255 0>;
+pos @LetterWithBelow [na-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <385 0 385 0>;
+pos @LetterWithBelow [na-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <659 0 659 0>;
+pos @LetterWithBelow [na-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <310 0 310 0>;
+pos @LetterWithBelow [na-java]' [caMurdaPas_suku-java] <759 0 759 0>;
+pos @LetterWithBelow [na-java]' [caMurdaPas_sukuMendut-java] <652 0 652 0>;
+pos @LetterWithBelow [na-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <400 0 400 0>;
+pos @LetterWithBelow [na-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <410 0 410 0>;
+pos @LetterWithBelow [na-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <409 0 409 0>;
+pos @LetterWithBelow [na-java]' [ddaMahapranaPas-java] <77 0 77 0>;
+pos @LetterWithBelow [na-java]' [naMurdaPas-java nyaPas-java.alt] <1234 0 1234 0>;
+pos @LetterWithBelow [na-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <337 0 337 0>;
+pos @LetterWithBelow [na-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <370 0 370 0>;
+pos @LetterWithBelow [na-java]' [yaPas-java] <620 0 620 0>;
+pos @LetterWithBelow [na-java]' [raPas-java] <220 0 220 0>;
+pos @LetterWithBelow [na-java]' [raAgungPas-java] <860 0 860 0>;
+pos @LetterWithBelow [na-java]' [laPas-java.base] <560 0 560 0>;
+pos @LetterWithBelow [na-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <650 0 650 0>;
+pos @LetterWithBelow [na-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <300 0 300 0>;
+pos @LetterWithBelow [na-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <572 0 572 0>;
+pos @LetterWithBelow [na-java]' [maPas_pengkal-java] <269 0 269 0>;
+pos @LetterWithBelow [na-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <750 0 750 0>;
+pos @LetterWithBelow [na-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <450 0 450 0>;
+pos @LetterWithBelow [na-java]' [aPas-java] <464 0 464 0>;
+pos @LetterWithBelow [na-java]' [iPas-java] <654 0 654 0>;
+pos @LetterWithBelow [na-java]' [oPas-java] <80 0 80 0>;
+pos @LetterWithBelow [na-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <170 0 170 0>;
+pos @LetterWithBelow [na-java]' [paMurdaPas-java.alt] <210 0 210 0>;
+pos @LetterWithBelow [na-java]' [saMahapranaPas-java.alt] <946 0 946 0>;
+pos @LetterWithBelow [na-java]' [haPas-java.alt] <638 0 638 0>;
+pos @LetterWithBelow [na-java]' [nyaMurdaPas-java.alt] <140 0 140 0>;
+pos @LetterWithBelow [na-java]' [baPas-java.alt] <740 0 740 0>;
+pos @LetterWithBelow [na-java]' [laPas-java.below] <49 0 49 0>;
+pos @LetterWithBelow [na-java]' [laPas-java.below.base] <460 0 460 0>;
+pos @LetterWithBelow [pa-java]' [pengkal-java pengkal_sukuMendut-java pengkal_keret-java ttaMahapranaPas-java daMahapranaPas-java naPas-java naPas_pengkal-java naPas_pengkal_suku-java naPas_pengkal_suku-java naPas_pengkal_sukuMendut-java naPas_suku-java naPas_sukuMendut-java maPas-java waPas-java taMurdaPas_pengkal-java taMurdaPas_pengkal_suku-java taMurdaPas_pengkal_sukuMendut-java waPas_pengkal-java waPas_pengkal_suku-java waPas_pengkal_sukuMendut-java taMurdaPas_keret-java taMurdaPas_keret-java taMurdaPas_suku-java taMurdaPas_sukuMendut-java waPas_keret-java waPas_suku-java waPas_sukuMendut-java naPas_keret-java naPas_keret-java pengkal-java.base caPas-java.short] <20 0 20 0>;
+pos @LetterWithBelow [pa-java]' [suku-java sukuMendut-java] <41 0 41 0>;
+pos @LetterWithBelow [pa-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <540 0 540 0>;
+pos @LetterWithBelow [pa-java]' [gaPas-java saMurdaPas-java] <560 0 560 0>;
+pos @LetterWithBelow [pa-java]' [ngaPas-java caPas-java baMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java uPas-java] <80 0 80 0>;
+pos @LetterWithBelow [pa-java]' [caPas_pengkal-java] <215 0 215 0>;
+pos @LetterWithBelow [pa-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <345 0 345 0>;
+pos @LetterWithBelow [pa-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <619 0 619 0>;
+pos @LetterWithBelow [pa-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <270 0 270 0>;
+pos @LetterWithBelow [pa-java]' [caMurdaPas_suku-java] <719 0 719 0>;
+pos @LetterWithBelow [pa-java]' [caMurdaPas_sukuMendut-java] <612 0 612 0>;
+pos @LetterWithBelow [pa-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <360 0 360 0>;
+pos @LetterWithBelow [pa-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <370 0 370 0>;
+pos @LetterWithBelow [pa-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <369 0 369 0>;
+pos @LetterWithBelow [pa-java]' [ddaMahapranaPas-java] <37 0 37 0>;
+pos @LetterWithBelow [pa-java]' [naMurdaPas-java nyaPas-java.alt] <1194 0 1194 0>;
+pos @LetterWithBelow [pa-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <297 0 297 0>;
+pos @LetterWithBelow [pa-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <330 0 330 0>;
+pos @LetterWithBelow [pa-java]' [yaPas-java] <580 0 580 0>;
+pos @LetterWithBelow [pa-java]' [raPas-java] <180 0 180 0>;
+pos @LetterWithBelow [pa-java]' [raAgungPas-java] <820 0 820 0>;
+pos @LetterWithBelow [pa-java]' [laPas-java.base] <520 0 520 0>;
+pos @LetterWithBelow [pa-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <610 0 610 0>;
+pos @LetterWithBelow [pa-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <260 0 260 0>;
+pos @LetterWithBelow [pa-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <532 0 532 0>;
+pos @LetterWithBelow [pa-java]' [maPas_pengkal-java] <229 0 229 0>;
+pos @LetterWithBelow [pa-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <710 0 710 0>;
+pos @LetterWithBelow [pa-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <410 0 410 0>;
+pos @LetterWithBelow [pa-java]' [aPas-java] <424 0 424 0>;
+pos @LetterWithBelow [pa-java]' [iPas-java] <614 0 614 0>;
+pos @LetterWithBelow [pa-java]' [oPas-java] <40 0 40 0>;
+pos @LetterWithBelow [pa-java]' [paPas-java.alt saPas-java.alt paCerekPas-java.alt] <130 0 130 0>;
+pos @LetterWithBelow [pa-java]' [paMurdaPas-java.alt] <170 0 170 0>;
+pos @LetterWithBelow [pa-java]' [saMahapranaPas-java.alt] <906 0 906 0>;
+pos @LetterWithBelow [pa-java]' [haPas-java.alt] <598 0 598 0>;
+pos @LetterWithBelow [pa-java]' [nyaMurdaPas-java.alt] <100 0 100 0>;
+pos @LetterWithBelow [pa-java]' [baPas-java.alt] <700 0 700 0>;
+pos @LetterWithBelow [pa-java]' [laPas-java.below] <9 0 9 0>;
+pos @LetterWithBelow [pa-java]' [laPas-java.below.base] <420 0 420 0>;
+pos @LetterWithBelow [ba-java]' [gaPas-java saMurdaPas-java] <16 0 16 0>;
+pos @LetterWithBelow [ba-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <75 0 75 0>;
+pos @LetterWithBelow [ba-java]' [caMurdaPas_suku-java] <175 0 175 0>;
+pos @LetterWithBelow [ba-java]' [caMurdaPas_sukuMendut-java] <68 0 68 0>;
+pos @LetterWithBelow [ba-java]' [naMurdaPas-java nyaPas-java.alt] <650 0 650 0>;
+pos @LetterWithBelow [ba-java]' [yaPas-java] <36 0 36 0>;
+pos @LetterWithBelow [ba-java]' [raAgungPas-java] <276 0 276 0>;
+pos @LetterWithBelow [ba-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <66 0 66 0>;
+pos @LetterWithBelow [ba-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <166 0 166 0>;
+pos @LetterWithBelow [ba-java]' [iPas-java] <70 0 70 0>;
+pos @LetterWithBelow [ba-java]' [saMahapranaPas-java.alt] <362 0 362 0>;
+pos @LetterWithBelow [ba-java]' [haPas-java.alt] <54 0 54 0>;
+pos @LetterWithBelow [ba-java]' [baPas-java.alt] <156 0 156 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <400 0 400 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [gaPas-java saMurdaPas-java] <420 0 420 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [caPas_pengkal-java] <75 0 75 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <205 0 205 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <479 0 479 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <130 0 130 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [caMurdaPas_suku-java] <579 0 579 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [caMurdaPas_sukuMendut-java] <472 0 472 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <220 0 220 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <230 0 230 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <229 0 229 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [naMurdaPas-java nyaPas-java.alt] <1054 0 1054 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <157 0 157 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <190 0 190 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [yaPas-java] <440 0 440 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [raPas-java] <40 0 40 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [raAgungPas-java] <680 0 680 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [laPas-java.base] <380 0 380 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <470 0 470 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <120 0 120 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <392 0 392 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [maPas_pengkal-java] <89 0 89 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <570 0 570 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <270 0 270 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [aPas-java] <284 0 284 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [iPas-java] <474 0 474 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [paMurdaPas-java.alt] <30 0 30 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [saMahapranaPas-java.alt] <766 0 766 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [haPas-java.alt] <458 0 458 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [baPas-java.alt] <560 0 560 0>;
+pos @LetterWithBelow [baMurda-java ra-java]' [laPas-java.below.base] <280 0 280 0>;
+pos @LetterWithBelow [ya-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <39 0 39 0>;
+pos @LetterWithBelow [ya-java]' [caMurdaPas_suku-java] <139 0 139 0>;
+pos @LetterWithBelow [ya-java]' [caMurdaPas_sukuMendut-java] <32 0 32 0>;
+pos @LetterWithBelow [ya-java]' [naMurdaPas-java nyaPas-java.alt] <614 0 614 0>;
+pos @LetterWithBelow [ya-java]' [raAgungPas-java] <240 0 240 0>;
+pos @LetterWithBelow [ya-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <30 0 30 0>;
+pos @LetterWithBelow [ya-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <130 0 130 0>;
+pos @LetterWithBelow [ya-java]' [iPas-java] <34 0 34 0>;
+pos @LetterWithBelow [ya-java]' [saMahapranaPas-java.alt] <326 0 326 0>;
+pos @LetterWithBelow [ya-java]' [haPas-java.alt] <18 0 18 0>;
+pos @LetterWithBelow [ya-java]' [baPas-java.alt] <120 0 120 0>;
+pos @LetterWithBelow [la-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <20 0 20 0>;
+pos @LetterWithBelow [la-java]' [gaPas-java saMurdaPas-java] <40 0 40 0>;
+pos @LetterWithBelow [la-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <99 0 99 0>;
+pos @LetterWithBelow [la-java]' [caMurdaPas_suku-java] <199 0 199 0>;
+pos @LetterWithBelow [la-java]' [caMurdaPas_sukuMendut-java] <92 0 92 0>;
+pos @LetterWithBelow [la-java]' [naMurdaPas-java nyaPas-java.alt] <674 0 674 0>;
+pos @LetterWithBelow [la-java]' [yaPas-java] <60 0 60 0>;
+pos @LetterWithBelow [la-java]' [raAgungPas-java] <300 0 300 0>;
+pos @LetterWithBelow [la-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <90 0 90 0>;
+pos @LetterWithBelow [la-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <12 0 12 0>;
+pos @LetterWithBelow [la-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <190 0 190 0>;
+pos @LetterWithBelow [la-java]' [iPas-java] <94 0 94 0>;
+pos @LetterWithBelow [la-java]' [saMahapranaPas-java.alt] <386 0 386 0>;
+pos @LetterWithBelow [la-java]' [haPas-java.alt] <78 0 78 0>;
+pos @LetterWithBelow [la-java]' [baPas-java.alt] <180 0 180 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <90 0 90 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [gaPas-java saMurdaPas-java] <110 0 110 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <169 0 169 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [caMurdaPas_suku-java] <269 0 269 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [caMurdaPas_sukuMendut-java] <162 0 162 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [naMurdaPas-java nyaPas-java.alt] <744 0 744 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [yaPas-java] <130 0 130 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [raAgungPas-java] <370 0 370 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [laPas-java.base] <70 0 70 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <160 0 160 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <82 0 82 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <260 0 260 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [iPas-java] <164 0 164 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [saMahapranaPas-java.alt] <456 0 456 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [haPas-java.alt] <148 0 148 0>;
+pos @LetterWithBelow [nyaPas-java.base]' [baPas-java.alt] <250 0 250 0>;
+pos @LetterWithBelow [paPas-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <410 0 410 0>;
+pos @LetterWithBelow [paPas-java]' [gaPas-java saMurdaPas-java] <430 0 430 0>;
+pos @LetterWithBelow [paPas-java]' [caPas_pengkal-java] <85 0 85 0>;
+pos @LetterWithBelow [paPas-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <215 0 215 0>;
+pos @LetterWithBelow [paPas-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <489 0 489 0>;
+pos @LetterWithBelow [paPas-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <140 0 140 0>;
+pos @LetterWithBelow [paPas-java]' [caMurdaPas_suku-java] <589 0 589 0>;
+pos @LetterWithBelow [paPas-java]' [caMurdaPas_sukuMendut-java] <482 0 482 0>;
+pos @LetterWithBelow [paPas-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <230 0 230 0>;
+pos @LetterWithBelow [paPas-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <240 0 240 0>;
+pos @LetterWithBelow [paPas-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <239 0 239 0>;
+pos @LetterWithBelow [paPas-java]' [naMurdaPas-java nyaPas-java.alt] <1064 0 1064 0>;
+pos @LetterWithBelow [paPas-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <167 0 167 0>;
+pos @LetterWithBelow [paPas-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <200 0 200 0>;
+pos @LetterWithBelow [paPas-java]' [yaPas-java] <450 0 450 0>;
+pos @LetterWithBelow [paPas-java]' [raPas-java] <50 0 50 0>;
+pos @LetterWithBelow [paPas-java]' [raAgungPas-java] <690 0 690 0>;
+pos @LetterWithBelow [paPas-java]' [laPas-java.base] <390 0 390 0>;
+pos @LetterWithBelow [paPas-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <480 0 480 0>;
+pos @LetterWithBelow [paPas-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <130 0 130 0>;
+pos @LetterWithBelow [paPas-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <402 0 402 0>;
+pos @LetterWithBelow [paPas-java]' [maPas_pengkal-java] <99 0 99 0>;
+pos @LetterWithBelow [paPas-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <580 0 580 0>;
+pos @LetterWithBelow [paPas-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <280 0 280 0>;
+pos @LetterWithBelow [paPas-java]' [aPas-java] <294 0 294 0>;
+pos @LetterWithBelow [paPas-java]' [iPas-java] <484 0 484 0>;
+pos @LetterWithBelow [paPas-java]' [paMurdaPas-java.alt] <40 0 40 0>;
+pos @LetterWithBelow [paPas-java]' [saMahapranaPas-java.alt] <776 0 776 0>;
+pos @LetterWithBelow [paPas-java]' [haPas-java.alt] <468 0 468 0>;
+pos @LetterWithBelow [paPas-java]' [baPas-java.alt] <570 0 570 0>;
+pos @LetterWithBelow [paPas-java]' [laPas-java.below.base] <290 0 290 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <370 0 370 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [gaPas-java saMurdaPas-java] <390 0 390 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [caPas_pengkal-java] <45 0 45 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caPas_keret-java] <175 0 175 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <449 0 449 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [caMurdaPas_suku-java caMurdaPas_sukuMendut-java] <100 0 100 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [caMurdaPas_suku-java] <549 0 549 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [caMurdaPas_sukuMendut-java] <442 0 442 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [jaPas-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java] <190 0 190 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java jaPas_keret-java nyaMurdaPas_keret-java] <200 0 200 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [jaPas_pengkal_sukuMendut-java nyaMurdaPas_pengkal_sukuMendut-java] <199 0 199 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [naMurdaPas-java nyaPas-java.alt] <1024 0 1024 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [daPas-java daPas_cakra-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java] <127 0 127 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [daPas_pengkal-java daPas_pengkal_suku-java daPas_keret-java] <160 0 160 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [yaPas-java] <410 0 410 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [raPas-java] <10 0 10 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [raAgungPas-java] <650 0 650 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [laPas-java.base] <350 0 350 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <440 0 440 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ttaMahapranaPas_keret-java maPas_keret-java] <90 0 90 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <362 0 362 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [maPas_pengkal-java] <59 0 59 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <540 0 540 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java] <240 0 240 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [aPas-java] <254 0 254 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [iPas-java] <444 0 444 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [saMahapranaPas-java.alt] <736 0 736 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [haPas-java.alt] <428 0 428 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [baPas-java.alt] <530 0 530 0>;
+pos @LetterWithBelow [paMurdaPas-java]' [laPas-java.below.base] <250 0 250 0>;
+pos @LetterWithBelow [saPas-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <85 0 85 0>;
+pos @LetterWithBelow [saPas-java]' [gaPas-java saMurdaPas-java] <105 0 105 0>;
+pos @LetterWithBelow [saPas-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <164 0 164 0>;
+pos @LetterWithBelow [saPas-java]' [caMurdaPas_suku-java] <264 0 264 0>;
+pos @LetterWithBelow [saPas-java]' [caMurdaPas_sukuMendut-java] <157 0 157 0>;
+pos @LetterWithBelow [saPas-java]' [naMurdaPas-java nyaPas-java.alt] <739 0 739 0>;
+pos @LetterWithBelow [saPas-java]' [yaPas-java] <125 0 125 0>;
+pos @LetterWithBelow [saPas-java]' [raAgungPas-java] <365 0 365 0>;
+pos @LetterWithBelow [saPas-java]' [laPas-java.base] <65 0 65 0>;
+pos @LetterWithBelow [saPas-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <155 0 155 0>;
+pos @LetterWithBelow [saPas-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <77 0 77 0>;
+pos @LetterWithBelow [saPas-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <255 0 255 0>;
+pos @LetterWithBelow [saPas-java]' [iPas-java] <159 0 159 0>;
+pos @LetterWithBelow [saPas-java]' [saMahapranaPas-java.alt] <451 0 451 0>;
+pos @LetterWithBelow [saPas-java]' [haPas-java.alt] <143 0 143 0>;
+pos @LetterWithBelow [saPas-java]' [baPas-java.alt] <245 0 245 0>;
+pos @LetterWithBelow [haPas-java]' [kaPas-java.base kaSasakPas-java.base gaMurdaPas-java caMurdaPas-java ttaPas-java ddaPas-java taPas-java.base baPas-java] <30 0 30 0>;
+pos @LetterWithBelow [haPas-java]' [gaPas-java saMurdaPas-java] <50 0 50 0>;
+pos @LetterWithBelow [haPas-java]' [caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_keret-java] <109 0 109 0>;
+pos @LetterWithBelow [haPas-java]' [caMurdaPas_suku-java] <209 0 209 0>;
+pos @LetterWithBelow [haPas-java]' [caMurdaPas_sukuMendut-java] <102 0 102 0>;
+pos @LetterWithBelow [haPas-java]' [naMurdaPas-java nyaPas-java.alt] <684 0 684 0>;
+pos @LetterWithBelow [haPas-java]' [yaPas-java] <70 0 70 0>;
+pos @LetterWithBelow [haPas-java]' [raAgungPas-java] <310 0 310 0>;
+pos @LetterWithBelow [haPas-java]' [laPas-java.base] <10 0 10 0>;
+pos @LetterWithBelow [haPas-java]' [ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaPas_keret-java] <100 0 100 0>;
+pos @LetterWithBelow [haPas-java]' [ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java ddaPas_keret-java] <22 0 22 0>;
+pos @LetterWithBelow [haPas-java]' [ttaPas_suku-java ttaPas_sukuMendut-java ddaPas_suku-java ddaPas_sukuMendut-java] <200 0 200 0>;
+pos @LetterWithBelow [haPas-java]' [iPas-java] <104 0 104 0>;
+pos @LetterWithBelow [haPas-java]' [saMahapranaPas-java.alt] <396 0 396 0>;
+pos @LetterWithBelow [haPas-java]' [haPas-java.alt] <88 0 88 0>;
+pos @LetterWithBelow [haPas-java]' [baPas-java.alt] <190 0 190 0>;
+pos @LetterWithBelow [jaMahapranaPas-java.short.base]' [naMurdaPas-java nyaPas-java.alt] <374 0 374 0>;
+pos @LetterWithBelow [jaMahapranaPas-java.short.base]' [saMahapranaPas-java.alt] <86 0 86 0>;";
 tag = kern;
 },
 {
@@ -5189,7 +5188,11 @@ tag = kern;
 automatic = 1;
 code = "sub behDotless-ar by behDotless-ar.init;
 sub beh-ar by beh-ar.init;
+sub seen-ar by seen-ar.init;
+sub feh-ar by feh-ar.init;
 sub fehDotless-ar by fehDotless-ar.init;
+sub kaf-ar by kaf-ar.init;
+sub meem-ar by meem-ar.init;
 ";
 tag = init;
 },
@@ -5197,15 +5200,24 @@ tag = init;
 automatic = 1;
 code = "sub behDotless-ar by behDotless-ar.medi;
 sub beh-ar by beh-ar.medi;
+sub hah-ar by hah-ar.medi;
+sub seen-ar by seen-ar.medi;
 sub fehDotless-ar by fehDotless-ar.medi;
+sub kaf-ar by kaf-ar.medi;
+sub lam-ar by lam-ar.medi;
+sub meem-ar by meem-ar.medi;
 ";
 tag = medi;
 },
 {
 automatic = 1;
-code = "sub behDotless-ar by behDotless-ar.fina;
+code = "sub alef-ar by alef-ar.fina;
+sub behDotless-ar by behDotless-ar.fina;
 sub beh-ar by beh-ar.fina;
+sub seen-ar by seen-ar.fina;
+sub sheen-ar by sheen-ar.fina;
 sub fehDotless-ar by fehDotless-ar.fina;
+sub tehMarbuta-ar by tehMarbuta-ar.fina;
 ";
 tag = fina;
 },
@@ -5229,6 +5241,121 @@ value = "";
 );
 notes = "Prevent Tumpuk telu except pandjingan";
 tag = ss03;
+},
+{
+automatic = 1;
+code = "lookup ccmp_Other_1 {
+	@CombiningTopAccents = [acutecomb brevecomb caroncomb dieresiscomb dotaccentcomb macroncomb tildecomb];
+	@CombiningNonTopAccents = [dotbelowcomb macronbelowcomb ogonekcomb];
+	sub [i j]' @CombiningTopAccents by [idotless jdotless];
+	sub [i j]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless];
+} ccmp_Other_1;
+
+lookup ccmp_Other_2 {
+	lookupflag 0;
+	sub ai-java cecakTelu-java cecak-java by ai_cecakTelu_cecak-java;
+	sub ai-java cecakTelu-java layar-java by ai_cecakTelu_layar-java;
+	sub ai-java cecakTelu-java panyangga-java by ai_cecakTelu_panyangga-java;
+	sub caMurdaPas-java pengkal-java suku-java by caMurdaPas_pengkal_suku-java;
+	sub caMurdaPas-java pengkal-java sukuMendut-java by caMurdaPas_pengkal_sukuMendut-java;
+	sub caPas-java pengkal-java suku-java by caPas_pengkal_suku-java;
+	sub caPas-java pengkal-java sukuMendut-java by caPas_pengkal_sukuMendut-java;
+	sub cecakTelu-java pepet-java cecak-java by cecakTelu_pepet_cecak-java;
+	sub cecakTelu-java pepet-java layar-java by cecakTelu_pepet_layar-java;
+	sub cecakTelu-java pepet-java panyangga-java by cecakTelu_pepet_panyangga-java;
+	sub cecakTelu-java wuluMelik-java cecak-java by cecakTelu_wuluMelik_cecak-java;
+	sub cecakTelu-java wuluMelik-java layar-java by cecakTelu_wuluMelik_layar-java;
+	sub cecakTelu-java wuluMelik-java panyangga-java by cecakTelu_wuluMelik_panyangga-java;
+	sub cecakTelu-java wulu-java cecak-java by cecakTelu_wulu_cecak-java;
+	sub cecakTelu-java wulu-java layar-java by cecakTelu_wulu_layar-java;
+	sub cecakTelu-java wulu-java panyangga-java by cecakTelu_wulu_panyangga-java;
+	sub daPas-java pengkal-java suku-java by daPas_pengkal_suku-java;
+	sub daPas-java pengkal-java sukuMendut-java by daPas_pengkal_sukuMendut-java;
+	sub jaPas-java pengkal-java suku-java by jaPas_pengkal_suku-java;
+	sub jaPas-java pengkal-java sukuMendut-java by jaPas_pengkal_sukuMendut-java;
+	sub naPas-java pengkal-java suku-java by naPas_pengkal_suku-java;
+	sub naPas-java pengkal-java sukuMendut-java by naPas_pengkal_sukuMendut-java;
+	sub nyaMurdaPas-java pengkal-java suku-java by nyaMurdaPas_pengkal_suku-java;
+	sub nyaMurdaPas-java pengkal-java sukuMendut-java by nyaMurdaPas_pengkal_sukuMendut-java;
+	sub ai-java cecak-java by ai_cecak-java;
+	sub ai-java cecakTelu-java by ai_cecakTelu-java;
+	sub ai-java layar-java by ai_layar-java;
+	sub ai-java panyangga-java by ai_panyangga-java;
+	sub caMurdaPas-java pengkal-java by caMurdaPas_pengkal-java;
+	sub caMurdaPas-java suku-java by caMurdaPas_suku-java;
+	sub caMurdaPas-java sukuMendut-java by caMurdaPas_sukuMendut-java;
+	sub caPas-java pengkal-java by caPas_pengkal-java;
+	sub caPas-java suku-java by caPas_suku-java;
+	sub caPas-java sukuMendut-java by caPas_sukuMendut-java;
+	sub cakra-java suku-java by cakra_suku-java.001;
+	sub cecakTelu-java cecak-java by cecakTelu_cecak-java;
+	sub cecakTelu-java layar-java by cecakTelu_layar-java;
+	sub cecakTelu-java panyangga-java by cecakTelu_panyangga-java;
+	sub cecakTelu-java pepet-java by cecakTelu_pepet-java;
+	sub cecakTelu-java wulu-java by cecakTelu_wulu-java;
+	sub cecakTelu-java wuluMelik-java by cecakTelu_wuluMelik-java;
+	sub daPas-java cakra-java by daPas_cakra-java;
+	sub daPas-java pengkal-java by daPas_pengkal-java;
+	sub daPas-java suku-java by daPas_suku-java;
+	sub daPas-java sukuMendut-java by daPas_sukuMendut-java;
+	sub jaMahapranaPas-java suku-java by jaMahapranaPas_suku-java;
+	sub jaMahapranaPas-java sukuMendut-java by jaMahapranaPas_sukuMendut-java;
+	sub jaMahaprana-java suku-java by jaMahaprana_suku-java;
+	sub jaMahaprana-java sukuMendut-java by jaMahaprana_sukuMendut-java;
+	sub jaPas-java pengkal-java by jaPas_pengkal-java;
+	sub jaPas-java suku-java by jaPas_suku-java;
+	sub jaPas-java sukuMendut-java by jaPas_sukuMendut-java;
+	sub layar-java cecak-java by layar_cecak-java;
+	sub layar-java cecakTelu-java by layar_cecakTelu-java;
+	sub naPas-java pengkal-java by naPas_pengkal-java;
+	sub naPas-java suku-java by naPas_suku-java;
+	sub naPas-java sukuMendut-java by naPas_sukuMendut-java;
+	sub nyaMurdaPas-java pengkal-java by nyaMurdaPas_pengkal-java;
+	sub nyaMurdaPas-java suku-java by nyaMurdaPas_suku-java;
+	sub nyaMurdaPas-java sukuMendut-java by nyaMurdaPas_sukuMendut-java;
+	sub nyaPas-java suku-java by nyaPas_suku-java;
+	sub nyaPas-java sukuMendut-java by nyaPas_sukuMendut-java;
+	sub pepet-java layar-java by pepet_layar-java;
+	sub pepet-java panyangga-java by pepet_panyangga-java;
+	sub ttaPas-java pengkal-java.below by ttaPas_pengkal-java;
+	sub wuluMelik-java layar-java by wuluMelik_layar-java;
+	sub wuluMelik-java panyangga-java by wuluMelik_panyangga-java;
+	sub wulu-java layar-java by wulu_layar-java;
+	sub wulu-java panyangga-java by wulu_panyangga-java;
+} ccmp_Other_2;
+
+lookup ccmp_bali_1 {
+	lookupflag 0;
+	sub rerekan-bali pepet-bali cecek-bali by rerekan_pepet_cecek-bali;
+	sub rerekan-bali pepet-bali surang-bali by rerekan_pepet_surang-bali;
+	sub rerekan-bali uluSari-bali cecek-bali by rerekan_uluSari_cecek-bali;
+	sub rerekan-bali uluSari-bali surang-bali by rerekan_uluSari_surang-bali;
+	sub rerekan-bali ulu-bali cecek-bali by rerekan_ulu_cecek-bali;
+	sub rerekan-bali ulu-bali surang-bali by rerekan_ulu_surang-bali;
+	sub pepet-bali cecek-bali by pepet_cecek-bali;
+	sub pepet-bali surang-bali by pepet_surang-bali;
+	sub rerekan-bali cecek-bali by rerekan_cecek-bali;
+	sub rerekan-bali surang-bali by rerekan_surang-bali;
+	sub uluSari-bali cecek-bali by uluSari_cecek-bali;
+	sub uluSari-bali surang-bali by uluSari_surang-bali;
+	sub uluSari-bali uluCandra-bali by uluSari_uluCandra-bali;
+	sub uluSari-bali uluRicem-bali by uluSari_uluRicem-bali;
+	sub ulu-bali cecek-bali by ulu_cecek-bali;
+	sub ulu-bali surang-bali by ulu_surang-bali;
+	sub ulu-bali uluCandra-bali by ulu_uluCandra-bali;
+	sub ulu-bali uluRicem-bali by ulu_uluRicem-bali;
+} ccmp_bali_1;
+
+script bali;
+lookup ccmp_bali_1;
+";
+tag = ccmp;
+},
+{
+automatic = 1;
+code = "sub cakra-java by cakra-java.isol;
+";
+tag = isol;
 }
 );
 fontMaster = (
@@ -6433,13 +6560,13 @@ width = 1200;
 },
 {
 glyphname = J;
-lastChange = "2022-01-06 12:13:55 +0000";
+lastChange = "2022-01-26 05:08:55 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-pos = (292,0);
+pos = (282,-60);
 },
 {
 name = top;
@@ -6483,7 +6610,7 @@ unicode = 74;
 },
 {
 glyphname = J_dotbelowcomb;
-lastChange = "2022-01-06 12:13:57 +0000";
+lastChange = "2022-01-26 05:08:55 +0000";
 layers = (
 {
 layerId = m01;
@@ -6492,7 +6619,7 @@ shapes = (
 ref = J;
 },
 {
-pos = (17,0);
+pos = (7,-60);
 ref = dotbelowcomb;
 }
 );
@@ -6502,16 +6629,106 @@ width = 583;
 },
 {
 glyphname = K;
+lastChange = "2022-03-01 16:26:39 +0000";
 layers = (
 {
-layerId = m01;
-width = 1200;
+anchors = (
+{
+name = bottom;
+pos = (671,0);
+},
+{
+name = top;
+pos = (671,1283);
 }
 );
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(503,0,l),
+(503,46,l),
+(409,56,l),
+(394,68,l),
+(387,109,o),
+(384,165,o),
+(384,204,cs),
+(384,1079,ls),
+(384,1118,o),
+(387,1174,o),
+(394,1215,c),
+(409,1227,l),
+(503,1237,l),
+(503,1283,l),
+(110,1283,l),
+(110,1237,l),
+(204,1227,l),
+(219,1215,l),
+(226,1174,o),
+(229,1118,o),
+(229,1079,cs),
+(229,204,ls),
+(229,165,o),
+(226,109,o),
+(219,68,c),
+(204,56,l),
+(110,46,l),
+(110,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(480,685,l),
+(846,204,ls),
+(872,170,o),
+(919,109,o),
+(944,68,c),
+(929,56,l),
+(835,46,l),
+(835,0,l),
+(1241,0,l),
+(1241,46,l),
+(1147,56,l),
+(1132,68,l),
+(1091,109,o),
+(1041,169,o),
+(1014,204,cs),
+(649,685,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(984,1087,ls),
+(1028,1139,o),
+(1069,1176,o),
+(1112,1215,c),
+(1127,1227,l),
+(1211,1237,l),
+(1211,1283,l),
+(891,1283,l),
+(891,1237,l),
+(985,1227,l),
+(1000,1215,l),
+(975,1176,o),
+(947,1149,o),
+(896,1087,cs),
+(560,685,l),
+(649,685,l)
+);
+}
+);
+width = 1341;
+}
+);
+metricLeft = H;
 unicode = 75;
 },
 {
 glyphname = Kdotbelow;
+lastChange = "2022-03-01 16:26:40 +0000";
 layers = (
 {
 layerId = m01;
@@ -6520,23 +6737,24 @@ shapes = (
 ref = K;
 },
 {
+pos = (396,0);
 ref = dotbelowcomb;
 }
 );
-width = 1200;
+width = 1341;
 }
 );
 unicode = 7730;
 },
 {
 glyphname = L;
-lastChange = "2022-01-06 12:13:48 +0000";
+lastChange = "2022-03-01 16:26:47 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-pos = (580,0);
+pos = (660,0);
 },
 {
 name = center;
@@ -6604,7 +6822,7 @@ unicode = 76;
 },
 {
 glyphname = Ldotbelow;
-lastChange = "2022-01-06 12:13:48 +0000";
+lastChange = "2022-03-01 16:26:47 +0000";
 layers = (
 {
 layerId = m01;
@@ -6613,7 +6831,7 @@ shapes = (
 ref = L;
 },
 {
-pos = (305,0);
+pos = (385,0);
 ref = dotbelowcomb;
 }
 );
@@ -6802,7 +7020,7 @@ unicode = 79;
 },
 {
 glyphname = Odieresis;
-lastChange = "2022-01-06 12:13:57 +0000";
+lastChange = "2022-02-05 09:30:53 +0000";
 layers = (
 {
 layerId = m01;
@@ -6811,7 +7029,7 @@ shapes = (
 ref = O;
 },
 {
-pos = (342,343);
+pos = (336,343);
 ref = dieresiscomb;
 }
 );
@@ -7268,7 +7486,7 @@ unicode = 7778;
 },
 {
 glyphname = T;
-lastChange = "2022-01-06 12:13:55 +0000";
+lastChange = "2022-01-29 08:33:33 +0000";
 layers = (
 {
 anchors = (
@@ -10767,7 +10985,7 @@ unicode = 331;
 {
 glyphname = o;
 kernLeft = o;
-lastChange = "2022-01-12 06:06:06 +0000";
+lastChange = "2022-02-06 16:20:38 +0000";
 layers = (
 {
 anchors = (
@@ -10881,7 +11099,7 @@ unicode = 111;
 color = 6;
 glyphname = odieresis;
 kernLeft = o;
-lastChange = "2022-01-12 06:06:12 +0000";
+lastChange = "2022-02-05 09:30:53 +0000";
 layers = (
 {
 layerId = m01;
@@ -10890,7 +11108,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (122,-80);
+pos = (116,-80);
 ref = dieresiscomb;
 }
 );
@@ -10923,7 +11141,7 @@ unicode = 491;
 {
 color = 6;
 glyphname = oogonek_dieresiscomb;
-lastChange = "2022-01-06 12:09:15 +0000";
+lastChange = "2022-02-05 09:30:53 +0000";
 layers = (
 {
 layerId = m01;
@@ -10936,7 +11154,7 @@ pos = (-151,0);
 ref = ogonekcomb;
 },
 {
-pos = (122,-80);
+pos = (116,-80);
 ref = dieresiscomb;
 }
 );
@@ -11310,7 +11528,7 @@ unicode = 7769;
 {
 color = 6;
 glyphname = rdotbelow;
-lastChange = "2022-01-13 05:05:12 +0000";
+lastChange = "2022-03-02 06:19:41 +0000";
 layers = (
 {
 layerId = m01;
@@ -11331,7 +11549,7 @@ unicode = 7771;
 {
 color = 6;
 glyphname = rdotbelowmacron;
-lastChange = "2022-01-13 05:05:12 +0000";
+lastChange = "2022-03-02 06:19:41 +0000";
 layers = (
 {
 layerId = m01;
@@ -11480,7 +11698,7 @@ unicode = 7779;
 },
 {
 glyphname = t;
-lastChange = "2022-01-05 06:22:44 +0000";
+lastChange = "2022-02-09 08:33:04 +0000";
 layers = (
 {
 anchors = (
@@ -12203,8 +12421,8 @@ metricRight = "=|";
 unicode = 122;
 },
 {
-glyphname = "alef-ar.fina";
-lastChange = "2022-01-03 09:10:01 +0000";
+glyphname = "alef-ar";
+lastChange = "2022-02-11 16:44:17 +0000";
 layers = (
 {
 layerId = m01;
@@ -12212,34 +12430,163 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(286,135,o),
-(225,193,o),
-(225,407,cs),
-(225,723,o),
-(225,1028,o),
-(185,1413,c),
-(165,1413,l),
-(105,1358,l),
-(160,953,o),
-(162,682,o),
-(164,313,cs),
-(165,120,o),
-(201,-20,o),
-(424,-20,c),
-(477,-20,o),
-(477,135,o),
-(424,135,c)
+(184,1418,l),
+(158,1418,l),
+(115,1327,l),
+(189,0,l),
+(230,0,l),
+(248,113,o),
+(254,204,o),
+(244,381,cs)
 );
 }
 );
-width = 424;
+width = 364;
+}
+);
+metricRight = "=|";
+unicode = 1575;
+},
+{
+glyphname = "alef-ar.fina";
+lastChange = "2022-02-11 16:49:42 +0000";
+layers = (
+{
+anchors = (
+{
+name = entry;
+pos = (454,-20);
+}
+);
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(266,135,o),
+(205,193,o),
+(205,407,cs),
+(205,723,o),
+(205,1028,o),
+(165,1413,c),
+(145,1413,l),
+(85,1358,l),
+(140,953,o),
+(142,682,o),
+(144,313,cs),
+(145,120,o),
+(181,-20,o),
+(404,-20,c),
+(457,-20,o),
+(457,135,o),
+(404,135,c)
+);
+}
+);
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(347,135,o),
+(263,188,o),
+(248,371,cs),
+(165,1418,l),
+(139,1418,l),
+(97,1327,l),
+(174,325,ls),
+(193,81,o),
+(275,-20,o),
+(454,-20,c),
+(517,-20,o),
+(517,135,o),
+(454,135,c)
+);
+}
+);
+width = 454;
 }
 );
 },
 {
 glyphname = "behDotless-ar";
-lastChange = "2022-01-03 09:09:36 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (1051,-50);
+},
+{
+name = ring;
+pos = (981,-50);
+},
+{
+name = top;
+pos = (1028,469);
+}
+);
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(1372,-50,o),
+(1801,117,o),
+(1801,379,cs),
+(1801,440,o),
+(1778,558,o),
+(1717,674,c),
+(1697,674,l),
+(1609,582,l),
+(1739,270,l),
+(1756,304,l),
+(1578,195,o),
+(1237,105,o),
+(833,105,cs),
+(341,105,o),
+(147,238,o),
+(292,599,c),
+(238,618,l),
+(43,159,o),
+(231,-50,o),
+(833,-50,cs)
+);
+}
+);
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1366,-50,o),
+(1801,105,o),
+(1801,346,cs),
+(1801,402,o),
+(1778,504,o),
+(1717,604,c),
+(1697,604,l),
+(1609,512,l),
+(1739,240,l),
+(1756,274,l),
+(1586,184,o),
+(1239,105,o),
+(843,105,cs),
+(375,105,o),
+(195,215,o),
+(302,529,c),
+(248,548,l),
+(96,139,o),
+(262,-50,o),
+(841,-50,cs)
+);
+}
+);
+width = 1996;
+},
 {
 anchors = (
 {
@@ -12255,6 +12602,7 @@ name = top;
 pos = (988,2096);
 }
 );
+associatedMasterId = m01;
 background = {
 shapes = (
 {
@@ -12283,18 +12631,19 @@ nodes = (
 }
 );
 };
-layerId = m01;
+layerId = "E4DEE693-3C2E-4A44-A8D4-228D4A94D58E";
+name = "11 Feb 22 23.29";
 shapes = (
 {
 closed = 1;
 nodes = (
-(1379,-50,o),
-(1811,125,o),
-(1811,399,cs),
-(1811,460,o),
-(1788,578,o),
-(1727,694,c),
-(1707,694,l),
+(1372,-50,o),
+(1801,117,o),
+(1801,379,cs),
+(1801,440,o),
+(1778,558,o),
+(1717,674,c),
+(1697,674,l),
 (1609,582,l),
 (1739,270,l),
 (1756,304,l),
@@ -12306,8 +12655,8 @@ nodes = (
 (292,599,c),
 (238,618,l),
 (43,159,o),
-(232,-50,o),
-(831,-50,cs)
+(231,-50,o),
+(833,-50,cs)
 );
 }
 );
@@ -12319,25 +12668,25 @@ unicode = 1646;
 },
 {
 glyphname = "behDotless-ar.fina";
-lastChange = "2022-01-05 06:29:34 +0000";
+lastChange = "2022-02-16 14:21:35 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-pos = (955,-80);
+pos = (1032,-80);
 },
 {
 name = entry;
-pos = (1997,-20);
+pos = (1974,-20);
 },
 {
 name = ring;
-pos = (955,-80);
+pos = (952,-80);
 },
 {
 name = top;
-pos = (1039,2096);
+pos = (1036,2096);
 }
 );
 background = {
@@ -12345,30 +12694,30 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(341,125,o),
-(146,228,o),
-(292,619,c),
-(238,635,l),
-(42,170,o),
-(230,-30,o),
-(847,-30,cs),
-(1258,-30,o),
-(1621,61,o),
-(1781,247,c),
-(1731,247,l),
-(1765,39,o),
-(1872,-20,o),
-(2017,-20,c),
-(2070,-20,o),
-(2070,135,o),
-(2017,135,c),
-(1899,135,o),
-(1828,190,o),
-(1794,348,c),
-(1761,348,l),
-(1641,192,o),
-(1268,125,o),
-(856,125,cs)
+(425,75,o),
+(199,184,o),
+(297,499,c),
+(243,515,l),
+(97,104,o),
+(280,-80,o),
+(836,-80,cs),
+(1268,-80,o),
+(1632,31,o),
+(1800,216,c),
+(1728,267,l),
+(1753,40,o),
+(1835,-20,o),
+(1974,-20,c),
+(2027,-20,o),
+(2027,136,o),
+(1974,136,c),
+(1860,136,o),
+(1801,202,o),
+(1791,348,c),
+(1758,348,l),
+(1639,171,o),
+(1261,75,o),
+(858,75,cs)
 );
 }
 );
@@ -12378,34 +12727,34 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(391,75,o),
-(146,205,o),
-(292,579,c),
-(238,595,l),
-(40,129,o),
-(239,-80,o),
-(837,-80,cs),
-(1272,-80,o),
-(1635,31,o),
-(1803,216,c),
-(1731,267,l),
-(1778,40,o),
-(1867,-20,o),
-(1997,-20,c),
-(2050,-20,o),
-(2050,135,o),
-(1997,135,c),
-(1890,135,o),
-(1825,201,o),
-(1794,348,c),
-(1761,348,l),
-(1642,171,o),
-(1264,75,o),
-(861,75,cs)
+(425,75,o),
+(199,184,o),
+(297,499,c),
+(243,515,l),
+(97,104,o),
+(280,-80,o),
+(836,-80,cs),
+(1268,-80,o),
+(1632,37,o),
+(1800,220,c),
+(1728,267,l),
+(1753,40,o),
+(1835,-20,o),
+(1974,-20,c),
+(2027,-20,o),
+(2027,136,o),
+(1974,136,c),
+(1860,136,o),
+(1801,202,o),
+(1791,348,c),
+(1758,348,l),
+(1629,181,o),
+(1261,75,o),
+(858,75,cs)
 );
 }
 );
-width = 1997;
+width = 1974;
 },
 {
 associatedMasterId = m01;
@@ -12450,13 +12799,101 @@ nodes = (
 }
 );
 width = 1957;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (952,-80);
+},
+{
+name = entry;
+pos = (1974,-20);
+},
+{
+name = ring;
+pos = (952,-80);
+},
+{
+name = top;
+pos = (1036,2096);
+}
+);
+associatedMasterId = m01;
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(338,125,o),
+(143,228,o),
+(289,619,c),
+(235,635,l),
+(39,170,o),
+(227,-30,o),
+(844,-30,cs),
+(1255,-30,o),
+(1618,61,o),
+(1778,247,c),
+(1728,247,l),
+(1762,39,o),
+(1869,-20,o),
+(2014,-20,c),
+(2067,-20,o),
+(2067,135,o),
+(2014,135,c),
+(1896,135,o),
+(1825,190,o),
+(1791,348,c),
+(1758,348,l),
+(1638,192,o),
+(1265,125,o),
+(853,125,cs)
+);
+}
+);
+};
+layerId = "0271DE40-72BA-43EE-A310-73C9AB1B7FEC";
+name = "11 Feb 22 23.30";
+shapes = (
+{
+closed = 1;
+nodes = (
+(425,75,o),
+(199,184,o),
+(297,499,c),
+(243,515,l),
+(97,104,o),
+(280,-80,o),
+(836,-80,cs),
+(1268,-80,o),
+(1632,31,o),
+(1800,216,c),
+(1728,267,l),
+(1753,40,o),
+(1835,-20,o),
+(1974,-20,c),
+(2027,-20,o),
+(2027,136,o),
+(1974,136,c),
+(1860,136,o),
+(1801,202,o),
+(1791,348,c),
+(1758,348,l),
+(1639,171,o),
+(1261,75,o),
+(858,75,cs)
+);
+}
+);
+width = 1974;
 }
 );
 metricLeft = "behDotless-ar";
 },
 {
 glyphname = "behDotless-ar.medi";
-lastChange = "2022-01-02 17:26:01 +0000";
+lastChange = "2022-02-08 13:19:50 +0000";
 layers = (
 {
 anchors = (
@@ -12486,26 +12923,26 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(189,207,l),
+(96,-20,o),
+(219,30,o),
+(229,217,c),
+(199,207,l),
 (221,28,o),
-(325,-20,o),
+(335,-20,o),
 (445,-20,c),
 (498,-20,o),
 (498,135,o),
 (445,135,c),
-(338,135,o),
-(281,184,o),
-(266,392,c),
-(229,392,l),
-(184,187,o),
-(102,135,o),
+(328,135,o),
+(271,174,o),
+(236,342,c),
+(199,337,l),
+(184,169,o),
+(122,135,o),
 (0,135,c),
 (-53,135,o),
 (-53,-20,o),
-(0,-20,c),
-(96,-20,o),
-(219,32,o),
-(239,157,c)
+(0,-20,c)
 );
 }
 );
@@ -12516,7 +12953,7 @@ metricLeft = "=|";
 },
 {
 glyphname = "behDotless-ar.init";
-lastChange = "2022-01-03 09:37:21 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 anchors = (
@@ -12545,15 +12982,15 @@ nodes = (
 (-67,135,o),
 (-67,-20,o),
 (0,-20,c),
-(171,-20,o),
-(281,105,o),
-(281,301,cs),
-(281,396,o),
-(252,513,o),
-(202,614,c),
-(182,614,l),
-(84,502,l),
-(224,170,l),
+(165,-20,o),
+(271,102,o),
+(271,288,cs),
+(271,378,o),
+(246,483,o),
+(202,574,c),
+(182,574,l),
+(94,472,l),
+(214,170,l),
 (241,204,l),
 (173,154,o),
 (108,135,o),
@@ -12561,14 +12998,14 @@ nodes = (
 );
 }
 );
-width = 445;
+width = 466;
 }
 );
 metricRight = "behDotless-ar";
 },
 {
 glyphname = "beh-ar";
-lastChange = "2022-01-03 09:09:36 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 layerId = m01;
@@ -12577,18 +13014,18 @@ shapes = (
 ref = "behDotless-ar";
 },
 {
-pos = (848,-50);
+pos = (878,-50);
 ref = "dotbelow-ar";
 }
 );
-width = 1975;
+width = 1996;
 }
 );
 unicode = 1576;
 },
 {
 glyphname = "beh-ar.fina";
-lastChange = "2022-01-03 09:09:41 +0000";
+lastChange = "2022-02-11 16:52:06 +0000";
 layers = (
 {
 layerId = m01;
@@ -12597,17 +13034,17 @@ shapes = (
 ref = "behDotless-ar.fina";
 },
 {
-pos = (822,-80);
+pos = (859,-80);
 ref = "dotbelow-ar";
 }
 );
-width = 1997;
+width = 1974;
 }
 );
 },
 {
 glyphname = "beh-ar.medi";
-lastChange = "2022-01-02 16:57:39 +0000";
+lastChange = "2022-02-08 13:45:27 +0000";
 layers = (
 {
 layerId = m01;
@@ -12616,7 +13053,7 @@ shapes = (
 ref = "behDotless-ar.medi";
 },
 {
-pos = (50,0);
+pos = (10,0);
 ref = "dotbelow-ar";
 }
 );
@@ -12626,7 +13063,7 @@ width = 445;
 },
 {
 glyphname = "beh-ar.init";
-lastChange = "2022-01-03 09:37:21 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 layerId = m01;
@@ -12635,16 +13072,154 @@ shapes = (
 ref = "behDotless-ar.init";
 },
 {
-pos = (19,0);
+pos = (-21,0);
 ref = "dotbelow-ar";
 }
 );
-width = 445;
+width = 466;
+}
+);
+},
+{
+glyphname = "teh-ar";
+lastChange = "2022-02-11 16:54:45 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = "behDotless-ar";
+},
+{
+pos = (794,-91);
+ref = "twodotshorizontalabove-ar";
+}
+);
+width = 1996;
+}
+);
+unicode = 1578;
+},
+{
+glyphname = "hah-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+unicode = 1581;
+},
+{
+glyphname = "hah-ar.medi";
+lastChange = "2022-02-11 16:49:03 +0000";
+layers = (
+{
+anchors = (
+{
+name = entry;
+pos = (1197,-20);
+},
+{
+name = exit;
+pos = (-1,-20);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(505,-20,o),
+(684,248,o),
+(1042,240,cs),
+(1130,238,l),
+(1174,321,l),
+(1174,350,l),
+(822,350,o),
+(655,539,o),
+(387,539,cs),
+(327,539,o),
+(262,526,o),
+(217,501,c),
+(146,393,l),
+(166,373,l),
+(478,483,o),
+(721,262,o),
+(992,262,c),
+(965,315,l),
+(600,315,o),
+(561,135,o),
+(-1,135,c),
+(-81,135,o),
+(-70,-20,o),
+(-1,-20,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(1254,-20,o),
+(1264,135,o),
+(1207,135,c),
+(1080,135,o),
+(1042,175,o),
+(1028,266,c),
+(975,272,l),
+(963,72,o),
+(1037,-20,o),
+(1197,-20,c)
+);
+}
+);
+width = 1207;
+}
+);
+},
+{
+glyphname = "hah-ar.init";
+lastChange = "2022-02-11 16:49:08 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(505,-20,o),
+(684,238,o),
+(1042,230,cs),
+(1130,228,l),
+(1174,321,l),
+(1174,350,l),
+(822,350,o),
+(655,539,o),
+(387,539,cs),
+(327,539,o),
+(262,526,o),
+(217,501,c),
+(146,393,l),
+(166,373,l),
+(478,483,o),
+(721,262,o),
+(992,262,c),
+(965,315,l),
+(600,315,o),
+(561,135,o),
+(-1,135,c),
+(-81,135,o),
+(-70,-20,o),
+(-1,-20,c)
+);
+}
+);
+width = 1200;
 }
 );
 },
 {
 glyphname = "reh-ar";
+lastChange = "2022-02-11 16:56:48 +0000";
 layers = (
 {
 layerId = m01;
@@ -12652,6 +13227,54 @@ width = 1200;
 }
 );
 unicode = 1585;
+},
+{
+glyphname = "reh-ar.fina";
+lastChange = "2022-02-16 14:29:07 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(938,135,o),
+(823,208,o),
+(757,293,c),
+(732,293,l),
+(704,142,l),
+(785,48,o),
+(907,-20,o),
+(1080,-20,c),
+(1159,-20,o),
+(1159,135,o),
+(1080,135,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(750,104,o),
+(781,67,o),
+(813,29,c),
+(821,67,l),
+(690,-333,o),
+(425,-436,o),
+(45,-385,c),
+(30,-427,l),
+(101,-466,o),
+(299,-532,o),
+(402,-532,cs),
+(619,-532,o),
+(870,-253,o),
+(880,125,c),
+(704,142,l)
+);
+}
+);
+width = 1080;
+}
+);
 },
 {
 glyphname = "seen-ar";
@@ -12664,10 +13287,120 @@ width = 1200;
 unicode = 1587;
 },
 {
-glyphname = "seen-ar.medi";
-lastChange = "2022-01-05 06:26:51 +0000";
+glyphname = "seen-ar.fina";
+lastChange = "2022-02-09 10:15:29 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (1101,241);
+},
+{
+name = top;
+pos = (1144,418);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(770,86,l),
+(811,18,o),
+(866,-20,o),
+(953,-20,cs),
+(1140,-20,o),
+(1184,162,o),
+(1217,312,c),
+(1180,322,l),
+(1132,186,o),
+(1075,125,o),
+(966,125,cs),
+(874,125,o),
+(834,169,o),
+(796,230,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(1085,126,l),
+(1141,20,o),
+(1219,-20,o),
+(1296,-20,cs),
+(1463,-20,o),
+(1511,155,o),
+(1542,312,c),
+(1505,322,l),
+(1463,186,o),
+(1410,125,o),
+(1320,125,cs),
+(1255,125,o),
+(1198,159,o),
+(1171,200,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(1440,110,l),
+(1494,25,o),
+(1565,-20,o),
+(1683,-20,c),
+(1723,-20,o),
+(1723,135,o),
+(1683,135,c),
+(1615,135,o),
+(1551,158,o),
+(1516,204,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(694,-550,o),
+(878,-378,o),
+(878,-172,cs),
+(878,-88,o),
+(847,122,o),
+(774,294,c),
+(754,294,l),
+(679,222,l),
+(846,-250,l),
+(853,-196,l),
+(771,-305,o),
+(644,-395,o),
+(454,-395,cs),
+(189,-395,o),
+(87,-219,o),
+(189,79,c),
+(135,98,l),
+(-32,-347,o),
+(157,-550,o),
+(437,-550,cs)
+);
+}
+);
+width = 1683;
+}
+);
+},
+{
+glyphname = "seen-ar.medi";
+lastChange = "2022-02-11 16:29:46 +0000";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (676,0);
+},
+{
+name = top;
+pos = (776,491);
+}
+);
 layerId = m01;
 shapes = (
 {
@@ -12707,53 +13440,57 @@ nodes = (
 closed = 1;
 nodes = (
 (674,156,l),
-(738,29,o),
-(813,-20,o),
-(915,-20,cs),
-(1117,-20,o),
-(1166,170,o),
-(1201,342,c),
-(1164,342,l),
-(1115,199,o),
-(1057,135,o),
-(942,135,cs),
-(847,135,o),
-(795,178,o),
+(734,29,o),
+(805,-20,o),
+(901,-20,cs),
+(1092,-20,o),
+(1134,170,o),
+(1171,342,c),
+(1134,342,l),
+(1081,199,o),
+(1035,135,o),
+(928,135,cs),
+(840,135,o),
+(792,178,o),
 (760,240,c)
 );
 },
 {
 closed = 1;
 nodes = (
-(1089,146,l),
-(1147,20,o),
-(1214,-20,o),
-(1352,-20,c),
-(1392,-20,o),
-(1392,135,o),
-(1352,135,c),
-(1268,135,o),
-(1204,164,o),
-(1165,240,c)
+(1059,146,l),
+(1117,20,o),
+(1184,-20,o),
+(1322,-20,c),
+(1362,-20,o),
+(1362,135,o),
+(1322,135,c),
+(1238,135,o),
+(1174,164,o),
+(1135,240,c)
 );
 }
 );
-width = 1352;
+width = 1322;
 }
 );
 },
 {
 glyphname = "seen-ar.init";
-lastChange = "2022-01-05 06:28:28 +0000";
+lastChange = "2022-02-11 16:35:35 +0000";
 layers = (
 {
 anchors = (
 {
-name = exit;
-pos = (-60,-20);
+name = bottom;
+pos = (570,0);
+},
+{
+name = top;
+pos = (660,510);
 }
 );
-layerId = m01;
+background = {
 shapes = (
 {
 closed = 1;
@@ -12810,7 +13547,140 @@ nodes = (
 );
 }
 );
-width = 1140;
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(205,136,l),
+(259,24,o),
+(329,-20,o),
+(424,-20,cs),
+(526,-20,o),
+(599,33,o),
+(639,119,c),
+(613,132,l),
+(681,29,o),
+(801,-20,o),
+(866,-20,cs),
+(946,-20,o),
+(1021,53,o),
+(1021,208,cs),
+(1021,274,o),
+(1006,365,o),
+(982,444,c),
+(962,444,l),
+(859,362,l),
+(957,72,l),
+(995,105,l),
+(834,125,o),
+(728,174,o),
+(664,256,c),
+(662,208,l),
+(676,242,o),
+(691,282,o),
+(706,332,c),
+(669,332,l),
+(620,196,o),
+(560,135,o),
+(454,135,cs),
+(363,135,o),
+(325,176,o),
+(291,230,c),
+(294,205,l),
+(314,253,o),
+(325,285,o),
+(337,338,c),
+(304,338,l),
+(257,201,o),
+(180,135,o),
+(0,135,c),
+(-53,135,o),
+(-53,-20,o),
+(0,-20,c),
+(118,-20,o),
+(219,23,o),
+(276,166,c)
+);
+}
+);
+width = 1130;
+}
+);
+},
+{
+glyphname = "sheen-ar";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = "seen-ar";
+},
+{
+ref = "threedotsupabove-ar";
+}
+);
+width = 1200;
+}
+);
+unicode = 1588;
+},
+{
+glyphname = "sheen-ar.fina";
+lastChange = "2022-02-08 14:19:23 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = "seen-ar.fina";
+},
+{
+pos = (896,-131);
+ref = "threedotsupabove-ar";
+}
+);
+width = 1683;
+}
+);
+},
+{
+glyphname = "sheen-ar.medi";
+lastChange = "2022-02-11 16:29:46 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = "seen-ar.medi";
+},
+{
+pos = (528,-58);
+ref = "threedotsupabove-ar";
+}
+);
+width = 1322;
+}
+);
+},
+{
+glyphname = "sheen-ar.init";
+lastChange = "2022-02-11 16:28:07 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = "seen-ar.init";
+},
+{
+pos = (412,-39);
+ref = "threedotsupabove-ar";
+}
+);
+width = 1130;
 }
 );
 },
@@ -12912,7 +13782,7 @@ width = 1200;
 },
 {
 glyphname = "fehDotless-ar.init";
-lastChange = "2022-01-05 06:27:59 +0000";
+lastChange = "2022-02-11 16:53:40 +0000";
 layers = (
 {
 anchors = (
@@ -12929,6 +13799,113 @@ name = top;
 pos = (248,769);
 }
 );
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(-53,135,o),
+(-53,-20,o),
+(0,-20,c),
+(287,-20,o),
+(505,133,o),
+(505,332,cs),
+(505,485,o),
+(377,709,o),
+(249,709,cs),
+(126,709,o),
+(48,494,o),
+(48,419,cs),
+(48,334,o),
+(147,278,o),
+(241,278,cs),
+(342,278,o),
+(400,342,o),
+(442,402,c),
+(332,499,l),
+(302,453,o),
+(277,431,o),
+(229,431,cs),
+(179,431,o),
+(143,460,o),
+(116,497,c),
+(106,426,l),
+(122,490,o),
+(133,548,o),
+(191,548,cs),
+(266,548,o),
+(349,456,o),
+(443,240,c),
+(460,274,l),
+(370,197,o),
+(204,135,o),
+(0,135,c)
+);
+}
+);
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-53,135,o),
+(-53,-20,o),
+(0,-20,c),
+(276,-20,o),
+(485,133,o),
+(485,331,cs),
+(485,479,o),
+(368,693,o),
+(246,693,cs),
+(128,693,o),
+(48,490,o),
+(48,422,cs),
+(48,346,o),
+(147,299,o),
+(243,299,cs),
+(342,299,o),
+(400,348,o),
+(442,393,c),
+(352,489,l),
+(316,457,o),
+(284,441,o),
+(235,441,cs),
+(175,441,o),
+(144,466,o),
+(116,497,c),
+(106,426,l),
+(122,490,o),
+(133,548,o),
+(191,548,cs),
+(260,548,o),
+(336,456,o),
+(423,240,c),
+(440,274,l),
+(354,197,o),
+(195,135,o),
+(0,135,c)
+);
+}
+);
+width = 589;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (248,0);
+},
+{
+name = exit;
+pos = (0,-20);
+},
+{
+name = top;
+pos = (248,769);
+}
+);
+associatedMasterId = m01;
 background = {
 shapes = (
 {
@@ -12974,7 +13951,8 @@ nodes = (
 }
 );
 };
-layerId = m01;
+layerId = "388723A8-0D8C-4A20-AC3C-6FD0E3BF6CEB";
+name = "11 Feb 22 23.52";
 shapes = (
 {
 closed = 1;
@@ -13024,11 +14002,762 @@ width = 609;
 metricRight = "fehDotless-ar";
 },
 {
-glyphname = "noon-ar";
-lastChange = "2022-01-04 07:30:05 +0000";
+glyphname = "kaf-ar";
 layers = (
 {
 layerId = m01;
+width = 1200;
+}
+);
+unicode = 1603;
+},
+{
+glyphname = "kaf-ar.medi";
+lastChange = "2022-02-11 17:01:54 +0000";
+layers = (
+{
+anchors = (
+{
+name = entry;
+pos = (2163,-50);
+},
+{
+name = exit;
+pos = (0,-20);
+}
+);
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(778,-20,o),
+(1261,114,o),
+(1966,114,c),
+(2020,141,o),
+(2084,237,o),
+(2084,318,cs),
+(2084,416,o),
+(1989,576,o),
+(1650,576,cs),
+(1394,576,o),
+(948,485,o),
+(562,485,cs),
+(416,485,o),
+(329,498,o),
+(263,536,c),
+(264,495,l),
+(322,621,o),
+(553,774,o),
+(952,851,c),
+(988,969,l),
+(971,995,l),
+(369,845,o),
+(193,573,o),
+(193,459,cs),
+(193,357,o),
+(333,335,o),
+(563,335,cs),
+(867,335,o),
+(1357,425,o),
+(1649,425,cs),
+(1892,425,o),
+(1976,360,o),
+(2013,227,c),
+(2030,249,l),
+(1250,249,o),
+(803,135,o),
+(0,135,c),
+(-72,135,o),
+(-72,-20,o),
+(0,-20,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(2190,-50,o),
+(2189,105,o),
+(2132,105,c),
+(2031,105,o),
+(1997,121,o),
+(1973,156,c),
+(1920,162,l),
+(1936,17,o),
+(1989,-50,o),
+(2133,-50,c)
+);
+}
+);
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(778,-20,o),
+(1261,114,o),
+(1966,114,c),
+(2020,141,o),
+(2084,237,o),
+(2084,318,cs),
+(2084,427,o),
+(1989,606,o),
+(1650,606,cs),
+(1394,606,o),
+(948,515,o),
+(562,515,cs),
+(416,515,o),
+(329,528,o),
+(263,566,c),
+(264,525,l),
+(322,640,o),
+(553,780,o),
+(952,851,c),
+(988,969,l),
+(971,995,l),
+(369,853,o),
+(193,597,o),
+(193,489,cs),
+(193,387,o),
+(333,365,o),
+(563,365,cs),
+(867,365,o),
+(1357,455,o),
+(1649,455,cs),
+(1892,455,o),
+(1976,380,o),
+(2013,227,c),
+(2030,249,l),
+(1250,249,o),
+(803,135,o),
+(0,135,c),
+(-72,135,o),
+(-72,-20,o),
+(0,-20,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(2220,-50,o),
+(2219,105,o),
+(2162,105,c),
+(2061,105,o),
+(2026,127,o),
+(2003,176,c),
+(1900,142,l),
+(1941,17,o),
+(2000,-50,o),
+(2163,-50,c)
+);
+}
+);
+width = 2162;
+},
+{
+anchors = (
+{
+name = entry;
+pos = (2133,-50);
+},
+{
+name = exit;
+pos = (0,-20);
+}
+);
+associatedMasterId = m01;
+layerId = "6BA855D0-1B0B-4562-83DC-2165CE5CB744";
+name = "11 Feb 22 23.54";
+shapes = (
+{
+closed = 1;
+nodes = (
+(778,-20,o),
+(1261,114,o),
+(1966,114,c),
+(2020,141,o),
+(2084,237,o),
+(2084,318,cs),
+(2084,416,o),
+(1989,576,o),
+(1650,576,cs),
+(1394,576,o),
+(948,485,o),
+(562,485,cs),
+(416,485,o),
+(329,498,o),
+(263,536,c),
+(264,495,l),
+(322,621,o),
+(553,774,o),
+(952,851,c),
+(988,969,l),
+(971,995,l),
+(369,845,o),
+(193,573,o),
+(193,459,cs),
+(193,357,o),
+(333,335,o),
+(563,335,cs),
+(867,335,o),
+(1357,425,o),
+(1649,425,cs),
+(1892,425,o),
+(1976,360,o),
+(2013,227,c),
+(2030,249,l),
+(1250,249,o),
+(803,135,o),
+(0,135,c),
+(-72,135,o),
+(-72,-20,o),
+(0,-20,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(2190,-50,o),
+(2189,105,o),
+(2132,105,c),
+(2031,105,o),
+(1997,121,o),
+(1973,156,c),
+(1920,162,l),
+(1936,17,o),
+(1989,-50,o),
+(2133,-50,c)
+);
+}
+);
+width = 2132;
+}
+);
+},
+{
+glyphname = "kaf-ar.init";
+lastChange = "2022-02-11 16:47:57 +0000";
+layers = (
+{
+anchors = (
+{
+name = exit;
+pos = (1,-20);
+}
+);
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(-27,629,l),
+(-68,598,l),
+(-107,613,o),
+(-129,644,o),
+(-136,689,c),
+(153,963,o),
+(503,1227,o),
+(914,1483,c),
+(933,1460,l),
+(887,1327,l),
+(521,1112,o),
+(213,889,o),
+(-37,659,c),
+(-30,749,l),
+(169,674,o),
+(352,392,o),
+(352,219,cs),
+(352,27,o),
+(81,-20,o),
+(-59,-20,c),
+(-115,-20,o),
+(-115,135,o),
+(-59,135,c),
+(93,135,o),
+(250,178,o),
+(308,208,c),
+(307,170,l),
+(246,413,o),
+(61,565,o),
+(-65,629,c)
+);
+}
+);
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-27,549,l),
+(-88,508,l),
+(-115,520,o),
+(-130,544,o),
+(-135,580,c),
+(154,871,o),
+(504,1152,o),
+(915,1424,c),
+(934,1401,l),
+(887,1317,l),
+(509,1060,o),
+(191,813,o),
+(-67,559,c),
+(-30,649,l),
+(162,584,o),
+(322,376,o),
+(322,225,cs),
+(322,63,o),
+(166,-20,o),
+(1,-20,c),
+(-55,-20,o),
+(-55,135,o),
+(1,135,c),
+(137,135,o),
+(243,172,o),
+(288,208,c),
+(277,180,l),
+(221,370,o),
+(51,489,o),
+(-85,539,c)
+);
+}
+);
+width = 801;
+},
+{
+anchors = (
+{
+name = exit;
+pos = (0,-20);
+}
+);
+associatedMasterId = m01;
+layerId = "E879F6BB-A3DB-4DC5-A265-996FC25E1E94";
+name = "8 Feb 22 20.19";
+shapes = (
+{
+closed = 1;
+nodes = (
+(32,629,l),
+(-9,598,l),
+(-48,613,o),
+(-70,644,o),
+(-77,689,c),
+(212,963,o),
+(562,1227,o),
+(973,1483,c),
+(992,1460,l),
+(946,1327,l),
+(580,1112,o),
+(272,889,o),
+(22,659,c),
+(29,749,l),
+(228,674,o),
+(411,392,o),
+(411,219,cs),
+(411,27,o),
+(140,-20,o),
+(0,-20,c),
+(-56,-20,o),
+(-56,135,o),
+(0,135,c),
+(152,135,o),
+(309,178,o),
+(367,208,c),
+(366,170,l),
+(305,413,o),
+(120,565,o),
+(-6,629,c)
+);
+}
+);
+width = 860;
+}
+);
+},
+{
+glyphname = "lam-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+unicode = 1604;
+},
+{
+glyphname = "lam-ar.medi";
+lastChange = "2022-02-11 16:44:46 +0000";
+layers = (
+{
+anchors = (
+{
+name = entry;
+pos = (449,-20);
+},
+{
+name = exit;
+pos = (0,-30);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(347,135,o),
+(278,178,o),
+(265,351,cs),
+(184,1418,l),
+(158,1418,l),
+(120,1327,l),
+(189,365,ls),
+(202,182,o),
+(120,125,o),
+(0,125,c),
+(-66,125,o),
+(-66,-30,o),
+(0,-30,c),
+(166,-30,o),
+(236,89,o),
+(224,254,c),
+(208,207,l),
+(245,44,o),
+(325,-20,o),
+(449,-20,c),
+(512,-20,o),
+(512,135,o),
+(449,135,c)
+);
+}
+);
+width = 450;
+}
+);
+},
+{
+glyphname = "lam-ar.init";
+lastChange = "2022-02-11 16:44:27 +0000";
+layers = (
+{
+anchors = (
+{
+name = exit;
+pos = (0,-30);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(272,391,cs),
+(194,1418,l),
+(168,1418,l),
+(130,1327,l),
+(199,365,ls),
+(212,182,o),
+(128,125,o),
+(0,125,c),
+(-66,125,o),
+(-66,-30,o),
+(0,-30,c),
+(170,-30,o),
+(295,88,o)
+);
+}
+);
+width = 381;
+}
+);
+},
+{
+glyphname = "meem-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+unicode = 1605;
+},
+{
+glyphname = "meem-ar.medi";
+lastChange = "2022-02-16 14:28:56 +0000";
+layers = (
+{
+anchors = (
+{
+name = entry;
+pos = (637,-20);
+},
+{
+name = exit;
+pos = (0,-20);
+}
+);
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(220,34,o),
+(321,-27,o),
+(376,-27,cs),
+(444,-27,o),
+(504,58,o),
+(504,135,cs),
+(504,182,o),
+(481,351,o),
+(349,351,cs),
+(199,351,o),
+(201,135,o),
+(0,135,c),
+(-50,135,o),
+(-50,-20,o),
+(0,-20,c),
+(218,-20,o),
+(203,219,o),
+(326,219,cs),
+(384,219,o),
+(427,166,o),
+(427,138,cs),
+(427,92,o),
+(316,121,o),
+(233,184,c),
+(168,94,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(416,56,l),
+(473,10,o),
+(534,-20,o),
+(637,-20,c),
+(693,-20,o),
+(693,135,o),
+(637,135,c),
+(579,135,o),
+(537,138,o),
+(490,153,c)
+);
+}
+);
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(198,14,o),
+(315,-27,o),
+(371,-27,cs),
+(446,-27,o),
+(504,58,o),
+(504,135,cs),
+(504,182,o),
+(481,351,o),
+(349,351,cs),
+(199,351,o),
+(201,135,o),
+(0,135,c),
+(-50,135,o),
+(-50,-20,o),
+(0,-20,c),
+(218,-20,o),
+(204,219,o),
+(326,219,cs),
+(384,219,o),
+(427,164,o),
+(427,136,cs),
+(427,90,o),
+(306,111,o),
+(213,164,c),
+(138,64,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(416,56,l),
+(473,10,o),
+(534,-20,o),
+(637,-20,c),
+(693,-20,o),
+(693,135,o),
+(637,135,c),
+(579,135,o),
+(537,138,o),
+(490,153,c)
+);
+}
+);
+width = 637;
+},
+{
+anchors = (
+{
+name = entry;
+pos = (637,-20);
+},
+{
+name = exit;
+pos = (0,-20);
+}
+);
+associatedMasterId = m01;
+layerId = "15A461D0-85A5-401B-8F0B-9148F275820E";
+name = "16 Feb 22 21.28";
+shapes = (
+{
+closed = 1;
+nodes = (
+(220,34,o),
+(321,-27,o),
+(376,-27,cs),
+(444,-27,o),
+(504,58,o),
+(504,135,cs),
+(504,182,o),
+(481,351,o),
+(349,351,cs),
+(199,351,o),
+(201,135,o),
+(0,135,c),
+(-50,135,o),
+(-50,-20,o),
+(0,-20,c),
+(218,-20,o),
+(203,219,o),
+(326,219,cs),
+(384,219,o),
+(427,166,o),
+(427,138,cs),
+(427,92,o),
+(316,121,o),
+(233,184,c),
+(168,94,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(416,56,l),
+(473,10,o),
+(534,-20,o),
+(637,-20,c),
+(693,-20,o),
+(693,135,o),
+(637,135,c),
+(579,135,o),
+(537,138,o),
+(490,153,c)
+);
+}
+);
+width = 637;
+}
+);
+},
+{
+glyphname = "meem-ar.init";
+lastChange = "2022-02-08 14:18:00 +0000";
+layers = (
+{
+anchors = (
+{
+name = exit;
+pos = (0,-20);
+}
+);
+background = {
+anchors = (
+{
+name = exit;
+pos = (0,-20);
+}
+);
+shapes = (
+{
+closed = 1;
+nodes = (
+(247,119,o),
+(337,73,o),
+(391,73,cs),
+(458,73,o),
+(524,134,o),
+(524,223,cs),
+(524,284,o),
+(493,431,o),
+(379,431,cs),
+(229,431,o),
+(215,135,o),
+(0,135,c),
+(-50,135,o),
+(-50,-20,o),
+(0,-20,c),
+(219,-20,o),
+(199,299,o),
+(331,299,cs),
+(383,299,o),
+(427,259,o),
+(427,233,cs),
+(427,198,o),
+(325,210,o),
+(263,274,c),
+(198,174,l)
+);
+}
+);
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(240,90,o),
+(344,33,o),
+(402,33,cs),
+(466,33,o),
+(534,121,o),
+(534,207,cs),
+(534,265,o),
+(489,411,o),
+(385,411,cs),
+(242,411,o),
+(218,135,o),
+(0,135,c),
+(-50,135,o),
+(-50,-20,o),
+(0,-20,c),
+(231,-20,o),
+(234,279,o),
+(334,279,cs),
+(374,279,o),
+(427,231,o),
+(427,198,cs),
+(427,185,o),
+(418,179,o),
+(404,179,cs),
+(366,179,o),
+(305,213,o),
+(263,254,c),
+(208,174,l)
+);
+}
+);
+width = 559;
+}
+);
+},
+{
+glyphname = "noon-ar";
+lastChange = "2022-02-11 16:54:45 +0000";
+layers = (
+{
+background = {
 shapes = (
 {
 closed = 1;
@@ -13056,11 +14785,142 @@ nodes = (
 );
 }
 );
-width = 1364;
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(999,-430,o),
+(1200,-213,o),
+(1200,47,cs),
+(1200,149,o),
+(1169,321,o),
+(1116,464,c),
+(1096,464,l),
+(998,352,l),
+(1148,-70,l),
+(1155,-16,l),
+(1066,-158,o),
+(909,-275,o),
+(685,-275,cs),
+(407,-275,o),
+(265,-95,o),
+(381,289,c),
+(327,303,l),
+(170,-190,o),
+(345,-430,o),
+(681,-430,cs)
+);
+}
+);
+width = 1395;
 }
 );
 metricRight = "behDotless-ar";
 unicode = 1606;
+},
+{
+glyphname = "heh-ar.fina";
+lastChange = "2022-02-11 16:55:14 +0000";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (305,0);
+},
+{
+name = entry;
+pos = (609,-20);
+},
+{
+name = top;
+pos = (195,798);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(514,135,o),
+(473,171,o),
+(456,281,cs),
+(377,787,l),
+(351,787,l),
+(313,696,l),
+(388,233,ls),
+(415,68,o),
+(465,-20,o),
+(609,-20,c),
+(681,-20,o),
+(681,135,o),
+(609,135,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(244,521,o),
+(141,462,o),
+(73,411,c),
+(56,363,o),
+(43,301,o),
+(42,254,c),
+(72,213,o),
+(154,177,o),
+(227,177,cs),
+(306,177,o),
+(367,219,o),
+(387,279,c),
+(378,351,l),
+(348,337,o),
+(295,325,o),
+(252,325,cs),
+(175,325,o),
+(126,364,o),
+(111,390,c),
+(100,344,l),
+(169,400,o),
+(273,454,o),
+(351,486,c),
+(340,565,l)
+);
+}
+);
+width = 609;
+}
+);
+},
+{
+glyphname = "tehMarbuta-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+unicode = 1577;
+},
+{
+glyphname = "tehMarbuta-ar.fina";
+lastChange = "2022-02-11 16:51:24 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+ref = "heh-ar.fina";
+},
+{
+pos = (-39,238);
+ref = "twodotshorizontalabove-ar";
+}
+);
+width = 609;
+}
+);
 },
 {
 glyphname = "akara-bali";
@@ -21102,9 +22962,19 @@ unicode = 6935;
 },
 {
 glyphname = "pa-bali";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-08 14:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (770,0);
+},
+{
+name = top;
+pos = (770,940);
+}
+);
 background = {
 shapes = (
 {
@@ -24660,7 +26530,7 @@ unicode = 6659;
 },
 {
 glyphname = "pa-bugi";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-08 14:06:08 +0000";
 layers = (
 {
 anchors = (
@@ -26854,7 +28724,7 @@ note = uniA98D_uniA9B3_uniA981;
 {
 color = 9;
 glyphname = "ai_cecakTelu_panyangga-java";
-lastChange = "2022-01-06 12:48:29 +0000";
+lastChange = "2022-02-05 09:30:53 +0000";
 layers = (
 {
 background = {
@@ -26894,7 +28764,7 @@ pos = (513,0);
 ref = _cerek3;
 },
 {
-pos = (307,0);
+pos = (287,0);
 ref = "panyangga-java";
 },
 {
@@ -26968,7 +28838,7 @@ note = uniA98D_uniA9B3_uniA982;
 {
 color = 9;
 glyphname = "ai_panyangga-java";
-lastChange = "2022-01-06 12:48:29 +0000";
+lastChange = "2022-02-05 09:30:53 +0000";
 layers = (
 {
 background = {
@@ -26996,7 +28866,7 @@ pos = (513,0);
 ref = _cerek3;
 },
 {
-pos = (307,0);
+pos = (287,0);
 ref = "panyangga-java";
 }
 );
@@ -45619,17 +47489,17 @@ unicode = 9676;
 },
 {
 glyphname = "dotbelow-ar";
-lastChange = "2022-01-02 16:46:32 +0000";
+lastChange = "2022-02-08 13:45:28 +0000";
 layers = (
 {
 anchors = (
 {
 name = _bottom;
-pos = (133,0);
+pos = (173,0);
 },
 {
 name = bottom;
-pos = (133,-401);
+pos = (173,-401);
 }
 );
 layerId = m01;
@@ -45637,17 +47507,208 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(133,-401,l),
-(261,-273,l),
-(133,-145,l),
-(5,-273,l)
+(173,-401,l),
+(301,-273,l),
+(173,-145,l),
+(45,-273,l)
 );
 }
 );
-width = 266;
+width = 346;
 }
 );
+metricLeft = "=45";
 metricRight = "=|";
+},
+{
+glyphname = "twodotsverticalabove-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "twodotsverticalbelow-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "twodotshorizontalabove-ar";
+lastChange = "2022-02-11 17:00:52 +0000";
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (234,560);
+},
+{
+name = top;
+pos = (234,812);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(145,599,l),
+(246,699,l),
+(145,800,l),
+(45,699,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(333,612,l),
+(433,712,l),
+(333,812,l),
+(232,712,l)
+);
+}
+);
+width = 478;
+}
+);
+metricLeft = "=45";
+metricRight = "=|";
+},
+{
+glyphname = "twodotshorizontalbelow-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "threedotsdownabove-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "threedotsdownbelow-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "threedotsdowncenter-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "threedotsupabove-ar";
+lastChange = "2022-02-08 14:19:23 +0000";
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (248,549);
+},
+{
+name = top;
+pos = (248,995);
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(146,599,l),
+(251,705,l),
+(146,809,l),
+(41,705,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(350,603,l),
+(455,709,l),
+(350,814,l),
+(245,709,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(248,774,l),
+(354,879,l),
+(248,984,l),
+(144,879,l)
+);
+}
+);
+width = 1200;
+}
+);
+},
+{
+glyphname = "threedotsupbelow-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "miniKeheh-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "gafsarkashabove-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "gafsarkashcenter-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
+},
+{
+glyphname = "doublestroke-ar";
+layers = (
+{
+layerId = m01;
+width = 1200;
+}
+);
 },
 {
 glyphname = "ha-bali.below";
@@ -46784,7 +48845,7 @@ metricRight = "=|";
 },
 {
 glyphname = "taMurdaMahaprana-bali.below";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-05 09:30:39 +0000";
 layers = (
 {
 layerId = m01;
@@ -46792,13 +48853,13 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(80,-423,l),
-(123,-832,o),
-(261,-1160,o),
-(893,-1160,cs),
-(1535,-1160,o),
+(94,-420,l),
+(139,-842,o),
+(302,-1160,o),
+(905,-1160,cs),
+(1529,-1160,o),
 (1677,-820,o),
-(1677,-657,cs),
+(1677,-656,cs),
 (1677,-543,o),
 (1607,-486,o),
 (1521,-486,cs),
@@ -46827,7 +48888,7 @@ width = 1200;
 },
 {
 glyphname = "taLatik-bali.below";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-05 09:30:52 +0000";
 layers = (
 {
 layerId = m01;
@@ -46835,13 +48896,13 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(80,-423,l),
-(123,-832,o),
-(261,-1160,o),
-(893,-1160,cs),
-(1535,-1160,o),
+(95,-424,l),
+(139,-838,o),
+(291,-1160,o),
+(902,-1160,cs),
+(1530,-1160,o),
 (1677,-820,o),
-(1677,-657,cs),
+(1677,-656,cs),
 (1677,-543,o),
 (1607,-486,o),
 (1521,-486,cs),
@@ -46876,7 +48937,7 @@ nodes = (
 );
 }
 );
-width = 2027;
+width = 2042;
 }
 );
 metricRight = "=|";
@@ -47588,9 +49649,19 @@ metricRight = "=|";
 },
 {
 glyphname = "ga-bali.below";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-08 14:15:45 +0000";
 layers = (
 {
+anchors = (
+{
+name = _bottom;
+pos = (1592,0);
+},
+{
+name = bottom;
+pos = (1592,-1122);
+}
+);
 layerId = m01;
 shapes = (
 {
@@ -50187,7 +52258,7 @@ unicode = 6973;
 },
 {
 glyphname = "taling-bali";
-lastChange = "2022-01-02 16:33:39 +0000";
+lastChange = "2022-02-08 14:16:45 +0000";
 layers = (
 {
 anchors = (
@@ -50201,49 +52272,49 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(936,-1959,l),
-(756,-1772,o),
-(639,-1579,o),
-(639,-1221,cs),
-(639,-556,o),
-(1042,-280,o),
-(1042,395,cs),
-(1042,811,o),
-(889,960,o),
-(609,960,cs),
-(321,960,o),
-(153,802,o),
-(153,496,cs),
+(796,-1959,l),
+(641,-1776,o),
+(519,-1574,o),
+(519,-1226,cs),
+(519,-541,o),
+(992,-303,o),
+(992,413,cs),
+(992,805,o),
+(850,960,o),
+(584,960,cs),
+(316,960,o),
+(153,803,o),
+(153,498,cs),
 (153,336,o),
 (199,218,o),
 (295,115,c),
 (349,160,l),
 (278,244,o),
 (234,335,o),
-(234,461,cs),
+(234,465,cs),
 (234,698,o),
-(381,780,o),
-(589,780,cs),
-(843,780,o),
-(962,658,o),
-(962,392,cs),
-(962,-110,o),
-(540,-405,o),
-(540,-1166,cs),
-(540,-1558,o),
-(652,-1812,o),
-(883,-2010,c)
+(375,780,o),
+(566,780,cs),
+(803,780,o),
+(912,654,o),
+(912,403,cs),
+(912,-129,o),
+(420,-391,o),
+(420,-1171,cs),
+(420,-1561,o),
+(543,-1819,o),
+(743,-2010,c)
 );
 }
 );
-width = 1190;
+width = 1150;
 }
 );
 unicode = 6974;
 },
 {
 glyphname = "talingRepa-bali";
-lastChange = "2022-01-02 16:33:39 +0000";
+lastChange = "2022-02-08 14:16:45 +0000";
 layers = (
 {
 layerId = m01;
@@ -50256,7 +52327,7 @@ pos = (335,0);
 ref = _cerek3;
 }
 );
-width = 1190;
+width = 1150;
 }
 );
 unicode = 6975;
@@ -50799,7 +52870,7 @@ unicode = 6683;
 },
 {
 glyphname = "e-bugi";
-lastChange = "2021-10-24 04:30:41 +0000";
+lastChange = "2022-02-08 14:17:12 +0000";
 layers = (
 {
 layerId = m01;
@@ -50807,24 +52878,24 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(529,595,l),
-(303,360,o),
-(157,212,o),
-(157,87,cs),
-(157,-77,o),
-(392,-264,o),
-(819,-637,c),
-(877,-575,l),
-(477,-223,o),
-(321,-81,o),
-(321,26,cs),
-(321,107,o),
-(419,212,o),
-(665,459,c)
+(509,595,l),
+(283,360,o),
+(137,212,o),
+(137,87,cs),
+(137,-77,o),
+(372,-264,o),
+(799,-637,c),
+(857,-575,l),
+(457,-223,o),
+(301,-81,o),
+(301,26,cs),
+(301,107,o),
+(399,212,o),
+(645,459,c)
 );
 }
 );
-width = 670;
+width = 650;
 }
 );
 unicode = 6681;
@@ -51560,7 +53631,7 @@ unicode = 43443;
 {
 color = 6;
 glyphname = "cecakTelu_panyangga-java";
-lastChange = "2022-01-06 12:41:23 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 anchors = (
@@ -51606,7 +53677,7 @@ pos = (953,19);
 ref = "panyangga-java";
 }
 );
-width = 2037;
+width = 2077;
 }
 );
 metricLeft = "=180";
@@ -52018,7 +54089,7 @@ note = uniA9B3_uniA982;
 {
 color = 6;
 glyphname = "cecakTelu_wulu_panyangga-java";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 background = {
@@ -52060,7 +54131,7 @@ pos = (135,293);
 ref = "_cecakTelu-java.small";
 }
 );
-width = 3213;
+width = 3253;
 }
 );
 metricLeft = "=180";
@@ -52122,7 +54193,7 @@ note = uniA9B3_uniA9B6_uniA982;
 {
 color = 6;
 glyphname = "cecakTelu_wuluMelik_panyangga-java";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 background = {
@@ -52168,7 +54239,7 @@ pos = (2069,0);
 ref = "panyangga-java";
 }
 );
-width = 3153;
+width = 3193;
 }
 );
 metricLeft = "=180";
@@ -52234,7 +54305,7 @@ note = uniA9B3_uniA9B7_uniA982;
 {
 color = 6;
 glyphname = "cecakTelu_pepet_panyangga-java";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 background = {
@@ -52405,7 +54476,7 @@ pos = (1342,-30);
 ref = "panyangga-java";
 }
 );
-width = 2430;
+width = 2466;
 }
 );
 metricLeft = "=180";
@@ -53082,7 +55153,7 @@ note = uniA9B6_uniA981;
 {
 color = 6;
 glyphname = "wulu_panyangga-java";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 anchors = (
@@ -53114,7 +55185,7 @@ pos = (1201,0);
 ref = "panyangga-java";
 }
 );
-width = 2285;
+width = 2325;
 }
 );
 metricLeft = "=180";
@@ -53247,7 +55318,7 @@ note = uniA9B7_uniA981;
 {
 color = 6;
 glyphname = "wuluMelik_panyangga-java";
-lastChange = "2021-11-21 03:05:06 +0000";
+lastChange = "2022-02-11 16:54:45 +0000";
 layers = (
 {
 background = {
@@ -53281,7 +55352,7 @@ pos = (406,300);
 ref = "cecak-java";
 }
 );
-width = 2278;
+width = 2318;
 }
 );
 metricLeft = "=180";
@@ -53561,17 +55632,17 @@ note = uniA9BC_uniA982;
 },
 {
 glyphname = "panyangga-java";
-lastChange = "2022-01-06 12:48:59 +0000";
+lastChange = "2022-02-05 09:30:52 +0000";
 layers = (
 {
 anchors = (
 {
 name = _top;
-pos = (542,940);
+pos = (562,940);
 },
 {
 name = top;
-pos = (542,1485);
+pos = (562,1485);
 }
 );
 background = {
@@ -53579,39 +55650,39 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(701,1225,l),
-(692,1337,o),
-(657,1395,o),
-(542,1485,c),
-(427,1399,o),
-(392,1334,o),
-(383,1226,c),
-(463,1192,l),
-(462,1308,o),
-(488,1340,o),
-(542,1385,c),
-(598,1337,o),
-(619,1310,o),
-(622,1191,c)
+(721,1225,l),
+(712,1337,o),
+(677,1395,o),
+(562,1485,c),
+(447,1399,o),
+(412,1334,o),
+(403,1226,c),
+(483,1192,l),
+(482,1308,o),
+(508,1340,o),
+(562,1385,c),
+(618,1337,o),
+(639,1310,o),
+(642,1191,c)
 );
 },
 {
 closed = 1;
 nodes = (
-(666,1210,o),
-(542,1210,cs),
-(418,1210,o),
-(324,1263,o),
-(229,1343,c),
-(180,1284,l),
-(261,1146,o),
-(411,1080,o),
-(542,1080,cs),
-(673,1080,o),
-(823,1146,o),
-(904,1284,c),
-(855,1343,l),
-(760,1263,o)
+(686,1210,o),
+(562,1210,cs),
+(438,1210,o),
+(344,1263,o),
+(249,1343,c),
+(200,1284,l),
+(281,1146,o),
+(431,1080,o),
+(562,1080,cs),
+(693,1080,o),
+(843,1146,o),
+(924,1284,c),
+(875,1343,l),
+(780,1263,o)
 );
 }
 );
@@ -53621,43 +55692,43 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(731,1225,l),
-(720,1337,o),
-(679,1395,o),
-(542,1485,c),
-(405,1399,o),
-(364,1334,o),
-(353,1226,c),
-(433,1192,l),
-(432,1308,o),
-(467,1340,o),
-(542,1385,c),
-(619,1337,o),
-(648,1310,o),
-(652,1191,c)
+(751,1225,l),
+(740,1337,o),
+(699,1395,o),
+(562,1485,c),
+(425,1399,o),
+(384,1334,o),
+(373,1226,c),
+(453,1192,l),
+(452,1308,o),
+(487,1340,o),
+(562,1385,c),
+(639,1337,o),
+(668,1310,o),
+(672,1191,c)
 );
 },
 {
 closed = 1;
 nodes = (
-(704,1210,o),
-(542,1210,cs),
-(380,1210,o),
-(280,1263,o),
-(209,1403,c),
-(160,1389,l),
-(215,1160,o),
-(374,1080,o),
-(542,1080,cs),
-(710,1080,o),
-(869,1160,o),
-(924,1389,c),
-(875,1403,l),
-(804,1263,o)
+(724,1210,o),
+(562,1210,cs),
+(400,1210,o),
+(300,1263,o),
+(229,1403,c),
+(180,1389,l),
+(235,1160,o),
+(394,1080,o),
+(562,1080,cs),
+(730,1080,o),
+(889,1160,o),
+(944,1389,c),
+(895,1403,l),
+(824,1263,o)
 );
 }
 );
-width = 1084;
+width = 1124;
 }
 );
 metricLeft = "=180";
@@ -91239,17 +93310,17 @@ note = _cmpjhapengkal;
 },
 {
 glyphname = dieresiscomb;
-lastChange = "2022-01-05 06:12:22 +0000";
+lastChange = "2022-02-05 09:30:52 +0000";
 layers = (
 {
 anchors = (
 {
 name = _top;
-pos = (373,940);
+pos = (379,940);
 },
 {
 name = top;
-pos = (373,1310);
+pos = (379,1310);
 }
 );
 background = {
@@ -91257,35 +93328,35 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(296,1160,o),
-(338,1160,qs),
-(380,1160,o),
-(438,1218,o),
-(438,1260,qs),
-(438,1302,o),
-(380,1360,o),
-(338,1360,qs),
-(296,1360,o),
-(238,1302,o),
-(238,1260,qs),
-(238,1218,o)
+(302,1160,o),
+(344,1160,qs),
+(386,1160,o),
+(444,1218,o),
+(444,1260,qs),
+(444,1302,o),
+(386,1360,o),
+(344,1360,qs),
+(302,1360,o),
+(244,1302,o),
+(244,1260,qs),
+(244,1218,o)
 );
 },
 {
 closed = 1;
 nodes = (
-(-44,1160,o),
-(-2,1160,qs),
-(40,1160,o),
-(98,1218,o),
-(98,1260,qs),
-(98,1302,o),
-(40,1360,o),
-(-2,1360,qs),
-(-44,1360,o),
-(-102,1302,o),
-(-102,1260,qs),
-(-102,1218,o)
+(-38,1160,o),
+(4,1160,qs),
+(46,1160,o),
+(104,1218,o),
+(104,1260,qs),
+(104,1302,o),
+(46,1360,o),
+(4,1360,qs),
+(-38,1360,o),
+(-96,1302,o),
+(-96,1260,qs),
+(-96,1218,o)
 );
 }
 );
@@ -91295,39 +93366,39 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(230,1075,o),
-(282,1128,o),
-(282,1193,cs),
-(282,1257,o),
-(230,1310,o),
-(166,1310,cs),
-(101,1310,o),
-(49,1257,o),
-(49,1193,cs),
-(49,1128,o),
-(101,1075,o),
-(166,1075,cs)
+(236,1075,o),
+(288,1128,o),
+(288,1193,cs),
+(288,1257,o),
+(236,1310,o),
+(172,1310,cs),
+(107,1310,o),
+(55,1257,o),
+(55,1193,cs),
+(55,1128,o),
+(107,1075,o),
+(172,1075,cs)
 );
 },
 {
 closed = 1;
 nodes = (
-(644,1076,o),
-(696,1128,o),
-(696,1193,cs),
-(696,1257,o),
-(644,1309,o),
-(580,1309,cs),
-(515,1309,o),
-(463,1257,o),
-(463,1193,cs),
-(463,1128,o),
-(515,1076,o),
-(580,1076,cs)
+(650,1076,o),
+(702,1128,o),
+(702,1193,cs),
+(702,1257,o),
+(650,1309,o),
+(586,1309,cs),
+(521,1309,o),
+(469,1257,o),
+(469,1193,cs),
+(469,1128,o),
+(521,1076,o),
+(586,1076,cs)
 );
 }
 );
-width = 745;
+width = 757;
 }
 );
 metricLeft = "=55";
@@ -127728,52 +129799,6 @@ m01 = 1;
 name = Regular;
 }
 );
-kerningLTR = {
-m01 = {
-"@MMK_L_ka-bugi" = {
-"@MMK_R_ga-bugi" = -90;
-"@MMK_R_ka-bugi" = -110;
-};
-"@MMK_L_ma-bugi" = {
-"@MMK_R_ga-bugi" = -70;
-"e-bugi" = -120;
-};
-"@MMK_L_nga-bugi" = {
-"@MMK_R_ma-bugi" = -90;
-"ra-bugi" = -50;
-};
-T = {
-"@MMK_R_o" = -110;
-odieresis = -40;
-};
-"ba-bugi" = {
-"@MMK_R_ma-bugi" = -70;
-"e-bugi" = -50;
-};
-"e-bugi" = {
-"@MMK_R_ga-bugi" = -50;
-};
-"e-java" = {
-"padaLingsa-java" = -90;
-};
-"ngka-bugi" = {
-"@MMK_R_ga-bugi" = -60;
-"e-bugi" = -100;
-};
-"nra-bugi" = {
-"@MMK_R_ga-bugi" = -60;
-};
-"o-bugi" = {
-"@MMK_R_ga-bugi" = -60;
-"@MMK_R_ma-bugi" = -200;
-"ra-bugi" = -180;
-};
-"pa-bugi" = {
-"e-bugi" = -100;
-"o-bugi" = -60;
-};
-};
-};
 metrics = (
 {
 type = ascender;
