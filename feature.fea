@@ -1,0 +1,149 @@
+languagesystem DFLT dflt;
+
+languagesystem java dflt;
+languagesystem java KAW;
+
+@belowForm = [
+    aPas-java aiPas-java ePas-java iKawiPas-java iPas-java iiPas-java kaPas-java kaPas-java.base kaSasakPas-java kaSasakPas-java.base kaMurdaPas-java gaPas-java gaMurdaPas-java ngaPas-java caPas-java caPas-java.short caPas_pengkal-java caPas_suku-java caMurdaPas-java jaPas-java jaPas_suku-java nyaMurdaPas-java ttaPas-java ttaPas_pengkal-java ttaPas_suku-java ttaMahapranaPas-java ttaMahapranaPas_suku-java ddaPas-java ddaPas_suku-java ddaMahapranaPas-java naMurdaPas-java taPas-java taMurdaPas-java taPas-java.base daPas-java daMahapranaPas-java naPas-java naPas_suku-java baPas-java baMurdaPas-java maPas-java maPas_suku-java yaPas-java raPas-java raAgungPas-java laPas-java laPas-java.base waPas-java waPas_suku-java saMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java oPas-java uPas-java nyaMurdaPas-java.alt baPas-java.alt pengkal-java.below laPas-java.below
+];
+@AllJavanese = [
+    ka-java kaSasak-java kaMurda-java ga-java gaMurda-java nga-java ca-java caMurda-java ja-java nyaMurda-java jaMahaprana-java jaMahaprana_suku-java jaMahaprana_sukuMendut-java jaMahaprana-java.base nya-java tta-java ttaMahaprana-java dda-java ddaMahaprana-java naMurda-java ta-java taMurda-java da-java daMahaprana-java na-java pa-java paMurda-java ba-java baMurda-java ma-java ya-java ra-java raAgung-java la-java wa-java saMurda-java saMahaprana-java sa-java ha-java a-java iKawi-java i-java ii-java u-java e-java ai-java ai_cecak-java ai_cecakTelu-java ai_cecakTelu_cecak-java ai_cecakTelu_panyangga-java ai_cecakTelu_layar-java ai_panyangga-java ai_layar-java o-java paCerek-java ngaLelet-java ngaLeletRaswadi-java pangkon-java taling-java dirgaMure-java wignyan-java cakra-java.isol jaMahapranaPas-java jaMahapranaPas_suku-java jaMahapranaPas_sukuMendut-java jaMahapranaPas-java.base nyaPas-java nyaPas_suku-java nyaPas_sukuMendut-java nyaPas-java.base paPas-java paMurdaPas-java saMahapranaPas-java saPas-java haPas-java paCerekPas-java pangrangkep-java jaMahaprana_keret-java jaMahapranaPas_keret-java nyaPas_keret-java jaMahapranaPas-java.short.base jaMahaprana-java.short.base zero-java one-java two-java three-java four-java five-java six-java seven-java eight-java nine-java rerengganLeft-java rerengganRight-java padaAndap-java padaMadya-java padaLuhur-java padaWindu-java padaTirtaTumetes-java padaIsenIsen-java padaPangkat-java padaLingsa-java padaLungsi-java padaAdeg-java padaAdegAdeg-java padaPiseleh-java padaPiselehTurned-java tarung-java tolong-java cakra-java cakra-java.below cakra_suku-java cakra_suku-java.below pengkal-java pengkal_suku-java pengkal_sukuMendut-java pengkal_keret-java pengkal-java.below pengkal_suku-java.below pengkal_sukuMendut-java.below pengkal_keret-java.below cecak-java cecakTelu-java cecakTelu_panyangga-java cecakTelu_cecak-java cecakTelu_wulu-java cecakTelu_wuluMelik-java cecakTelu_pepet-java cecakTelu_layar-java cecakTelu_wulu_panyangga-java cecakTelu_wulu_layar-java cecakTelu_wuluMelik_panyangga-java cecakTelu_wuluMelik_layar-java cecakTelu_pepet_panyangga-java cecakTelu_pepet_layar-java cecakTelu_wulu_cecak-java cecakTelu_wuluMelik_cecak-java cecakTelu_pepet_cecak-java wulu-java wulu_cecak-java wulu_panyangga-java wulu_layar-java wuluMelik-java wuluMelik_cecak-java wuluMelik_panyangga-java wuluMelik_layar-java pepet-java pepet_cecak-java pepet_panyangga-java pepet_layar-java panyangga-java layar-java layar_cecak-java layar_cecakTelu-java suku-java suku-java.below sukuMendut-java sukuMendut-java.below keret-java keret-java.below kaPas-java kaPas-java.base kaSasakPas-java kaSasakPas-java.base kaMurdaPas-java gaPas-java gaMurdaPas-java ngaPas-java caPas-java caPas_pengkal-java caPas_pengkal_suku-java caPas_pengkal_sukuMendut-java caPas_suku-java caPas_sukuMendut-java caMurdaPas-java caMurdaPas_pengkal-java caMurdaPas_pengkal_suku-java caMurdaPas_pengkal_sukuMendut-java caMurdaPas_suku-java caMurdaPas_sukuMendut-java jaPas-java jaPas_pengkal-java jaPas_pengkal_suku-java jaPas_pengkal_sukuMendut-java jaPas_suku-java jaPas_sukuMendut-java nyaMurdaPas-java nyaMurdaPas_pengkal-java nyaMurdaPas_pengkal_suku-java nyaMurdaPas_pengkal_sukuMendut-java nyaMurdaPas_suku-java nyaMurdaPas_sukuMendut-java ttaPas-java ttaMahapranaPas-java ddaPas-java ddaMahapranaPas-java naMurdaPas-java taPas-java taPas-java.base taMurdaPas-java daPas-java daPas_cakra-java daPas_pengkal-java daPas_pengkal_suku-java daPas_pengkal_sukuMendut-java daPas_suku-java daPas_sukuMendut-java daMahapranaPas-java naPas-java naPas_pengkal-java naPas_pengkal_suku-java naPas_pengkal_sukuMendut-java naPas_suku-java naPas_sukuMendut-java baPas-java baMurdaPas-java maPas-java yaPas-java raPas-java raAgungPas-java laPas-java laPas-java.base waPas-java waPas-java.below saMurdaPas-java ngaLeletPas-java ngaLeletRaswadiPas-java ttaPas_pengkal-java ttaPas_pengkal_suku-java ttaPas_pengkal_sukuMendut-java ttaMahapranaPas_pengkal-java ttaMahapranaPas_pengkal_suku-java ttaMahapranaPas_pengkal_sukuMendut-java ddaPas_pengkal-java ddaPas_pengkal_suku-java ddaPas_pengkal_sukuMendut-java taMurdaPas_pengkal-java taMurdaPas_pengkal_suku-java taMurdaPas_pengkal_sukuMendut-java maPas_pengkal-java maPas_pengkal_suku-java maPas_pengkal_sukuMendut-java waPas_pengkal-java waPas_pengkal_suku-java waPas_pengkal_sukuMendut-java ttaPas_keret-java ttaPas_suku-java ttaPas_sukuMendut-java ttaMahapranaPas_keret-java ttaMahapranaPas_suku-java ttaMahapranaPas_sukuMendut-java ddaPas_keret-java ddaPas_suku-java ddaPas_sukuMendut-java taMurdaPas_keret-java taMurdaPas_suku-java taMurdaPas_sukuMendut-java maPas_keret-java maPas_suku-java maPas_sukuMendut-java waPas_keret-java waPas_suku-java waPas_sukuMendut-java aPas-java iKawiPas-java iPas-java iiPas-java uPas-java ePas-java aiPas-java oPas-java caPas_keret-java caMurdaPas_keret-java jaPas_keret-java nyaMurdaPas_keret-java daPas_keret-java naPas_keret-java cakra_suku-java.001 cakra_suku-java.002 nyaPas-java.alt paPas-java.alt paMurdaPas-java.alt saMahapranaPas-java.alt saPas-java.alt haPas-java.alt paCerekPas-java.alt nyaMurdaPas-java.alt baPas-java.alt pengkal-java.base pengkal-java.below.base laPas-java.below cakra-java.001 cakra-java.002 cakra-java.below.001 cakra-java.below.002 pepet-java.short suku-java.straight keret-java.straight
+];
+
+lookup lookup0 {
+ sub cakra-java by cakra-java.isol;
+} lookup0;
+
+lookup removeDottedCircle {
+	sub pengkal-java dottedcircle keret-java by pengkal_keret-java;
+	sub pengkal-java.below dottedcircle keret-java by pengkal_keret-java.below;
+} removeDottedCircle;
+
+
+feature aalt {
+
+    feature pref;
+    feature rphf;
+    feature abvs;
+    feature blwf;
+    feature blws;
+    feature pstf;
+    feature psts;
+    feature ss01;
+    feature ss02;
+    feature cv01;
+    feature cv02;
+    feature init;
+    feature medi;
+    feature fina;
+    feature calt;
+}
+
+
+lookup pref_java_02 {
+    @cakras = [cakra-java cakra-java.below cakra_suku-java cakra_suku-java.below cakra_suku-java.001 cakra_suku-java.002 cakra-java.001 pengkal-java pengkal-java.below pengkal-java.base pengkal-java.below.base pengkal_keret-java pengkal_keret-java.below];
+
+    lookupflag UseMarkFilteringSet @cakras;
+    sub [kaPas-java.base taPas-java.base] cakra-java' lookup lookup0 pengkal-java;
+    sub cakra-java' lookup lookup0 pengkal-java;
+} pref_java_02;
+
+lookup pref_java_01 {
+    ignore sub pangkon-java [pa-java paMurda-java sa-java ha-java ka-java kaSasak-java ta-java] pangkon-java [ka-java kaSasak-java ta-java la-java] cakra-java';
+    ignore sub pangkon-java [pa-java paMurda-java sa-java ha-java ka-java kaSasak-java ta-java la-java] cakra-java';
+    sub pangkon-java [ngaLelet-java ngaLeletRaswadi-java kaMurda-java ca-java caMurda-java ja-java nyaMurda-java jaMahaprana-java nya-java tta-java ttaMahaprana-java dda-java ddaMahaprana-java  taMurda-java da-java na-java pa-java ba-java baMurda-java ma-java wa-java saMahaprana-java] cakra-java' lookup lookup0;
+    sub jaMahaprana-java cakra-java' lookup lookup0;
+} pref_java_01;
+
+lookup panyangga {
+	@cecakPanyangga = [cecakTelu-java panyangga-java];
+	lookupflag IgnoreBaseGlyphs UseMarkFilteringSet @cecakPanyangga;
+	sub cecakTelu-java panyangga-java by cecakTelu_panyangga-java;
+} panyangga;
+
+lookup abvs_java_03 {
+	sub ai-java cecakTelu-java cecak-java by ai_cecakTelu_cecak-java;
+	sub ai-java cecakTelu-java panyangga-java by ai_cecakTelu_panyangga-java;
+	sub ai-java cecakTelu-java layar-java by ai_cecakTelu_layar-java;
+	sub ai-java panyangga-java by ai_panyangga-java;
+} abvs_java_03;
+
+lookup abvs_java_01 {
+	sub wulu-java cecak-java by wulu_cecak-java;
+	sub wulu-java panyangga-java by wulu_panyangga-java;
+	sub wulu-java layar-java by wulu_layar-java;
+	sub cecakTelu-java cecak-java by cecakTelu_cecak-java;
+	sub cecakTelu-java wulu-java by cecakTelu_wulu-java;
+	sub cecakTelu-java wuluMelik-java by cecakTelu_wuluMelik-java;
+	sub cecakTelu-java pepet-java by cecakTelu_pepet-java;
+	sub cecakTelu-java layar-java by cecakTelu_layar-java;
+	sub cecakTelu-java wulu-java panyangga-java by cecakTelu_wulu_panyangga-java;
+	sub cecakTelu-java wulu-java layar-java by cecakTelu_wulu_layar-java;
+	sub cecakTelu-java wuluMelik-java panyangga-java by cecakTelu_wuluMelik_panyangga-java;
+	sub cecakTelu-java wuluMelik-java layar-java by cecakTelu_wuluMelik_layar-java;
+	sub cecakTelu-java pepet-java panyangga-java by cecakTelu_pepet_panyangga-java;
+	sub cecakTelu-java pepet-java layar-java by cecakTelu_pepet_layar-java;
+	sub cecakTelu-java wulu-java cecak-java by cecakTelu_wulu_cecak-java;
+	sub cecakTelu-java wuluMelik-java cecak-java by cecakTelu_wuluMelik_cecak-java;
+	sub cecakTelu-java pepet-java cecak-java by cecakTelu_pepet_cecak-java;
+	sub wuluMelik-java cecak-java by wuluMelik_cecak-java;
+	sub wuluMelik-java panyangga-java by wuluMelik_panyangga-java;
+	sub wuluMelik-java layar-java by wuluMelik_layar-java;
+	sub pepet-java cecak-java by pepet_cecak-java;
+	sub pepet-java panyangga-java by pepet_panyangga-java;
+	sub pepet-java layar-java by pepet_layar-java;
+	
+	#Repha Ligatures
+	sub layar-java cecak-java by layar_cecak-java;
+} abvs_java_01;
+
+lookup abvs_java_02 {
+	sub [na-java ja-java] pepet-java' by pepet-java.short;
+} abvs_java_02;
+
+lookup blwf_java_01 {
+	sub pangkon-java a-java by aPas-java;
+	sub pangkon-java ai-java by aiPas-java;
+	sub pangkon-java e-java by ePas-java;
+	sub pangkon-java iKawi-java by iKawiPas-java;
+	sub pangkon-java i-java by iPas-java;
+	sub pangkon-java ii-java by iiPas-java;
+	sub pangkon-java u-java by uPas-java;
+	sub pangkon-java o-java by oPas-java;
+	sub pangkon-java ngaLelet-java by ngaLeletPas-java;
+	sub pangkon-java ngaLeletRaswadi-java by ngaLeletRaswadiPas-java;
+	sub pangkon-java ka-java by kaPas-java;
+	sub pangkon-java kaSasak-java by kaSasakPas-java;
+	sub pangkon-java kaMurda-java by kaMurdaPas-java;
+	sub pangkon-java ga-java by gaPas-java;
+	sub pangkon-java gaMurda-java by gaMurdaPas-java;
+	sub pangkon-java nga-java by ngaPas-java;
+	sub pangkon-java ca-java by caPas-java;
+	sub pangkon-java caMurda-java by caMurdaPas-java;
+	sub pangkon-java ja-java by jaPas-java;
+	sub pangkon-java nyaMurda-java by nyaMurdaPas-java;
+	sub pangkon-java tta-java by ttaPas-java;
+	sub pangkon-java ttaMahaprana-java by ttaMahapranaPas-java;
+	sub pangkon-java dda-java by ddaPas-java;
+	sub pangkon-java ddaMahaprana-java by ddaMahapranaPas-java;
+	sub pangkon-java naMurda-java by naMurdaPas-java;
+	sub pangkon-java ta-java by taPas-java;
+	sub pangkon-java taMurda-java by taMurdaPas-java;
+	sub pangkon-java da-java by daPas-java;
+	sub pangkon-java daMahaprana-java by daMahapranaPas-java;
+	sub pangkon-java na-java by naPas-java;
+	sub pangkon-java ba-java by baPas-java;
+	sub pangkon-java baMurda-java by baMurdaPas-java;
+	sub pangkon-java ma-java by maPas-java;
+	sub pangkon-java ya-java by yaPas-java;
+	sub pangkon-java ra-java by raPas-java;
+	sub pangkon-java raAgung-java by raAgungPas-java;
+	sub pangkon-java la-java by laPas-java;
+	sub pangkon-java wa-java by waPas-java;
+	sub pangkon-java saMurda-java by saMurdaPas-java;
+} blwf_java_01;
+
+lookup belowForm {
+	sub @belowForm [waPas-java laPas-java]' by [waPas-java.below laPas-java.below];
+	sub @belowForm [suku-java sukuMendut-java pengkal-java keret-java]' by [suku-java.below sukuMendut-java.below pengkal-java.below keret-java.below];
+} belowForm;
