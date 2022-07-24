@@ -1,5 +1,4 @@
 languagesystem DFLT dflt;
-
 languagesystem java dflt;
 languagesystem java KAW;
 
@@ -18,26 +17,6 @@ lookup removeDottedCircle {
 	sub pengkal-java dottedcircle keret-java by pengkal_keret-java;
 	sub pengkal-java.below dottedcircle keret-java by pengkal_keret-java.below;
 } removeDottedCircle;
-
-
-feature aalt {
-
-    feature pref;
-    feature rphf;
-    feature abvs;
-    feature blwf;
-    feature blws;
-    feature pstf;
-    feature psts;
-    feature ss01;
-    feature ss02;
-    feature cv01;
-    feature cv02;
-    feature init;
-    feature medi;
-    feature fina;
-    feature calt;
-}
 
 
 lookup pref_java_02 {
@@ -147,3 +126,214 @@ lookup belowForm {
 	sub @belowForm [waPas-java laPas-java]' by [waPas-java.below laPas-java.below];
 	sub @belowForm [suku-java sukuMendut-java pengkal-java keret-java]' by [suku-java.below sukuMendut-java.below pengkal-java.below keret-java.below];
 } belowForm;
+
+lookup cakraBelow {
+	sub [ngaPas-java kaMurdaPas-java daMahapranaPas-java raPas-java paPas-java.alt paMurdaPas-java.alt saPas-java.alt kaPas-java kaPas-java.base kaSasakPas-java kaSasakPas-java.base gaPas-java gaMurdaPas-java taPas-java taPas-java.base yaPas-java laPas-java laPas-java.base saMurdaPas-java haPas-java.alt paCerekPas-java.alt raAgungPas-java naMurdaPas-java] cakra-java' by cakra-java.below;
+} cakraBelow;
+
+
+
+lookup belowBase {
+	sub [kaPas-java taPas-java laPas-java laPas-java.below kaSasakPas-java]' [suku-java.below pengkal-java.below waPas-java.below laPas-java.below cakra-java.below cakra-java.below.001 cakra-java.below.002 keret-java.below] by [kaPas-java.base taPas-java.base laPas-java.base laPas-java.below.base kaSasakPas-java.base];
+} belowBase;
+
+lookup PandjinganFit {
+	sub [caPas-java]' [laPas-java.below laPas-java.below.base] by [caPas-java.short];
+} PandjinganFit;
+
+lookup blws_java_01 {	
+	sub caPas-java pengkal-java.below suku-java.below by caPas_pengkal_suku-java;
+	sub caPas-java pengkal-java.below sukuMendut-java.below by caPas_pengkal_sukuMendut-java;
+	sub caMurdaPas-java pengkal-java.below suku-java.below by caMurdaPas_pengkal_suku-java;
+	sub caMurdaPas-java pengkal-java.below sukuMendut-java.below by caMurdaPas_pengkal_sukuMendut-java;
+	sub jaPas-java pengkal-java.below suku-java.below by jaPas_pengkal_suku-java;
+	sub jaPas-java pengkal-java.below sukuMendut-java.below by jaPas_pengkal_sukuMendut-java;
+	sub ttaPas-java pengkal-java.below suku-java.below by ttaPas_pengkal_suku-java;
+	sub ttaPas-java pengkal-java.below sukuMendut-java.below by ttaPas_pengkal_sukuMendut-java;
+	sub ttaMahapranaPas-java pengkal-java.below suku-java.below by ttaMahapranaPas_pengkal_suku-java;
+	sub ttaMahapranaPas-java pengkal-java.below sukuMendut-java.below by ttaMahapranaPas_pengkal_sukuMendut-java;
+	sub ddaPas-java pengkal-java.below suku-java.below by ddaPas_pengkal_suku-java;
+	sub ddaPas-java pengkal-java.below sukuMendut-java.below  by ddaPas_pengkal_sukuMendut-java;
+	sub daPas-java pengkal-java.below suku-java.below by daPas_pengkal_suku-java;
+	sub daPas-java pengkal-java.below sukuMendut-java.below by daPas_pengkal_sukuMendut-java;
+	sub naPas-java pengkal-java.below suku-java.below by naPas_pengkal_suku-java;
+	sub naPas-java pengkal-java.below sukuMendut-java.below by naPas_pengkal_sukuMendut-java;
+	sub maPas-java pengkal-java.below suku-java.below by maPas_pengkal_suku-java;
+	sub maPas-java pengkal-java.below sukuMendut-java.below by maPas_pengkal_sukuMendut-java;
+	sub waPas-java pengkal-java.below suku-java.below by waPas_pengkal_suku-java;
+	sub waPas-java pengkal-java.below sukuMendut-java.below by waPas_pengkal_sukuMendut-java;
+
+	sub caPas-java suku-java.below by caPas_suku-java;
+	sub caPas-java sukuMendut-java.below by caPas_sukuMendut-java;
+	sub caPas-java pengkal-java.below by caPas_pengkal-java;
+	sub caMurdaPas-java suku-java.below by caMurdaPas_suku-java;
+	sub caMurdaPas-java sukuMendut-java.below by caMurdaPas_sukuMendut-java;
+	sub caMurdaPas-java pengkal-java.below by caMurdaPas_pengkal-java;
+	sub jaPas-java suku-java.below by jaPas_suku-java;
+	sub jaPas-java sukuMendut-java.below by jaPas_sukuMendut-java;
+	sub jaPas-java pengkal-java.below by jaPas_pengkal-java;
+	sub ttaPas-java suku-java.below by ttaPas_suku-java;
+	sub ttaPas-java sukuMendut-java.below by ttaPas_sukuMendut-java;
+	sub ttaPas-java pengkal-java.below by ttaPas_pengkal-java;
+	sub ttaMahapranaPas-java suku-java.below by ttaMahapranaPas_suku-java;
+	sub ttaMahapranaPas-java sukuMendut-java.below  by ttaMahapranaPas_sukuMendut-java;
+	sub ttaMahapranaPas-java pengkal-java.below by ttaMahapranaPas_pengkal-java;
+	sub ddaPas-java suku-java.below by ddaPas_suku-java;
+	sub ddaPas-java sukuMendut-java.below by ddaPas_sukuMendut-java;
+	sub ddaPas-java pengkal-java.below by ddaPas_pengkal-java;
+	sub daPas-java suku-java.below by daPas_suku-java;
+	sub daPas-java sukuMendut-java.below by daPas_sukuMendut-java;
+	sub daPas-java pengkal-java.below by daPas_pengkal-java;
+	sub naPas-java suku-java.below by naPas_suku-java;
+	sub naPas-java sukuMendut-java.below  by naPas_sukuMendut-java;
+	sub naPas-java pengkal-java.below by naPas_pengkal-java;
+	sub naPas-java keret-java.below by naPas_keret-java;
+	sub maPas-java suku-java.below by maPas_suku-java;
+	sub maPas-java sukuMendut-java.below by maPas_sukuMendut-java;
+	sub maPas-java pengkal-java.below by maPas_pengkal-java;
+	sub waPas-java suku-java.below by waPas_suku-java;
+	sub waPas-java sukuMendut-java.below by waPas_sukuMendut-java;
+	sub waPas-java pengkal-java.below by waPas_pengkal-java;
+
+} blws_java_01;
+
+lookup psts_java_06 {
+	sub [ka-java kaSasak-java ga-java gaMurda-java caMurda-java ta-java ttaMahaprana-java ha-java ba-java haPas-java saMurda-java] cakra-java' by cakra-java.001;
+	sub [nya-java naMurda-java raAgung-java] cakra-java' by cakra-java.002;
+
+	sub [pa-java wa-java paCerek-java saMahaprana-java nga-java ca-java ja-java nyaMurda-java tta-java ttaMahaprana-java dda-java ddaMahaprana-java taMurda-java da-java daMahaprana-java paMurda-java baMurda-java ma-java ra-java sa-java paPas-java paMurdaPas-java paCerekPas-java na-java kaMurda-java saPas-java] [kaPas-java.base kaSasakPas-java.base gaPas-java gaMurdaPas-java taPas-java.base yaPas-java laPas-java.base gaPas-java saMurdaPas-java haPas-java.alt paCerekPas-java.alt] cakra-java.below' by cakra-java.below.001;
+sub [ka-java kaSasak-java ga-java gaMurda-java ba-java caMurda-java ta-java ha-java ya-java] [ngaPas-java kaMurdaPas-java daMahapranaPas-java raPas-java paPas-java.alt paMurdaPas-java.alt saPas-java.alt kaPas-java.base kaSasakPas-java.base gaPas-java gaMurdaPas-java taPas-java taPas-java.base yaPas-java laPas-java laPas-java.base saMurdaPas-java haPas-java.alt paCerekPas-java.alt] cakra-java.below' by cakra-java.001;
+sub [pa-java wa-java paCerek-java saMahaprana-java nga-java ca-java ja-java nyaMurda-java tta-java ttaMahaprana-java dda-java ddaMahaprana-java taMurda-java da-java daMahaprana-java paMurda-java baMurda-java ma-java ra-java sa-java paPas-java paMurdaPas-java paCerekPas-java na-java kaMurda-java] [raAgungPas-java naMurdaPas-java] cakra-java.below' by cakra-java.below.002;
+sub [ka-java kaSasak-java ga-java gaMurda-java caMurda-java ta-java ha-java ] [ngaPas-java kaMurdaPas-java daMahapranaPas-java raPas-java paPas-java.alt paMurdaPas-java.alt saPas-java.alt ] cakra-java.below' by cakra-java.below.001;
+sub [ka-java kaSasak-java ga-java gaMurda-java caMurda-java ta-java ha-java ] [kaPas-java.base kaSasakPas-java.base gaPas-java gaMurdaPas-java taPas-java.base yaPas-java laPas-java.base saMurdaPas-java haPas-java.alt paCerekPas-java.alt] cakra-java.below' by cakra-java.below.001;
+sub [ka-java kaSasak-java ga-java gaMurda-java caMurda-java ta-java ha-java ] [raAgungPas-java naMurdaPas-java] cakra-java.below' by cakra-java.below.002;
+sub [nya-java naMurda-java] [ngaPas-java kaMurdaPas-java daMahapranaPas-java raPas-java paPas-java.alt paMurdaPas-java.alt saPas-java.alt ] cakra-java.below' by cakra-java.below.002;
+sub [nya-java naMurda-java] [kaPas-java.base kaSasakPas-java.base gaPas-java gaMurdaPas-java taPas-java.base yaPas-java laPas-java.base saMurdaPas-java haPas-java.alt paCerekPas-java.alt ] cakra-java.below' by cakra-java.below.002;
+sub [nya-java naMurda-java] [raAgungPas-java naMurdaPas-java ] cakra-java.below' by cakra-java.below.002;
+} psts_java_06;
+
+lookup pstf_java_01 {
+sub pangkon-java jaMahaprana-java by jaMahapranaPas-java;
+sub pangkon-java nya-java by nyaPas-java;
+sub pangkon-java pa-java by paPas-java;
+sub pangkon-java paMurda-java by paMurdaPas-java;
+sub pangkon-java saMahaprana-java by saMahapranaPas-java;
+sub pangkon-java sa-java by saPas-java;
+sub pangkon-java ha-java by haPas-java;
+sub pangkon-java paCerek-java by paCerekPas-java;
+} pstf_java_01;
+
+lookup pstf_java_02 {
+	sub @belowForm pengkal-java' by pengkal-java.below;
+} pstf_java_02;
+
+lookup psts_java_01 {
+	sub pengkal-java suku-java by pengkal_suku-java;
+	sub pengkal-java sukuMendut-java by pengkal_sukuMendut-java;
+} psts_java_01;
+
+
+lookup psts_java_02 {
+	lookupflag UseMarkFilteringSet @cakras;
+	#lookupflag IgnoreMarks;
+	sub jaMahaprana-java' [keret-java suku-java] by jaMahaprana-java.base;
+	sub [jaMahaprana-java jaMahapranaPas-java nyaPas-java]' [pengkal-java pengkal_suku-java pengkal_sukuMendut-java pengkal_keret-java] by [jaMahaprana-java.short.base jaMahapranaPas-java.short.base nyaPas-java.base];
+} psts_java_02;
+
+lookup psts_java_03 {
+	sub jaMahaprana-java.base keret-java' by keret-java.straight;
+	sub [jaMahaprana-java.short.base jaMahapranaPas-java.short.base nyaPas-java.base] [pengkal-java pengkal_suku-java pengkal_sukuMendut-java pengkal_keret-java]' by [pengkal-java.below pengkal_suku-java.below pengkal_sukuMendut-java.below pengkal_keret-java.below];
+} psts_java_03;
+
+lookup psts_java_05 {
+	sub [kaPas-java taPas-java laPas-java]' pengkal-java.below by [kaPas-java.base taPas-java.base laPas-java.base];
+} psts_java_05;
+
+lookup psts_java_07 {
+	sub jaMahapranaPas-java suku-java by jaMahapranaPas_suku-java;
+	sub jaMahapranaPas-java sukuMendut-java by jaMahapranaPas_sukuMendut-java;
+	sub jaMahapranaPas-java keret-java by jaMahapranaPas_keret-java;
+	sub nyaPas-java keret-java by nyaPas_keret-java;
+	sub nyaPas-java suku-java by  nyaPas_suku-java;
+	sub nyaPas-java sukuMendut-java by  nyaPas_sukuMendut-java;
+	sub cakra-java suku-java by cakra_suku-java;
+	sub cakra-java.001 suku-java by cakra_suku-java.001;
+	sub cakra-java.002 suku-java by cakra_suku-java.002;
+	sub pengkal-java.below suku-java.below by pengkal_suku-java.below;
+	sub pengkal-java.below sukuMendut-java.below by pengkal_sukuMendut-java.below;
+	sub caMurdaPas-java pengkal-java.below by caMurdaPas_pengkal-java;
+} psts_java_07;
+
+lookup ss_01 {
+    sub nyaPas-java by nyaPas-java.alt;
+    sub nyaMurdaPas-java by nyaMurdaPas-java.alt;
+    sub baPas-java by baPas-java.alt;
+}ss_01;
+
+lookup ss_02 {
+    sub paPas-java by paPas-java.alt;
+    sub paMurdaPas-java by paMurdaPas-java.alt;
+    sub saMahapranaPas-java by saMahapranaPas-java.alt;
+    sub saPas-java by saPas-java.alt;
+    sub haPas-java by haPas-java.alt;
+    sub paCerekPas-java by paCerekPas-java.alt;
+}ss_02;
+
+lookup cv_01 {
+    sub nyaPas-java by nyaPas-java.alt;
+    sub nyaMurdaPas-java by nyaMurdaPas-java.alt;
+    sub baPas-java by baPas-java.alt;
+}cv_01;
+
+lookup cv_02 {
+    sub paPas-java by paPas-java.alt;
+    sub paMurdaPas-java by paMurdaPas-java.alt;
+    sub saMahapranaPas-java by saMahapranaPas-java.alt;
+    sub saPas-java by saPas-java.alt;
+    sub haPas-java by haPas-java.alt;
+    sub paCerekPas-java by paCerekPas-java.alt;
+}cv_02;
+
+lookup javaPunctsLeft {
+	sub parenleft' @AllJavanese by parenleft.java;
+} javaPunctsLeft;
+
+lookup javaPunctsRight {
+	sub @AllJavanese parenright' by parenright.java;
+} javaPunctsRight;
+
+feature aalt {
+    feature pref;
+    feature rphf;
+    feature abvs;
+    feature blwf;
+    feature blws;
+    feature pstf;
+    feature psts;
+    feature ss01;
+    feature ss02;
+    feature cv01;
+    feature cv02;
+    feature init;
+    feature medi;
+    feature fina;
+    feature calt;
+}
+
+feature pref {
+    script java;
+    lookup pref_java_02;
+    lookup pref_java_01;
+}
+
+feature abvs {
+    script java;
+    lookup panyangga;
+    lookup abvs_java_01;
+    lookup abvs_java_02;
+    lookup abvs_java_03;
+}
+
+feature blwf {
+    script java;
+}
