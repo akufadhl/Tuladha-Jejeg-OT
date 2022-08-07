@@ -1,6 +1,6 @@
 # Tuladha-Jejeg-OT
 
-this might be a non-sense. but it's a mechanical miracle ꦙ꦳ꦿꦾꦽꦀ
+this combination might be a non-sense. but it's a mechanical miracle ꦙ꦳ꦿꦾꦽꦀ
 
 list of use case of javanese script from [Pitulung: Tuladha Jejeg](https://jv.wikipedia.org/wiki/Pitulung:Tuladha_Jejeg):
 - ꦗꦼꦂꦧꦱꦸꦏꦶꦩꦮꦧꦺꦪ : jer basuki mawa béa
