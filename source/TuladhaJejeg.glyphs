@@ -10,7 +10,8 @@ DisplayStrings = (
 ꦚꦟꦬ",
 "ꦔꦺꦴꦱ꧀ꦚꦏꦶ",
 "/laPas-java.base/naMurdaPas-java/taPas-java.base/daMahapranaPas-java/yaPas-java",
-"    ꦏꦴꦏꦵꦏꦾꦏ"
+"ꦱꦴꦂꦼ/cecakTelu_pepet-java 
+    ꦏꦴꦏꦵꦏꦾꦏ"
 );
 classes = (
 {
@@ -63,6 +64,10 @@ value = (
 },
 {
 name = "Use Typo Metrics";
+value = 1;
+},
+{
+name = "Propagate Anchors";
 value = 1;
 }
 );
@@ -498,10 +503,10 @@ lookup PengkalSpace {
 	pos @PengkalSpacing <0 0 820 0>;
 } PengkalSpace;
 
-#lookup TarungSpace {
-#	#lookupflag UseMarkFilteringSet [pengkal_keret-java pengkal-java pengkal-java.below ];
-#	pos @AllJavanese [tarung-java tolong-java]' <0 0 740 0>;
-#} TarungSpace;
+lookup TarungSpace {
+	#lookupflag UseMarkFilteringSet [pengkal_keret-java pengkal-java pengkal-java.below ];
+	pos @AllJavanese [tarung-java tolong-java]' <0 0 740 0>;
+} TarungSpace;
 
 lookup belowCakraSpace {
 
@@ -21752,18 +21757,6 @@ note = uni00A0;
 unicode = 160;
 },
 {
-glyphname = nonbreakingspace;
-lastChange = "2022-08-07 18:10:33 +0000";
-layers = (
-{
-layerId = m01;
-width = 450;
-}
-);
-metricWidth = space;
-unicode = 160;
-},
-{
 glyphname = uni200B;
 lastChange = "2022-07-24 07:10:29 +0000";
 layers = (
@@ -26402,9 +26395,15 @@ subCategory = Nonspacing;
 {
 category = Mark;
 glyphname = "cecakTelu_pepet-java";
-lastChange = "2022-08-07 15:29:07 +0000";
+lastChange = "2022-08-07 19:41:46 +0000";
 layers = (
 {
+anchors = (
+{
+name = _topright;
+pos = (2184,940);
+}
+);
 background = {
 shapes = (
 {
@@ -29696,7 +29695,7 @@ unicode = 43392;
 {
 category = Mark;
 glyphname = "layar-java";
-lastChange = "2022-08-07 15:29:25 +0000";
+lastChange = "2022-08-07 19:31:26 +0000";
 layers = (
 {
 anchors = (
@@ -60762,7 +60761,7 @@ note = uniA9A2.conj;
 {
 category = Mark;
 glyphname = "tarung-java";
-lastChange = "2022-08-07 16:44:50 +0000";
+lastChange = "2022-08-07 19:39:43 +0000";
 layers = (
 {
 background = {
@@ -60876,7 +60875,6 @@ width = 760;
 }
 );
 note = uniA9B4;
-script = javanese;
 subCategory = "Spacing Combining";
 unicode = 43444;
 },
