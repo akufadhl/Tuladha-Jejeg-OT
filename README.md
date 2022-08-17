@@ -1,5 +1,14 @@
 # Tuladha Jejeg OT
 
+Tuladha Jejeg is javanese typeface designed by **R.S. Wihananto**. based on a javanese metal type punched by **T. Roorda**. Originally developed using Graphite, now converted to AFDKO feature for better support and use.
+
+## Special Thanks
+- Ben Mitchell | OTFeatures
+- John Hudson | Specimen images
+- Just Van Rossum | Font Goggles
+- Muthu Nedumaran | Hibizcus
+- 
+
 ## Word tests
 this combination might be a non-sense. but it's a mechanical miracle ꦙ꦳ꦿꦾꦽꦀ
 - it represents a problem of cecakTelu blocking some combinations
