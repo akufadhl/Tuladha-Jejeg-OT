@@ -1,6 +1,9 @@
-# Tuladha-Jejeg-OT
+# Tuladha Jejeg OT
 
+## Word tests
 this combination might be a non-sense. but it's a mechanical miracle ꦙ꦳ꦿꦾꦽꦀ
+- it represents a problem of cecakTelu blocking some combinations
+- inability of keret attaching to another medial
 
 list of use case of javanese script from [Pitulung: Tuladha Jejeg](https://jv.wikipedia.org/wiki/Pitulung:Tuladha_Jejeg):
 - ꦗꦼꦂꦧꦱꦸꦏꦶꦩꦮꦧꦺꦪ : jer basuki mawa béa
