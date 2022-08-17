@@ -25989,9 +25989,15 @@ subCategory = Nonspacing;
 {
 category = Mark;
 glyphname = "cecakTelu_cecak-java";
-lastChange = "2022-08-07 15:29:07 +0000";
+lastChange = "2022-08-17 11:35:24 +0000";
 layers = (
 {
+anchors = (
+{
+name = _topright;
+pos = (831,940);
+}
+);
 background = {
 shapes = (
 {
