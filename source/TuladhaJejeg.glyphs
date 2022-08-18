@@ -1,5 +1,5 @@
 {
-.appVersion = "3133";
+.appVersion = "3134";
 .formatVersion = 3;
 DisplayStrings = (
 "ꦩꦏ꧀ꦲꦿꦏ꧀ꦏꦿ ꦏ꧀ꦩꦿꦤ",
@@ -68,6 +68,10 @@ value = 1;
 },
 {
 name = "Propagate Anchors";
+value = 1;
+},
+{
+name = "Don't use Production Names";
 value = 1;
 }
 );
