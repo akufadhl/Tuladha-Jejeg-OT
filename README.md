@@ -6,6 +6,10 @@ This opentype version isn't exactly the same as the original, due to the limitat
 
 The first step of converting Tuladha jejeg to Opentype is to make it work. another features like more complex shape handling and unwanted collissions will be refined in future updates.
 
+# Build
+```
+make build
+```
 ## Special Thanks
 - [Ben Mitchell](http://www.fontpad.co.uk/), [Georg Seifert](https://github.com/schriftgestalt) | OTFeatures, No Collisions Idea
 - [John Hudson](https://github.com/TiroTypeworks) | Specimen images
