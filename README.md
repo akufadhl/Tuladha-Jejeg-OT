@@ -11,7 +11,7 @@ The first step of converting Tuladha jejeg to Opentype is to make it work. anoth
 - **fonts**, Binary font file:
   - OTF
   - TTF
-- **source**: a Glyph 3 source file
+- **source**: a Glyph 3 source file. Other source file such as UFO will be available in the future.
 - **Javanese Text**: a sample text to preview the font. (still growing).
 - **makefile**: makefile file to build the font from source and do a fontbakery test.
 
