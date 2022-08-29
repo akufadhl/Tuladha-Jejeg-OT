@@ -76,7 +76,7 @@ value = 1;
 }
 );
 date = "2011-09-18 19:23:17 +0000";
-familyName = "Tuladha Jejeg";
+familyName = "Tuladha Jejeg OT";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -75795,7 +75795,7 @@ key = copyrights;
 values = (
 {
 language = ENG;
-value = "Copyright 2011-2013 Tuladha Jejeg R.S. Wihananto, Fadhl Haqq (http://www.github.com/akufadhl/Tuladha-Jejeg-OT)";
+value = "Copyright 2011-2013 Tuladha Jejeg R.S. Wihananto, Copyright 2022 Fadhl Haqq (https://www.github.com/akufadhl/Tuladha-Jejeg-OT)";
 }
 );
 },
@@ -75804,7 +75804,7 @@ key = familyNames;
 values = (
 {
 language = ENG;
-value = "Tuladha Jejeg";
+value = "Tuladha Jejeg OT";
 }
 );
 },
