@@ -2,7 +2,11 @@
 
 # Tuladha Jejeg OT
 
-Tuladha Jejeg is javanese typeface designed by **R.S. Wihananto**. based on a javanese metal type punched by **T. Roorda**. Originally developed using Graphite (famously supported in MOZILLA), now converted to Opentype with AFDKO FEA for better device and software support.
+Tuladha Jejeg is javanese typeface designed by **R.S. Wihananto**. based on a javanese metal type punched by **T. Roorda**. Originally developed using Graphite (famously supported in MOZILLA and LIBRE OFFICE), now converted to Opentype with AFDKO FEA for better device and software support.
+
+you can download the original Graphite otf here:
+- [Tuladha Jejeg Graphite](https://sites.google.com/site/jawaunicode/home)
+- [Aksara di Nusantara Tuladha Jejeg](https://aksaradinusantara.com/fonta/tuladha-jejeg.font)
 
 This opentype version isn't exactly the same as the original, due to the limitations of AFDKO FEA syntax, some shaping isn't working and collision are handled differently.
 
