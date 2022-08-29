@@ -32,4 +32,4 @@ dependencies: venv
 venv :
 	echo "Activating Virtual Environment..."
 	python3 -m venv venv
-	/venv/bin/activate
+	./venv/bin/activate
