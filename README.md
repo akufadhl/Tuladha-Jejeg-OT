@@ -14,6 +14,9 @@ The first step of converting Tuladha jejeg to Opentype is to make it work. anoth
 - [Rainer Erich Scheichelbauer](https://github.com/mekkablue) | Glyphdata, App Support
 - [Simon Cozens](https://github.com/simoncozens) | Advice on Opentype
 
+## LICENSE
+**Tuladha Jejeg** is licensed under [SIL OFL 1.1](https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ_web)
+
 ## Word tests
 this combination might be a non-sense. but it's a mechanical miracle ꦙ꦳ꦿꦾꦽꦀ
 - it represents a problem of cecakTelu blocking some combinations
