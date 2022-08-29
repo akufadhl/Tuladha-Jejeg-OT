@@ -75845,6 +75845,6 @@ settings = {
 disablesNiceNames = 1;
 };
 unitsPerEm = 2048;
-versionMajor = 1;
-versionMinor = 1;
+versionMajor = 0;
+versionMinor = 5;
 }
