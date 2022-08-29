@@ -6,6 +6,15 @@ This opentype version isn't exactly the same as the original, due to the limitat
 
 The first step of converting Tuladha jejeg to Opentype is to make it work. another features like more complex shape handling and unwanted collissions will be refined in future updates.
 
+## Contents
+- **Glyphdata Javanese** : set of .plist file for Javanese Unicode Data for Glyphsapp file
+- **fonts**, Binary font file:
+  - OTF
+  - TTF
+- **source**: a Glyph 3 source file
+- **Javanese Text**: a sample text to preview the font. (still growing).
+- **makefile**: makefile file to build the font from source and do a fontbakery test.
+
 ## Special Thanks
 - [Ben Mitchell](http://www.fontpad.co.uk/), [Georg Seifert](https://github.com/schriftgestalt) | OTFeatures, No Collisions Idea
 - [John Hudson](https://github.com/TiroTypeworks) | Specimen images
