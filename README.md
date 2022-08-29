@@ -6,6 +6,18 @@ This opentype version isn't exactly the same as the original, due to the limitat
 
 The first step of converting Tuladha jejeg to Opentype is to make it work. another features like more complex shape handling and unwanted collissions will be refined in future updates.
 
+## Contents
+- **Glyphdata Javanese** : set of .plist file for Javanese Unicode Data for Glyphsapp file
+- **fonts**, Binary font file:
+  - OTF
+  - TTF
+- **source**: a Glyph 3 source file. Other source file such as UFO will be available in the future.
+- **Javanese Text**: a sample text to preview the font. (still growing).
+- **makefile**: makefile file to build the font from source and do a fontbakery test.
+
+## DISCLAIMER
+This opentype conversion of Tuladha Jejeg is not a perfect conversion of its *Graphite* origin. Bugs and Weird things may appear. If so, please file an issue or a bug report and we will do our best to fix and refine the font.
+
 ## Special Thanks
 - [Ben Mitchell](http://www.fontpad.co.uk/), [Georg Seifert](https://github.com/schriftgestalt) | OTFeatures, No Collisions Idea
 - [John Hudson](https://github.com/TiroTypeworks) | Specimen images
@@ -18,5 +30,5 @@ The first step of converting Tuladha jejeg to Opentype is to make it work. anoth
 **Tuladha Jejeg** is licensed under the [SIL Open Font License, Version 1.1](https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ_web)
 
 ## Change Log
-v0.5 : 01 September 2020
+v0.5 : 01 September 2022
   - Initial Release
