@@ -30,5 +30,5 @@ This opentype conversion of Tuladha Jejeg is not a perfect conversion of its *Gr
 **Tuladha Jejeg** is licensed under the [SIL Open Font License, Version 1.1](https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ_web)
 
 ## Change Log
-v0.5 : 01 September 2020
+v0.5 : 01 September 2022
   - Initial Release
