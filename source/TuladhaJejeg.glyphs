@@ -113,8 +113,6 @@ feature psts;
 feature calt;
 feature ss01;
 feature ss02;
-feature cv01;
-feature cv02;
 ";
 tag = aalt;
 },
