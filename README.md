@@ -21,6 +21,13 @@ The first step of converting Tuladha jejeg to Opentype is to make it work. anoth
 - **Javanese Text**: a sample text to preview the font. (still growing).
 - **makefile**: makefile file to build the font from source and do a fontbakery test.
 
+## Contributing
+Currently, the source file is only available in .glyphs 3 format. More source file will be available in the future.
+
+to build the font files run
+```
+make build
+```
 ## DISCLAIMER
 This opentype conversion of Tuladha Jejeg is not a perfect conversion of its *Graphite* origin. Bugs and Weird things may appear. If so, please file an issue or a bug report and we will do our best to fix and refine the font.
 
