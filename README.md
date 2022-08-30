@@ -4,9 +4,9 @@
 
 Tuladha Jejeg is javanese typeface designed by **R.S. Wihananto**. based on a javanese metal type punched by **T. Roorda**. Originally developed using Graphite (famously supported in **Mozilla** and **Libre Office**), now converted to Opentype with AFDKO FEA for better device and software support.
 
-you can download the original Graphite otf here:
-- [Tuladha Jejeg Graphite](https://sites.google.com/site/jawaunicode/home)
-- [Aksara di Nusantara Tuladha Jejeg](https://aksaradinusantara.com/fonta/tuladha-jejeg.font)
+you can download the original Graphite file here:
+- [Tuladha Jejeg Graphite](https://sites.google.com/site/jawaunicode/home) **Original Site**
+- [Tuladha Jejeg](https://aksaradinusantara.com/fonta/tuladha-jejeg.font) **Aksara di Nusantara**
 
 This opentype version isn't exactly the same as the original, due to the limitations of AFDKO FEA syntax, some shaping isn't working and collision are handled differently.
 
@@ -32,11 +32,11 @@ make build
 This opentype conversion of Tuladha Jejeg is not a perfect conversion of its *Graphite* origin. Bugs and Weird things may appear. If so, please file an issue or a bug report and we will do our best to fix and refine the font.
 
 ## Special Thanks
+- [Rainer Erich Scheichelbauer](https://github.com/mekkablue) | Glyphdata, App Support
 - [Ben Mitchell](http://www.fontpad.co.uk/), [Georg Seifert](https://github.com/schriftgestalt) | OTFeatures, No Collisions Idea
 - [John Hudson](https://github.com/TiroTypeworks) | Specimen images
 - [Just Van Rossum](https://github.com/justvanrossum) | [Font Goggles](https://fontgoggles.org/)
 - [Muthu Nedumaran](https://github.com/murasu) | [Hibizcus](https://hibizcus.com/)
-- [Rainer Erich Scheichelbauer](https://github.com/mekkablue) | Glyphdata, App Support
 - [Simon Cozens](https://github.com/simoncozens) | Advice on Opentype
 
 ## LICENSE
