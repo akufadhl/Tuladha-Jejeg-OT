@@ -38,6 +38,7 @@ This opentype conversion of Tuladha Jejeg is not a perfect conversion of its *Gr
 - [Just Van Rossum](https://github.com/justvanrossum) | [Font Goggles](https://fontgoggles.org/)
 - [Muthu Nedumaran](https://github.com/murasu) | [Hibizcus](https://hibizcus.com/)
 - [Simon Cozens](https://github.com/simoncozens) | Advice on Opentype
+- [Aditya Bayu Perdana](https://github.com/adtbayuperdana) | for his invaluable advice and guidance
 
 ## LICENSE
 **Tuladha Jejeg** is licensed under the [SIL Open Font License, Version 1.1](https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ_web)
