@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuladha Jejeg</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tuladha">
+            <a href="https://github.com/akufadhl/Tuladha-Jejeg-OT">ꦠꦸꦭꦣꦗꦼꦗꦼꦒ꧀<br>ꦎꦥꦼꦤ꧀ꦠꦻꦥ꧀</a>
+        </div>
+        <div class="logo">
+            <a href="https://sites.google.com/site/jawaunicode/home" lang="jv" class="wihananto">ꦫꦱꦮ</a>
+            <a href="https://www.akufadhl.com" lang="jv" class="akufadhl">ꦄ</a>
+        </div>
+    </div>
+    
+</body>
+
+<style>
+    @font-face {
+        font-family: 'Tuladha Jejeg';
+        src: url('./fonts/otf/TuladhaJejegOT-Regular.otf');
+    }
+    @font-face {
+        font-family: 'akufadhl';
+        src: url('./akufadhl-Regular.woff2'),
+        url('./akufadhl-Regular.woff');
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        all: unset;
+    }
+    a:hover {
+        cursor: pointer;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+        font-family: 'Tuladha Jejeg';
+        font-size: calc(7vw + 5px);
+    }
+
+    .tuladha {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+        text-align: center;
+    } 
+
+    .tuladha>a:hover {
+        color: rgb(104, 53, 255);
+        animation: changeColor 1s;
+    }
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 0.5em;
+        gap: 1em;
+        margin-top: 1em;
+        color: rgb(104, 53, 255);
+    }
+    .wihananto {
+        /* set opentype feature of cv01 */
+        font-feature-settings: "cv01" on;
+    }
+    .akufadhl {
+        font-family: 'akufadhl';
+    }
+    .wihananto:hover, .akufadhl:hover {
+        animation: moveUp 1s infinite;
+    }
+
+    @keyframes moveUp {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+
+    @keyframes changeColor {
+        0% {
+            color: black;
+        }
+        100% {
+            color: rgb(104, 53, 255);
+        }
+    }
+</style>
+</html>
