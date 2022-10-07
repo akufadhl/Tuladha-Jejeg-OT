@@ -12,7 +12,7 @@ This opentype version isn't exactly the same as the original, due to the limitat
 
 The first step of converting Tuladha jejeg to Opentype is to make it work. another features like more complex shape handling and unwanted collissions will be refined in future updates.
 
-## Host your file with CDN
+## use the font with CDN
 Add this html to your `<head>`
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akufadhl/Tuladha-Jejeg-OT/css/tuladhaJejeg.css">
