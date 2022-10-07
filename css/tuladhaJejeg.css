@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'tuladhaJejeg';
+	src: url('tuladhaJejeg.eot');
+	src: url('tuladhaJejeg.eot?#iefix') format('embedded-opentype'),
+		 url('tuladhaJejeg.woff') format('woff'),
+		 url('tuladhaJejeg.ttf') format('truetype'),
+		 url('tuladhaJejeg.svg#tuladhaJejeg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
