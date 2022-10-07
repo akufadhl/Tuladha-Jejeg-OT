@@ -21,6 +21,11 @@ or use `@import` in your css
 ```css
 @import url("https://cdn.jsdelivr.net/gh/akufadhl/Tuladha-Jejeg-OT/css/tuladhaJejeg.css");
 ```
+and reference the file in your styling
+```css
+font-family: "Tuladha Jejeg"
+```
+
 ## Contents
 - **Glyphdata Javanese** : set of .plist file for Javanese Unicode Data for Glyphsapp file
 - **fonts**, Binary font file:
