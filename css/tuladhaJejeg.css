@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Tuladha Jejeg';
-	src: url("../fonts/woff2/TuladhaJejegOT-Regular.woff2") format("woff2"), url("../fonts/ttf/TuladhaJejegOT-Regular.ttf") format("truetype");
+	src: url("https://raw.githubusercontent.com/akufadhl/Tuladha-Jejeg-OT/blob/main/fonts/woff2/TuladhaJejegOT-Regular.woff2") format("woff2"), url("../fonts/ttf/TuladhaJejegOT-Regular.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
